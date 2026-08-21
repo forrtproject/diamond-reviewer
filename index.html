@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diamond Reviewer Pledge</title>
+<meta name="description" content="Signatories of the Diamond Reviewer Pledge commit to reviewing at least one article in the next 12 months for a diamond open access journal.">
+<link rel="icon" id="favicon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+<style>
+/* =============================================================
+   ds-tokens — Diamond Reviewer Pledge
+   FORRT design-system token structure, diamond colour ramp.
+   ============================================================= */
+:root {
+  /* type */
+  --font-body: 'Source Sans 3', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-display: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --text-2xs: .6875rem;  --text-xs: .75rem;   --text-sm: .8125rem;
+  --text-base: .875rem;  --text-md: .9375rem; --text-lg: 1rem;
+  --text-xl: 1.1875rem;  --text-2xl: 1.75rem; --text-3xl: 2.25rem;
+
+  --font-weight-normal: 400; --font-weight-medium: 500;
+  --font-weight-semibold: 600; --font-weight-bold: 700;
+
+  --leading-none: 1; --leading-tight: 1.15; --leading-snug: 1.3;
+  --leading-normal: 1.45; --leading-relaxed: 1.6; --leading-loose: 1.75;
+
+  --tracking-tight: -.01em; --tracking-normal: 0;
+  --tracking-wider: .06em;  --tracking-widest: .12em;
+
+  /* spacing */
+  --spacing-px: 1px; --spacing-0-5: .125rem; --spacing-1: .25rem;
+  --spacing-1-5: .375rem; --spacing-2: .5rem; --spacing-2-5: .625rem;
+  --spacing-3: .75rem; --spacing-4: 1rem; --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem; --spacing-7: 1.75rem; --spacing-8: 2rem;
+  --spacing-10: 2.5rem; --spacing-12: 3rem; --spacing-16: 4rem;
+
+  /* radii */
+  --radius-2xs: 2px; --radius-xs: 3px; --radius-sm: 4px; --radius-md: 6px;
+  --radius-lg: 10px; --radius-xl: 14px; --radius-pill: 999px; --radius-circle: 50%;
+
+  /* borders */
+  --border-width-hairline: 1px; --border-width-emphasis: 2px;
+  --border-width-heavy: 2px;    --border-width-accent: 3px;
+
+  /* motion */
+  --duration-fast: 120ms; --duration-normal: 200ms; --duration-slower: 420ms;
+  --ease-standard: cubic-bezier(.4,0,.2,1);
+  --ease-out: cubic-bezier(0,0,.2,1);
+  --ease-emphasized: cubic-bezier(.2,0,0,1.2);
+  --transition: var(--duration-normal) var(--ease-standard);
+  --transition-fast: var(--duration-fast) var(--ease-standard);
+
+  /* layers */
+  --z-popover: 60; --z-overlay: 80; --z-modal: 100;
+  --size-modal-xl: 860px;
+
+  /* colour — light */
+  --color-white-rgb: 255 255 255;
+  --color-surface: #f6f9fb;
+  --color-surface-raised: #ffffff;
+  --color-surface-subtle: #f0f5f8;
+  --color-surface-alt: #e6eef3;
+  --color-text: #101f2e;
+  --color-text-secondary: #3b5163;
+  --color-text-muted: #6a7d8e;
+  --color-text-faint: #9aa9b6;
+  --color-text-inverse: #ffffff;
+  --color-border: #cad7e0;
+  --color-border-light: #e2e9ef;
+
+  --color-primary: #0d6c85;
+  --color-primary-dark: #084f63;
+  --color-primary-light: #4ea9c0;
+  --color-primary-faint: #e9f7fb;
+  --color-primary-border: #b6e3ef;
+  --color-primary-on-chrome: #80deea;
+  --color-on-primary: #ffffff;
+
+  --color-accent: #80deea;
+  --color-accent-strong: #4fc8dc;
+  --color-accent-soft: #ddf5fa;
+
+  --color-neutral: #0a1128;
+  --color-scrim: rgb(10 17 40 / .55);
+
+  --color-success: #1c7a4a; --color-success-strong: #14603a;
+  --color-success-bg: #e7f6ee; --color-success-border: #b7e2ca;
+  --color-error: #b42318; --color-error-bg: #fdeceb; --color-error-border: #f3c5c1;
+  --color-warning: #92610a; --color-warning-bg: #fdf4e3; --color-warning-border: #f0dcae;
+  --color-muted-bg: #eef2f6; --color-muted-fg: #5d7185;
+
+  --color-outcome-success: #2e9e63; --color-outcome-mixed: #d99e2b;
+  --color-outcome-failed: #d4503f;  --color-outcome-unknown: #94a3b1;
+  --color-study-original: #0d6c85; --color-study-original-bg: #e9f7fb; --color-study-original-border: #b6e3ef;
+
+  --shadow-sm: 0 1px 2px rgb(10 17 40 / .05);
+  --shadow-md: 0 4px 14px rgb(10 17 40 / .09);
+  --shadow-lg: 0 12px 32px rgb(10 17 40 / .16);
+  --shadow-chrome: 0 1px 0 rgb(10 17 40 / .35);
+  --shadow-modal-brand: 0 24px 60px rgb(10 17 40 / .35);
+  --shadow-focus-primary: 0 0 0 3px rgb(13 108 133 / .32);
+  --shadow-focus-inverse: 0 0 0 3px rgb(128 222 234 / .55);
+}
+
+[data-theme="dark"] {
+  --color-surface: #0b1220;
+  --color-surface-raised: #121b2c;
+  --color-surface-subtle: #162033;
+  --color-surface-alt: #1d2a3e;
+  --color-text: #e8eff7;
+  --color-text-secondary: #b4c3d2;
+  --color-text-muted: #8798a9;
+  --color-text-faint: #61738a;
+  --color-border: #2d3d52;
+  --color-border-light: #223042;
+
+  --color-primary: #6fd0e4;
+  --color-primary-dark: #4fb6cd;
+  --color-primary-light: #9ae3f1;
+  --color-primary-faint: rgb(111 208 228 / .10);
+  --color-primary-border: rgb(111 208 228 / .30);
+  --color-on-primary: #06232c;
+
+  --color-accent-soft: rgb(128 222 234 / .13);
+  --color-neutral: #060d1c;
+
+  --color-success: #6bd3a0; --color-success-strong: #8de0b6;
+  --color-success-bg: rgb(46 158 99 / .14); --color-success-border: rgb(46 158 99 / .32);
+  --color-error: #f08c80; --color-error-bg: rgb(212 80 63 / .15); --color-error-border: rgb(212 80 63 / .32);
+  --color-warning: #edc46a; --color-warning-bg: rgb(217 158 43 / .14); --color-warning-border: rgb(217 158 43 / .32);
+  --color-muted-bg: #1c2740; --color-muted-fg: #9db0c2;
+  --color-study-original: #6fd0e4; --color-study-original-bg: rgb(111 208 228 / .12); --color-study-original-border: rgb(111 208 228 / .3);
+
+  --shadow-focus-primary: 0 0 0 3px rgb(111 208 228 / .35);
+}
+
+/* =============================================================
+   Base
+   ============================================================= */
+* { box-sizing: border-box; }
+::placeholder { color: var(--color-text-faint); opacity: 1; }
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  line-height: var(--leading-loose);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  margin: 0; padding: 0;
+  transition: background-color var(--transition), color var(--transition);
+  height: 100dvh; display: flex; flex-direction: column; overflow: hidden;
+}
+.app-main {
+  flex: 1; overflow-y: auto; min-height: 0;
+  padding-top: var(--spacing-8); padding-bottom: var(--spacing-10);
+  scroll-behavior: smooth;
+}
+.container { width: 100%; max-width: 1060px; margin: 0 auto; padding: 0 var(--spacing-5); }
+
+h1, h2, h3, .serif, .card-header { font-family: var(--font-display); font-weight: var(--font-weight-semibold); letter-spacing: var(--tracking-tight); }
+a { color: var(--color-primary); }
+
+.micro, .filter-label, .badge, .badge-type, .table thead th, .oa-table thead th, .kpi-label, .stats-card .label {
+  font-family: var(--font-body); font-size: var(--text-xs);
+  font-weight: var(--font-weight-bold); letter-spacing: var(--tracking-wider);
+  text-transform: uppercase; line-height: var(--leading-snug);
+}
+
+:focus-visible { outline: none; box-shadow: var(--shadow-focus-primary); border-radius: var(--radius-xs); }
+
+@keyframes slideUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes alertFadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* =============================================================
+   Chrome
+   ============================================================= */
+.top-bar {
+  background: var(--color-neutral); color: var(--color-text-inverse);
+  height: 52px; flex-shrink: 0; font-family: var(--font-body);
+  position: relative; box-shadow: var(--shadow-chrome); z-index: 20;
+}
+.top-bar-inner { display: flex; align-items: stretch; height: 100%; gap: var(--spacing-4); padding: 0 var(--spacing-5); }
+.brand-mark {
+  color: var(--color-text-inverse); text-decoration: none; background: none; border: 0; cursor: pointer;
+  display: inline-flex; align-items: center; gap: var(--spacing-2-5);
+  transition: opacity var(--transition-fast); flex-shrink: 0; padding: 0;
+}
+.brand-mark:hover { opacity: .85; }
+.brand-icon {
+  width: 30px; height: 30px; flex-shrink: 0;
+  background: rgb(var(--color-white-rgb) / .1);
+  border: var(--border-width-hairline) solid rgb(var(--color-white-rgb) / .12);
+  border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center;
+  color: var(--color-primary-on-chrome);
+}
+.brand-icon svg { width: 19px; height: 19px; display: block; }
+.brand-name { display: flex; flex-direction: column; line-height: var(--leading-tight); min-width: 0; text-align: left; }
+.brand-name strong { font-family: var(--font-display); font-size: var(--text-md); font-weight: var(--font-weight-bold); }
+.brand-name > span { font-size: var(--text-2xs); opacity: .55; letter-spacing: var(--tracking-wider); text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 1080px) { .brand-name { display: none; } }
+
+.nav-tabs {
+  display: flex; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
+  align-items: stretch; min-width: 0; margin-left: auto; list-style: none; padding: 0 28px 0 0; margin-bottom: 0;
+  mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
+}
+.nav-tabs::-webkit-scrollbar { display: none; }
+.nav-tabs .nav-link {
+  color: rgb(var(--color-white-rgb) / .6); border: none; background: transparent;
+  border-bottom: var(--border-width-heavy) solid transparent;
+  padding: 0 var(--spacing-4); display: flex; align-items: center; cursor: pointer;
+  font-family: var(--font-body); font-weight: var(--font-weight-semibold);
+  font-size: var(--text-base); white-space: nowrap; text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  transition: color var(--transition-fast), border-color var(--transition);
+}
+.nav-tabs .nav-link:hover { color: rgb(var(--color-white-rgb) / .9); border-bottom-color: rgb(var(--color-white-rgb) / .25); }
+.nav-tabs .nav-link.active { color: var(--color-text-inverse); border-bottom-color: var(--color-primary-on-chrome); }
+.nav-tabs .nav-link:focus-visible { box-shadow: var(--shadow-focus-inverse); border-radius: 0; }
+
+.theme-toggle {
+  align-self: center; flex-shrink: 0;
+  background: rgb(var(--color-white-rgb) / .08);
+  border: var(--border-width-hairline) solid rgb(var(--color-white-rgb) / .15);
+  color: rgb(var(--color-white-rgb) / .78);
+  width: 34px; height: 34px; border-radius: var(--radius-pill);
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background var(--transition), color var(--transition-fast); padding: 0;
+}
+.theme-toggle:hover { background: rgb(var(--color-white-rgb) / .16); color: var(--color-text-inverse); }
+.theme-toggle:focus-visible { box-shadow: var(--shadow-focus-inverse); }
+.theme-toggle svg { width: 16px; height: 16px; }
+.theme-toggle .icon-sun { display: none; }
+[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+.footer-bar {
+  background: var(--color-neutral); color: rgb(var(--color-white-rgb) / .45);
+  padding: var(--spacing-2) var(--spacing-5); font-size: var(--text-xs);
+  display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-4); flex-shrink: 0;
+}
+.footer-bar > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.footer-bar a { color: rgb(var(--color-white-rgb) / .42); text-decoration: none; margin-left: var(--spacing-4); transition: color var(--transition-fast); }
+.footer-bar a:hover { color: rgb(var(--color-white-rgb) / .8); }
+@media (max-width: 600px) { .footer-bar > span { display: none; } .footer-bar { justify-content: center; } }
+
+/* =============================================================
+   Cards, sections, buttons
+   ============================================================= */
+.tab-pane { display: none; }
+.tab-pane.active { display: block; animation: slideUp var(--transition); }
+
+.card {
+  background: var(--color-surface-raised);
+  border: var(--border-width-hairline) solid var(--color-border-light);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-6); color: var(--color-text);
+}
+.card-header {
+  border-bottom: var(--border-width-hairline) solid var(--color-border-light);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0; padding: var(--spacing-4) var(--spacing-6);
+  font-family: var(--font-display); font-weight: var(--font-weight-semibold);
+  font-size: var(--text-xl); color: var(--color-primary);
+}
+.card-body { padding: var(--spacing-6); }
+@media (max-width: 768px) { .card-body { padding: var(--spacing-4); } }
+
+.section-title {
+  font-family: var(--font-display); font-weight: var(--font-weight-bold); font-size: var(--text-xl);
+  color: var(--color-primary); margin: var(--spacing-7) 0 var(--spacing-2);
+  padding-bottom: var(--spacing-1-5); border-bottom: var(--border-width-heavy) solid var(--color-primary-faint);
+  letter-spacing: var(--tracking-tight);
+}
+.section-title:first-child { margin-top: 0; }
+.lede { color: var(--color-text-secondary); font-size: var(--text-lg); line-height: var(--leading-loose); max-width: 850px; }
+.prose { font-size: var(--text-lg); line-height: var(--leading-loose); }
+.prose p { margin: 0 0 var(--spacing-4); }
+.prose ul, .prose ol { padding-left: var(--spacing-6); margin: var(--spacing-2) 0 var(--spacing-4); }
+.prose li { margin-bottom: var(--spacing-2-5); }
+.prose strong { color: var(--color-text); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--spacing-2);
+  font-family: var(--font-body); font-weight: var(--font-weight-bold); font-size: var(--text-base);
+  text-transform: uppercase; letter-spacing: var(--tracking-wider);
+  padding: var(--spacing-3) var(--spacing-6); border-radius: var(--radius-pill);
+  border: var(--border-width-hairline) solid transparent; cursor: pointer; text-decoration: none;
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.btn-primary { background: var(--color-primary); color: var(--color-on-primary); }
+.btn-primary:hover { background: var(--color-primary-dark); color: var(--color-on-primary); }
+.btn-diamond { background: var(--color-accent); color: #06232c; border-color: var(--color-accent-strong); }
+.btn-diamond:hover { background: var(--color-accent-strong); color: #04191f; }
+.btn-ghost {
+  background: var(--color-surface-raised); color: var(--color-text-secondary);
+  border-color: var(--color-border); box-shadow: none;
+}
+.btn-ghost:hover { color: var(--color-primary); border-color: var(--color-primary-light); box-shadow: none; }
+.btn-row { display: flex; flex-wrap: wrap; gap: var(--spacing-3); margin-top: var(--spacing-5); }
+
+.callout {
+  background: var(--color-primary-faint);
+  border-left: var(--border-width-accent) solid var(--color-primary);
+  padding: var(--spacing-3) var(--spacing-4); border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: var(--spacing-5) 0; font-size: var(--text-md); color: var(--color-text);
+  line-height: var(--leading-relaxed);
+}
+.callout strong { color: var(--color-primary); }
+.note { color: var(--color-text-muted); font-size: var(--text-md); line-height: var(--leading-relaxed); }
+
+/* =============================================================
+   Hero
+   ============================================================= */
+.hero {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  padding: var(--spacing-6) var(--spacing-4) var(--spacing-8);
+}
+.hero-logo { width: 100%; max-width: 260px; }
+.hero h1 {
+  font-size: var(--text-3xl); margin: var(--spacing-4) 0 var(--spacing-2);
+  color: var(--color-text); letter-spacing: var(--tracking-tight); line-height: var(--leading-tight);
+}
+.hero .hero-kicker {
+  font-size: var(--text-2xs); text-transform: uppercase; letter-spacing: var(--tracking-widest);
+  font-weight: var(--font-weight-bold); color: var(--color-primary);
+}
+@media (max-width: 600px) { .hero h1 { font-size: var(--text-2xl); } .hero-logo { max-width: 190px; } }
+
+/* =============================================================
+   OA comparison table
+   ============================================================= */
+.table-wrap {
+  background: var(--color-surface-raised);
+  border: var(--border-width-hairline) solid var(--color-border-light);
+  border-radius: var(--radius-lg); overflow: auto; box-shadow: var(--shadow-sm);
+  margin-top: var(--spacing-4);
+}
+.oa-table { width: 100%; border-collapse: collapse; font-size: var(--text-base); min-width: 660px; }
+.oa-table thead { background: var(--color-surface-subtle); }
+.oa-table th, .oa-table td {
+  padding: var(--spacing-3) var(--spacing-4); text-align: left;
+  border-bottom: var(--border-width-hairline) solid var(--color-border-light);
+}
+.oa-table th { color: var(--color-text-muted); }
+.oa-table th:not(:first-child), .oa-table td:not(:first-child) { text-align: center; }
+.oa-table tbody tr:last-child td { border-bottom: none; }
+.oa-table td:first-child {
+  font-family: var(--font-display); font-weight: var(--font-weight-semibold);
+  font-size: var(--text-lg); color: var(--color-text);
+}
+.oa-table tr.row-diamond td {
+  background: var(--color-accent-soft);
+  border-bottom-color: var(--color-primary-border);
+}
+.oa-table tr.row-diamond td:first-child { color: var(--color-primary); box-shadow: inset 3px 0 0 var(--color-accent-strong); }
+.mark { font-size: 1.05rem; line-height: 1; }
+.mark-yes { color: var(--color-outcome-success); }
+.mark-no { color: var(--color-outcome-failed); }
+.mark-q { color: var(--color-outcome-mixed); font-weight: var(--font-weight-bold); }
+.cell-cond { font-size: var(--text-sm); color: var(--color-text-secondary); }
+
+/* =============================================================
+   Share
+   ============================================================= */
+.share-row { display: flex; align-items: center; flex-wrap: wrap; gap: var(--spacing-2); margin-top: var(--spacing-5); }
+.share-label { color: var(--color-text-muted); font-size: var(--text-xs); font-weight: var(--font-weight-bold); text-transform: uppercase; letter-spacing: var(--tracking-wider); margin-right: var(--spacing-1); }
+.share-btn {
+  display: inline-flex; align-items: center; gap: var(--spacing-2);
+  background: var(--color-surface-raised); border: var(--border-width-hairline) solid var(--color-border);
+  color: var(--color-text-secondary); padding: var(--spacing-1-5) var(--spacing-3);
+  border-radius: var(--radius-pill); font-size: var(--text-base); font-weight: var(--font-weight-semibold);
+  cursor: pointer; text-decoration: none;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+.share-btn:hover { color: var(--color-primary); border-color: var(--color-primary-light); }
+.share-btn svg { width: 15px; height: 15px; fill: currentColor; }
+
+/* =============================================================
+   Signatories
+   ============================================================= */
+.count-band {
+  display: flex; align-items: baseline; gap: var(--spacing-3); flex-wrap: wrap;
+  margin-bottom: var(--spacing-5);
+}
+.count-band .count-number {
+  font-family: var(--font-display); font-size: var(--text-2xl);
+  font-weight: var(--font-weight-bold); color: var(--color-primary); line-height: var(--leading-tight);
+}
+.badge-panel {
+  display: flex; gap: var(--spacing-5); align-items: center; flex-wrap: wrap;
+  background: var(--color-surface-subtle);
+  border: var(--border-width-hairline) solid var(--color-border-light);
+  border-radius: var(--radius-lg); padding: var(--spacing-5); margin-bottom: var(--spacing-6);
+}
+.badge-panel .badge-art { width: 150px; flex-shrink: 0; }
+.badge-panel .badge-copy { flex: 1; min-width: 220px; }
+.badge-panel h3 { font-size: var(--text-xl); color: var(--color-primary); margin: 0 0 var(--spacing-1); }
+
+.sig-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--spacing-2); }
+.sig-item {
+  display: flex; flex-direction: column; gap: var(--spacing-0-5);
+  background: var(--color-surface-raised);
+  border: var(--border-width-hairline) solid var(--color-border-light);
+  border-left: var(--border-width-accent) solid var(--color-accent-strong);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  padding: var(--spacing-2-5) var(--spacing-4);
+  transition: box-shadow var(--transition), border-color var(--transition);
+}
+.sig-item:hover { box-shadow: var(--shadow-md); border-left-color: var(--color-primary); }
+.sig-name { font-family: var(--font-display); font-weight: var(--font-weight-semibold); font-size: var(--text-lg); color: var(--color-text); line-height: var(--leading-snug); }
+.sig-name.anon { font-style: italic; color: var(--color-text-secondary); }
+.sig-aff { font-size: var(--text-base); color: var(--color-text-muted); }
+
+/* =============================================================
+   Form
+   ============================================================= */
+.form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--spacing-4); }
+.field { display: flex; flex-direction: column; gap: var(--spacing-1-5); }
+.field label { font-size: var(--text-base); font-weight: var(--font-weight-semibold); color: var(--color-text-secondary); }
+.field .hint { font-size: var(--text-sm); color: var(--color-text-muted); }
+.form-control {
+  background: var(--color-surface-subtle); color: var(--color-text);
+  border: var(--border-width-hairline) solid var(--color-border);
+  border-radius: var(--radius-md); font-size: var(--text-lg); font-family: var(--font-body);
+  padding: var(--spacing-2-5) var(--spacing-3);
+  transition: border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+}
+.form-control:focus { outline: none; border-color: var(--color-primary); background: var(--color-surface-raised); box-shadow: var(--shadow-focus-primary); }
+.check-row { display: flex; align-items: flex-start; gap: var(--spacing-2-5); margin-top: var(--spacing-4); font-size: var(--text-md); color: var(--color-text-secondary); }
+.check-row input[type="checkbox"] { width: 18px; height: 18px; margin-top: 3px; accent-color: var(--color-primary); flex-shrink: 0; }
+.form-status {
+  margin-top: var(--spacing-4); padding: var(--spacing-3) var(--spacing-4);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0; font-size: var(--text-md);
+  background: var(--color-success-bg); border-left: var(--border-width-accent) solid var(--color-success);
+  color: var(--color-text); animation: alertFadeIn var(--duration-normal) var(--ease-out);
+}
+.form-status[hidden] { display: none; }
+
+/* =============================================================
+   FAQ
+   ============================================================= */
+.faq-item { border-bottom: var(--border-width-hairline) solid var(--color-border-light); }
+.faq-item:last-child { border-bottom: none; }
+.faq-question {
+  width: 100%; text-align: left; background: transparent; border: none; padding: var(--spacing-3) 0;
+  color: var(--color-text); font-family: var(--font-display); font-weight: var(--font-weight-semibold);
+  font-size: var(--text-xl); cursor: pointer; display: flex; align-items: flex-start; gap: var(--spacing-2);
+  line-height: var(--leading-snug); transition: color var(--transition-fast);
+}
+.faq-question:hover { color: var(--color-primary); }
+.faq-chevron { flex-shrink: 0; width: 16px; height: 16px; margin-top: 6px; color: var(--color-text-muted); transition: transform var(--transition); }
+.faq-item.open .faq-chevron { transform: rotate(90deg); }
+.faq-item.open .faq-question { color: var(--color-primary); }
+.faq-answer { display: none; padding: 0 0 var(--spacing-4) var(--spacing-6); color: var(--color-text-secondary); font-size: var(--text-lg); line-height: var(--leading-loose); }
+.faq-item.open .faq-answer { display: block; }
+.faq-answer p { margin: 0 0 var(--spacing-3); }
+.faq-answer p:last-child { margin-bottom: 0; }
+.faq-answer a { color: var(--color-study-original); }
+.faq-answer ul { padding-left: var(--spacing-5); margin: var(--spacing-2) 0 var(--spacing-3); }
+.faq-answer li { margin-bottom: var(--spacing-1-5); }
+
+/* =============================================================
+   People
+   ============================================================= */
+.person-tile {
+  display: flex; align-items: flex-start; gap: var(--spacing-3);
+  padding: var(--spacing-3) var(--spacing-4);
+  border: var(--border-width-hairline) solid var(--color-border-light);
+  border-left: var(--border-width-accent) solid transparent;
+  border-radius: var(--radius-lg); background: var(--color-surface-raised);
+  text-decoration: none; color: var(--color-text); margin-bottom: var(--spacing-2);
+  transition: border-color var(--transition), background var(--transition), box-shadow var(--transition);
+}
+.person-tile:hover { border-left-color: var(--color-primary); background: var(--color-surface-subtle); box-shadow: var(--shadow-md); }
+.person-tile .tool-icon {
+  flex-shrink: 0; width: 36px; height: 36px; background: var(--color-primary-faint);
+  border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center;
+  color: var(--color-primary); border: var(--border-width-hairline) solid var(--color-primary-border);
+  font-family: var(--font-display); font-weight: var(--font-weight-bold); font-size: var(--text-md);
+}
+.person-tile .tool-title { font-family: var(--font-display); font-weight: var(--font-weight-semibold); font-size: var(--text-xl); }
+.person-tile .tool-desc { color: var(--color-text-secondary); font-size: var(--text-md); line-height: var(--leading-normal); }
+</style>
+</head>
+
+<body>
+
+<!-- ============================ CHROME ============================ -->
+<header class="top-bar">
+  <div class="top-bar-inner">
+    <button class="brand-mark" data-goto="home" aria-label="Diamond Reviewer Pledge — home">
+      <span class="brand-icon">
+        <svg viewBox="0 0 200 200" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="11" stroke-linejoin="round" stroke-linecap="round">
+          <polygon points="100,28 160,80 100,172 40,80"/>
+          <line x1="60" y1="48" x2="140" y2="48"/>
+          <line x1="60" y1="48" x2="40" y2="80"/>
+          <line x1="140" y1="48" x2="160" y2="80"/>
+          <line x1="63" y1="80" x2="137" y2="80"/>
+        </svg>
+      </span>
+      <span class="brand-name">
+        <strong>Diamond Reviewer Pledge</strong>
+        <span>Peer review for scholar-led journals</span>
+      </span>
+    </button>
+
+    <nav class="nav-tabs" role="tablist" aria-label="Sections">
+      <button class="nav-link active" role="tab" data-tab="home">Home</button>
+      <button class="nav-link" role="tab" data-tab="signatories">Signatories</button>
+      <button class="nav-link" role="tab" data-tab="join">Join</button>
+      <button class="nav-link" role="tab" data-tab="reviewers">For Reviewers</button>
+      <button class="nav-link" role="tab" data-tab="journals">For DOA Journals</button>
+      <button class="nav-link" role="tab" data-tab="faq">FAQ</button>
+      <button class="nav-link" role="tab" data-tab="who">Who are we?</button>
+    </nav>
+
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle colour theme" title="Toggle colour theme">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="app-main" id="app-main">
+<div class="container">
+
+<!-- ============================ HOME ============================ -->
+<section class="tab-pane active" id="tab-home" role="tabpanel">
+
+  <div class="hero">
+    <div class="hero-logo" id="hero-logo">
+      <!-- ===== Diamond Reviewer logo / badge ===== -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 550" width="100%" height="100%" role="img" aria-label="Diamond Reviewer badge">
+        <style>
+          .badge-text { font-family: 'Montserrat', 'Source Sans 3', 'Segoe UI', Arial, sans-serif; font-weight: 700; font-size: 22px; fill: #80deea; text-anchor: middle; letter-spacing: 4px; }
+        </style>
+        <polygon points="250,20 440,130 440,350 250,460 60,350 60,130" fill="#0a1128" stroke="#80deea" stroke-width="8" stroke-linejoin="round"/>
+        <g fill="none" stroke="#80deea" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+          <polygon points="250,100 340,180 250,300 160,180"/>
+          <line x1="190" y1="130" x2="310" y2="130"/>
+          <line x1="190" y1="130" x2="160" y2="180"/>
+          <line x1="310" y1="130" x2="340" y2="180"/>
+          <line x1="250" y1="100" x2="215" y2="180"/>
+          <line x1="250" y1="100" x2="285" y2="180"/>
+          <line x1="215" y1="180" x2="250" y2="300"/>
+          <line x1="285" y1="180" x2="250" y2="300"/>
+          <line x1="190" y1="130" x2="215" y2="180"/>
+          <line x1="310" y1="130" x2="285" y2="180"/>
+          <line x1="215" y1="180" x2="285" y2="180"/>
+        </g>
+        <line x1="150" y1="330" x2="350" y2="330" stroke="#80deea" stroke-width="4" stroke-linecap="round"/>
+        <text x="250" y="370" class="badge-text">DIAMOND</text>
+        <text x="250" y="400" class="badge-text">REVIEWER</text>
+      </svg>
+    </div>
+    <span class="hero-kicker">Diamond Reviewer Pledge</span>
+    <h1>Give your peer review to the journals that give it back</h1>
+  </div>
+
+  <div class="card">
+    <div class="card-body prose">
+      <p><strong>Diamond Open Access journals are academic journals that are led by scholars.</strong> They do not charge for
+      publication nor reading and, unlike commercial journals, they are aligned with scholarly interest. We believe that in a
+      world where much work is published and requires peer review, scholars should prioritize reviewing for such journals as
+      opposed to pay-to-publish or pay-to-read journals.</p>
+
+      <p>As signatories of the Diamond Reviewer Pledge, we commit to <strong>reviewing at least one article in the next 12
+      months for a diamond open access journal</strong>.</p>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" data-goto="join">Become a Diamond Reviewer</button>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">How do I know if a journal is diamond open access?</h2>
+  <p class="lede">
+    You can look up journals in the <a href="https://ddh.edch.eu/en" target="_blank" rel="noopener">Diamond Discovery Hub</a>,
+    though many new journals have been created and are not listed there yet. Alternatively, check via
+    <a href="https://lukasroeseler.github.io/openjournals/" target="_blank" rel="noopener">Open Journals</a> for the
+    <em>ACCESS</em> variable, or visit the journal’s website.
+  </p>
+
+  <div class="table-wrap">
+    <table class="oa-table">
+      <thead>
+        <tr>
+          <th scope="col">Open Access Type</th>
+          <th scope="col">Free-to-read</th>
+          <th scope="col">Free-to-publish</th>
+          <th scope="col">Authors retain copyright</th>
+          <th scope="col">Peer-reviewed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-diamond">
+          <td>Diamond</td>
+          <td><span class="mark mark-yes" title="Yes">✔</span></td>
+          <td><span class="mark mark-yes" title="Yes">✔</span></td>
+          <td><span class="mark mark-yes" title="Yes">✔</span></td>
+          <td><span class="mark mark-yes" title="Yes">✔</span></td>
+        </tr>
+        <tr>
+          <td>Gold</td>
+          <td><span class="mark mark-yes" title="Yes">✔</span></td>
+          <td><span class="mark mark-no" title="No — article processing charges">✖</span></td>
+          <td><span class="mark mark-q" title="Depends on the journal">?</span></td>
+          <td><span class="mark mark-yes" title="Yes">✔</span></td>
+        </tr>
+        <tr>
+          <td>Hybrid</td>
+          <td><span class="cell-cond">Only for paid articles</span></td>
+          <td><span class="cell-cond">Only for closed articles</span></td>
+          <td><span class="mark mark-q" title="Depends on the journal">?</span></td>
+          <td><span class="mark mark-yes" title="Yes">✔</span></td>
+        </tr>
+        <tr>
+          <td>Closed</td>
+          <td><span class="mark mark-no" title="No — paywalled">✖</span></td>
+          <td><span class="mark mark-yes" title="Yes">✔</span></td>
+          <td><span class="mark mark-no" title="No — copyright transfer">✖</span></td>
+          <td><span class="mark mark-yes" title="Yes">✔</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note" style="margin-top:var(--spacing-3)">
+    ✔ = yes &nbsp;·&nbsp; ✖ = no &nbsp;·&nbsp; ? = varies by journal. Diamond is the only model in which neither authors nor
+    readers pay, and in which the scholarly community keeps ownership of the venue.
+  </p>
+
+  <div class="share-row">
+    <span class="share-label">Spread the word</span>
+    <a class="share-btn" id="share-bluesky" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/></svg>
+      Bluesky
+    </a>
+    <button class="share-btn" id="share-mastodon" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057 0 0 0 .023-.043v-1.809a.052.052 0 0 0-.066-.051 20.282 20.282 0 0 1-4.709.545c-2.73 0-3.463-1.284-3.674-1.818a5.593 5.593 0 0 1-.319-1.433.053.053 0 0 1 .066-.054c1.517.363 3.072.546 4.632.546.376 0 .75 0 1.125-.01 1.57-.044 3.224-.124 4.768-.422.038-.008.077-.015.11-.024 2.435-.464 4.753-1.92 4.989-5.604.008-.145.03-1.52.03-1.67.002-.512.167-3.63-.024-5.545zm-3.748 9.195h-2.561V8.29c0-1.309-.55-1.976-1.67-1.976-1.23 0-1.846.79-1.846 2.35v3.403h-2.546V8.663c0-1.56-.617-2.35-1.848-2.35-1.112 0-1.668.668-1.67 1.977v6.218H4.822V8.102c0-1.31.337-2.35 1.011-3.12.696-.77 1.608-1.164 2.74-1.164 1.311 0 2.302.5 2.962 1.498l.638 1.06.638-1.06c.66-.999 1.65-1.498 2.96-1.498 1.13 0 2.043.395 2.74 1.164.675.77 1.012 1.81 1.012 3.12z"/></svg>
+      Mastodon
+    </button>
+    <a class="share-btn" id="share-linkedin" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+      LinkedIn
+    </a>
+    <button class="share-btn" id="share-copy" type="button">Copy link</button>
+  </div>
+</section>
+
+<!-- ======================== SIGNATORIES ========================= -->
+<section class="tab-pane" id="tab-signatories" role="tabpanel">
+  <h2 class="section-title">Signatories</h2>
+
+  <div class="count-band">
+    <span class="count-number" id="sig-count">—</span>
+    <span class="lede" style="margin:0">people have joined the Initiative.</span>
+  </div>
+
+  <div class="badge-panel">
+    <div class="badge-art" id="badge-slot"><!-- badge cloned here --></div>
+    <div class="badge-copy">
+      <h3>The Diamond Reviewer badge</h3>
+      <p class="note">Signatories are welcome to display the badge on their website, CV, slides or email signature.
+      Right-click the badge to save it, or download the source <a href="#" id="badge-download" download="diamond-reviewer-badge.svg">SVG file</a>.</p>
+    </div>
+  </div>
+
+  <ul class="sig-list" id="sig-list"><!-- rendered by JS --></ul>
+
+  <p class="note" style="margin-top:var(--spacing-4)">
+    <a href="#signatories" id="sig-full-link">View the full list of signatories →</a>
+    <!-- TODO: point this at the signatory page backed by the signature database. -->
+  </p>
+
+  <div class="btn-row">
+    <button class="btn btn-primary" data-goto="join">Become a Diamond Reviewer</button>
+  </div>
+</section>
+
+<!-- ============================ JOIN ============================ -->
+<section class="tab-pane" id="tab-join" role="tabpanel">
+  <h2 class="section-title">Join</h2>
+  <p class="lede">Sign the pledge: commit to reviewing at least one article in the next 12 months for a diamond open access journal.</p>
+
+  <div class="card">
+    <div class="card-body">
+      <form id="pledge-form" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input class="form-control" id="f-name" name="name" type="text" autocomplete="name" required placeholder="Jane Q. Scholar">
+          </div>
+          <div class="field">
+            <label for="f-aff">Your affiliation</label>
+            <input class="form-control" id="f-aff" name="affiliation" type="text" autocomplete="organization" required placeholder="University of Somewhere">
+          </div>
+          <div class="field">
+            <label for="f-email">Your email</label>
+            <input class="form-control" id="f-email" name="email" type="email" autocomplete="email" required placeholder="jane@university.edu">
+          </div>
+          <div class="field">
+            <label for="f-orcid">Your ORCID iD <span class="hint">(optional)</span></label>
+            <input class="form-control" id="f-orcid" name="orcid" type="text" placeholder="0000-0002-1825-0097" pattern="^\s*(https?://orcid\.org/)?\d{4}-\d{4}-\d{4}-\d{3}[\dXx]\s*$">
+          </div>
+        </div>
+
+        <label class="check-row" for="f-private">
+          <input type="checkbox" id="f-private" name="private">
+          <span>Keep your name private? Your entry will be listed as <em>[anonymous]</em> with your affiliation only.</span>
+        </label>
+
+        <label class="check-row" for="f-database">
+          <input type="checkbox" id="f-database" name="database">
+          <span>Enlist me in a future reviewer database for diamond OA journals.</span>
+        </label>
+
+        <div class="btn-row">
+          <button class="btn btn-diamond" type="submit">Sign</button>
+        </div>
+
+        <div class="form-status" id="form-status" hidden role="status"></div>
+
+        <p class="note" style="margin-top:var(--spacing-4)">
+          Your email address will be used to verify your signature and to email you with updates related to the initiative.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== FOR REVIEWERS ======================= -->
+<section class="tab-pane" id="tab-reviewers" role="tabpanel">
+  <h2 class="section-title">Guidelines for Reviewers</h2>
+  <p class="lede">Signing takes a minute; the pledge is about what you do with the next review request that lands in your inbox.
+  These guidelines are suggestions, not conditions of signing.</p>
+
+  <div class="card">
+    <div class="card-body prose">
+      <h3 class="section-title" style="margin-top:0">Before you say yes</h3>
+      <ul>
+        <li><strong>Check the journal’s model.</strong> Look it up in the <a href="https://ddh.edch.eu/en" target="_blank" rel="noopener">Diamond Discovery Hub</a>, in <a href="https://lukasroeseler.github.io/openjournals/" target="_blank" rel="noopener">Open Journals</a> (the <em>ACCESS</em> variable), in the <a href="https://doaj.org" target="_blank" rel="noopener">DOAJ</a> (which records “no APC”), or on the journal’s own “about” and “fees” pages.</li>
+        <li><strong>Give diamond requests priority.</strong> Diamond journals are usually run by a handful of volunteers with no editorial office to fall back on; a fast yes is worth much more there than at a journal with a paid managing editor.</li>
+        <li><strong>Budget your reviewing.</strong> Decide how many reviews per year you can do well (a common heuristic: about three reviews per paper you publish), and reserve at least one of those slots for a diamond venue.</li>
+      </ul>
+
+      <h3 class="section-title">Be proactive</h3>
+      <ul>
+        <li><strong>Volunteer.</strong> Most diamond journals have a “become a reviewer” form, or you can email the editors with your topics, methods and rough availability. Tick the reviewer-database box when you sign the pledge.</li>
+        <li><strong>Review preprints and community-review submissions.</strong> Peer Community In (PCI), diamond overlay journals and community-run review platforms all count.</li>
+        <li><strong>Suggest yourself as a reviewer</strong> when colleagues submit to diamond journals, and recommend diamond venues when you are asked where to submit.</li>
+      </ul>
+
+      <h3 class="section-title">Review well</h3>
+      <ul>
+        <li><strong>Be on time.</strong> Agree only to deadlines you can keep, and tell the editor immediately if you slip. Volunteer-run journals cannot absorb silent delays.</li>
+        <li><strong>Review the work, not the person.</strong> Be specific, civil and constructive; separate “this is wrong” from “this is not what I would have done”.</li>
+        <li><strong>Prioritise rigour over novelty.</strong> Assess the question, design, analysis and the match between claims and evidence. Ask for data, code and materials, and check them where you can.</li>
+        <li><strong>Say what would convince you.</strong> Actionable requests are worth more than a verdict.</li>
+        <li><strong>Declare conflicts of interest</strong> and use AI tools only within the journal’s policy — never paste an unpublished manuscript into a service that retains it.</li>
+      </ul>
+
+      <h3 class="section-title">Get, and give, credit</h3>
+      <ul>
+        <li><strong>Consider open review.</strong> Sign your report or allow it to be published with the article if the journal offers it; open reports are citable scholarly output.</li>
+        <li><strong>Record your reviews</strong> in ORCID (journals can deposit review activity via Crossref) and list them on your CV and in evaluations.</li>
+        <li><strong>Make the norm visible.</strong> Add the badge to your website or signature, and mention the pledge when you decline a request from a pay-to-publish or pay-to-read journal — e.g. “I have committed to prioritising peer review for diamond open access journals; I am happy to review for you if the article is openly available without an APC.”</li>
+      </ul>
+
+      <div class="callout">
+        <strong>The pledge is additive, not exclusive.</strong> Nobody is asking you to boycott anything. Reviewing one article
+        a year for a scholar-led journal is a floor, not a ceiling.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== FOR DOA JOURNALS ====================== -->
+<section class="tab-pane" id="tab-journals" role="tabpanel">
+  <h2 class="section-title">Guidelines for Members of DOA Journals</h2>
+  <p class="lede">Reviewers can only prioritise you if they can find you, recognise you as diamond, and trust that their time
+  will be used well. Editors, here is how to make that easy.</p>
+
+  <div class="card">
+    <div class="card-body prose">
+      <h3 class="section-title" style="margin-top:0">Be findable and legible as diamond</h3>
+      <ul>
+        <li><strong>State it on the landing page:</strong> “No article processing charges. No subscription. Authors retain copyright (CC BY).” One sentence, above the fold, not buried in a policies page.</li>
+        <li><strong>Register the facts</strong> in DOAJ, the Diamond Discovery Hub, OpenAlex and your indexing services, and keep the APC field explicitly at zero.</li>
+        <li><strong>Publish your scope, criteria and timelines</strong>, including median times to first decision and to publication.</li>
+      </ul>
+
+      <h3 class="section-title">Recruit reviewers deliberately</h3>
+      <ul>
+        <li><strong>Keep a public “review for us” form</strong> with expertise keywords, methods and availability, and actually use the resulting database.</li>
+        <li><strong>Invite pledge signatories</strong> and say so in the invitation: a line such as “We are a diamond open access journal — free to read, free to publish, authors retain copyright” raises acceptance rates.</li>
+        <li><strong>Recruit early-career researchers</strong>, ideally with a co-review or mentored-review scheme that credits both people by name.</li>
+      </ul>
+
+      <h3 class="section-title">Respect reviewer time — it is the journal’s only real budget</h3>
+      <ul>
+        <li><strong>Desk-screen properly.</strong> Never send out a manuscript that is out of scope, incomplete or unreadable.</li>
+        <li><strong>Ask precise questions.</strong> A short structured form beats “please comment on the manuscript”.</li>
+        <li><strong>Set realistic deadlines</strong> (three to four weeks), send one polite reminder, and never chase a reviewer who has already delivered.</li>
+        <li><strong>Limit rounds.</strong> Editors should adjudicate rather than forward every disagreement back to the reviewers.</li>
+        <li><strong>Close the loop.</strong> Send the decision letter and the other reports to every reviewer. This is the cheapest form of payment there is.</li>
+      </ul>
+
+      <h3 class="section-title">Credit the work</h3>
+      <ul>
+        <li><strong>Deposit review activity to ORCID via Crossref</strong>, and issue certificates on request.</li>
+        <li><strong>Publish an annual thank-you list</strong> of reviewers (with consent).</li>
+        <li><strong>Offer open, DOI-bearing reports</strong> for reviewers who want their work to be citable.</li>
+      </ul>
+
+      <h3 class="section-title">Stay diamond, sustainably</h3>
+      <ul>
+        <li><strong>Use community infrastructure</strong> (OJS, Janeway, Episciences, PKP Preservation Network, CLOCKSS) and get DOIs and long-term archiving in place.</li>
+        <li><strong>Fund the journal through institutions, libraries, consortia and grants</strong>, not through authors. Publish your funding model.</li>
+        <li><strong>Do not flip to APCs.</strong> If costs grow, share them across the community before shifting them onto authors.</li>
+        <li><strong>Adopt transparency policies</strong> (data, code and materials availability; preregistration where applicable; Registered Reports) so that reviewers can actually evaluate what they are asked to evaluate.</li>
+        <li><strong>Link to this pledge</strong> from your reviewer pages, and tell us about your journal so we can point reviewers to you.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FAQ ============================ -->
+<section class="tab-pane" id="tab-faq" role="tabpanel">
+  <h2 class="section-title">FAQ</h2>
+
+  <div class="card">
+    <div class="card-body">
+
+      <div class="faq-item open">
+        <button class="faq-question" aria-expanded="true">
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          Shouldn’t researchers rather review for high-ranking journals regardless of the commercial status?
+        </button>
+        <div class="faq-answer">
+          <p>Peer review is <strong>free labour</strong>. Researchers — largely paid from public money — write the papers, review
+          the papers and edit the journals. The publisher coordinates and typesets, and then charges for the result. Estimates of
+          the global value of unpaid reviewing run to well over a billion US dollars per year, and the large commercial publishers
+          report operating margins in the range of 30–40 %, which is money that leaves the science system permanently.</p>
+
+          <p>That business model also creates a <strong>structural conflict of interest</strong>. Under article processing charges,
+          every additional accepted manuscript is additional revenue, so the commercial incentive points towards volume, not towards
+          strict quality control. Reviewers are the brake in that system, and they are the only unpaid part of it. Asking whether the
+          brake should be donated to the party that profits from wearing it out is a fair question.</p>
+
+          <p>Meanwhile the people who pay for the research often cannot read it. Much of the literature written by publicly funded
+          researchers, reviewed by publicly funded researchers, sits behind paywalls that neither the general public, nor practitioners,
+          nor colleagues at less wealthy institutions can pass. Where it is open, it is frequently open because someone paid an
+          <strong>exorbitant APC</strong>: commonly USD 2,000–4,000, and up to roughly EUR 9,500 at the most prestigious titles — figures
+          far above plausible per-article production costs and unaffordable for most of the world’s researchers.</p>
+
+          <p>Large publishers have also become <strong>data businesses</strong>. Elsevier’s parent company RELX derives much of its
+          revenue from analytics and risk products; academic platforms track user behaviour, and researcher and usage data are
+          aggregated into products sold back to universities, funders and, in the case of other RELX units, to third parties including
+          government agencies. See the German Research Foundation’s briefing paper
+          <a href="https://doi.org/10.5281/zenodo.5937995" target="_blank" rel="noopener">“Data Tracking in Research”</a> (DFG, 2021) and
+          the <a href="https://sparcopen.org/our-work/addressing-the-alarming-systems-of-surveillance-built-by-library-vendors/" target="_blank" rel="noopener">SPARC</a>
+          work on vendor surveillance. Every review you donate helps sustain that infrastructure.</p>
+
+          <p>Finally, “high-ranking” is not a property of the publisher — it is produced by authors, editors and reviewers, and it can
+          be built elsewhere. Diamond journals such as the <em>Journal of Machine Learning Research</em>, <em>Journal of Statistical
+          Software</em>, <em>Glossa</em>, <em>Discrete Analysis</em>, <em>Peer Community Journal</em> and <em>Meta-Psychology</em>
+          demonstrate that fully free-to-read, free-to-publish, rigorously reviewed and highly cited venues are entirely possible.
+          Where you send your review is where you invest your scarce quality-assurance capacity. The pledge asks for one article per
+          year on the scholar-led side of the ledger — and none of it prevents you from also reviewing for the journals in your field
+          you consider important.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          What exactly counts as a diamond open access journal?
+        </button>
+        <div class="faq-answer">
+          <p>A peer-reviewed journal that charges <strong>neither readers nor authors</strong>, is typically owned and run by the
+          scholarly community rather than a commercial publisher, and normally lets authors retain copyright under an open licence.
+          Diamond overlay journals and community peer review platforms such as Peer Community In fall under the same spirit and
+          count for the pledge.</p>
+          <p>Waived or discounted APCs do not make a journal diamond — the model, not the individual exemption, is what matters.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          Do I have to stop reviewing for commercial journals?
+        </button>
+        <div class="faq-answer">
+          <p>No. The pledge is a floor, not a boycott: at least one review for a diamond journal in the next 12 months. Many
+          signatories will continue to review for society and commercial titles as well. If you do decline elsewhere, saying why is
+          the most useful part of the decision.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          What if no diamond journal invites me within 12 months?
+        </button>
+        <div class="faq-answer">
+          <p>Then be proactive: volunteer through a journal’s reviewer form, email editors in your area, tick the reviewer-database
+          box when you sign, or review a preprint through a community review platform. The pledge is a good-faith commitment; nobody
+          audits it, and nobody is penalised for a year in which the invitations did not arrive.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          Isn’t reviewing for small journals bad for my career?
+        </button>
+        <div class="faq-answer">
+          <p>Reviewing is rarely evaluated by venue prestige in the first place — it is counted as service. Diamond journals are
+          often better at crediting it: open, citable reports with DOIs, ORCID deposits and public reviewer lists. And because many
+          of these journals are young, reviewers with substantive expertise are frequently invited onto editorial boards, which is
+          service that <em>does</em> appear in evaluations.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          How is my data handled?
+        </button>
+        <div class="faq-answer">
+          <p>We collect your name, affiliation, email and optionally your ORCID iD. The email address is used to verify your
+          signature and to send occasional updates about the initiative; it is never displayed publicly, sold or shared. If you tick
+          “keep your name private”, only your affiliation appears in the public list. You can ask to be removed at any time.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========================== WHO ARE WE ======================== -->
+<section class="tab-pane" id="tab-who" role="tabpanel">
+  <h2 class="section-title">Who are we?</h2>
+  <p class="lede">The Diamond Reviewer Pledge is a small, volunteer-run initiative. It costs nothing to sign and nothing to run.</p>
+
+  <a class="person-tile" href="https://lukasroeseler.github.io/home/" target="_blank" rel="noopener">
+    <span class="tool-icon">LR</span>
+    <span class="tool-body">
+      <span class="tool-title">Lukas Röseler</span>
+      <span class="tool-desc">University of Münster</span>
+    </span>
+  </a>
+
+  <div class="callout" style="margin-top:var(--spacing-6)">
+    <strong>Want to help?</strong> If you would like to join the team, translate the pledge, or list your diamond journal here,
+    sign the pledge and reply to the confirmation email.
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer class="footer-bar">
+  <span>Diamond Reviewer Pledge — free to read, free to publish, scholar-led.</span>
+  <div>
+    <a href="https://ddh.edch.eu/en" target="_blank" rel="noopener">Diamond Discovery Hub</a>
+    <a href="https://lukasroeseler.github.io/openjournals/" target="_blank" rel="noopener">Open Journals</a>
+    <a href="https://doaj.org" target="_blank" rel="noopener">DOAJ</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------------------------------------------------------------
+     Config
+     --------------------------------------------------------------- */
+  var SITE_URL   = "https://diamondreviewerpledge.org";   // TODO: set the live URL
+  var FORM_ENDPOINT = "";                                  // TODO: POST endpoint for signatures
+  var SHARE_TEXT = "I signed the Diamond Reviewer Pledge: I commit to reviewing at least one article in the next 12 months for a diamond open access journal. Free to read, free to publish, scholar-led. Join us:";
+
+  /* Replace with data pulled from the signature database. */
+  var SIGNATORIES = [
+    { name: "Lukas Röseler", affiliation: "University of Münster", anonymous: false },
+    { name: "[anonymous]",   affiliation: "Erasmus University Rotterdam", anonymous: true }
+  ];
+
+  var $  = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  /* ---------------------------------------------------------------
+     Favicon from the inline logo
+     --------------------------------------------------------------- */
+  try {
+    var logoSvg = $("#hero-logo svg");
+    var svgText = new XMLSerializer().serializeToString(logoSvg);
+    var url = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svgText);
+    $("#favicon").setAttribute("href", url);
+    var dl = $("#badge-download"); if (dl) dl.setAttribute("href", url);
+  } catch (e) { /* non-fatal */ }
+
+  /* Clone the badge into the signatories panel */
+  var slot = $("#badge-slot");
+  if (slot && logoSvg) slot.appendChild(logoSvg.cloneNode(true));
+
+  /* ---------------------------------------------------------------
+     Theme
+     --------------------------------------------------------------- */
+  var stored = null;
+  try { stored = localStorage.getItem("drp-theme"); } catch (e) {}
+  if (!stored && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) stored = "dark";
+  if (stored) document.documentElement.setAttribute("data-theme", stored);
+
+  $("#theme-toggle").addEventListener("click", function () {
+    var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem("drp-theme", next); } catch (e) {}
+  });
+
+  /* ---------------------------------------------------------------
+     Tabs
+     --------------------------------------------------------------- */
+  var TABS = ["home", "signatories", "join", "reviewers", "journals", "faq", "who"];
+
+  function activate(name, push) {
+    if (TABS.indexOf(name) === -1) name = "home";
+    $$(".nav-link").forEach(function (b) {
+      var on = b.dataset.tab === name;
+      b.classList.toggle("active", on);
+      b.setAttribute("aria-selected", on ? "true" : "false");
+    });
+    $$(".tab-pane").forEach(function (p) { p.classList.toggle("active", p.id === "tab-" + name); });
+    $("#app-main").scrollTop = 0;
+    if (push !== false && location.hash.slice(1) !== name) history.replaceState(null, "", "#" + name);
+    document.title = (name === "home" ? "" : name.charAt(0).toUpperCase() + name.slice(1) + " · ") + "Diamond Reviewer Pledge";
+  }
+
+  $$(".nav-link").forEach(function (b) { b.addEventListener("click", function () { activate(b.dataset.tab); }); });
+  $$("[data-goto]").forEach(function (b) { b.addEventListener("click", function () { activate(b.dataset.goto); }); });
+  window.addEventListener("hashchange", function () { activate(location.hash.slice(1), false); });
+  activate(location.hash.slice(1) || "home", false);
+
+  $("#sig-full-link").addEventListener("click", function (e) { e.preventDefault(); activate("signatories"); });
+
+  /* ---------------------------------------------------------------
+     Signatories
+     --------------------------------------------------------------- */
+  (function renderSignatories() {
+    var list = $("#sig-list");
+    list.innerHTML = "";
+    SIGNATORIES.forEach(function (s) {
+      var li = document.createElement("li");
+      li.className = "sig-item";
+      li.innerHTML =
+        '<span class="sig-name' + (s.anonymous ? " anon" : "") + '"></span>' +
+        '<span class="sig-aff"></span>';
+      $(".sig-name", li).textContent = s.anonymous ? "[anonymous]" : s.name;
+      $(".sig-aff", li).textContent  = "from " + s.affiliation;
+      list.appendChild(li);
+    });
+    $("#sig-count").textContent = SIGNATORIES.length.toLocaleString();
+  })();
+
+  /* ---------------------------------------------------------------
+     Sharing
+     --------------------------------------------------------------- */
+  var shareUrl  = (location.protocol === "file:" ? SITE_URL : location.origin + location.pathname);
+  var shareFull = SHARE_TEXT + " " + shareUrl;
+
+  $("#share-bluesky").href  = "https://bsky.app/intent/compose?text=" + encodeURIComponent(shareFull);
+  $("#share-linkedin").href = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(shareUrl);
+
+  $("#share-mastodon").addEventListener("click", function () {
+    var host = "";
+    try { host = localStorage.getItem("drp-mastodon") || ""; } catch (e) {}
+    host = window.prompt("Your Mastodon instance (e.g. fediscience.org):", host || "mastodon.social");
+    if (!host) return;
+    host = host.trim().replace(/^https?:\/\//, "").replace(/\/+$/, "");
+    try { localStorage.setItem("drp-mastodon", host); } catch (e) {}
+    window.open("https://" + host + "/share?text=" + encodeURIComponent(shareFull), "_blank", "noopener");
+  });
+
+  $("#share-copy").addEventListener("click", function () {
+    var btn = this, old = btn.textContent;
+    var done = function () { btn.textContent = "Copied ✓"; setTimeout(function () { btn.textContent = old; }, 1600); };
+    if (navigator.clipboard) navigator.clipboard.writeText(shareFull).then(done, done);
+    else { window.prompt("Copy:", shareFull); }
+  });
+
+  /* ---------------------------------------------------------------
+     FAQ accordion
+     --------------------------------------------------------------- */
+  $$(".faq-question").forEach(function (q) {
+    q.addEventListener("click", function () {
+      var item = q.closest(".faq-item");
+      var open = item.classList.toggle("open");
+      q.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+
+  /* ---------------------------------------------------------------
+     Pledge form
+     --------------------------------------------------------------- */
+  $("#pledge-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var form = e.target, status = $("#form-status");
+
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+
+    var payload = {
+      name: $("#f-name").value.trim(),
+      affiliation: $("#f-aff").value.trim(),
+      email: $("#f-email").value.trim(),
+      orcid: $("#f-orcid").value.trim(),
+      private: $("#f-private").checked,
+      reviewer_database: $("#f-database").checked,
+      pledged_at: new Date().toISOString()
+    };
+
+    var show = function (msg) { status.hidden = false; status.innerHTML = msg; };
+
+    if (!FORM_ENDPOINT) {
+      // No backend wired up yet — echo the signature so the flow is testable.
+      show("<strong>Thank you, " + (payload.private ? "signatory" : payload.name.replace(/[<>&]/g, "")) +
+           "!</strong> The signature database is not connected yet, so nothing has been stored. " +
+           "Set <code>FORM_ENDPOINT</code> in the page script to start collecting signatures.");
+      console.log("Pledge signature (not submitted):", payload);
+      return;
+    }
+
+    show("Submitting…");
+    fetch(FORM_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    }).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      show("<strong>Thank you for signing.</strong> Please check your inbox — we have sent a verification email. " +
+           "Your name will appear in the list of signatories once you confirm.");
+      form.reset();
+    }).catch(function () {
+      status.hidden = false;
+      status.style.background = "var(--color-error-bg)";
+      status.style.borderLeftColor = "var(--color-error)";
+      status.innerHTML = "<strong>Something went wrong.</strong> Please try again later, or email us directly.";
+    });
+  });
+})();
+</script>
+</body>
+</html>
