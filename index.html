@@ -198,9 +198,8 @@ a { color: var(--color-primary); }
   background: rgb(var(--color-white-rgb) / .1);
   border: var(--border-width-hairline) solid rgb(var(--color-white-rgb) / .12);
   border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center;
-  color: var(--color-primary-on-chrome);
 }
-.brand-icon svg { width: 19px; height: 19px; display: block; }
+.brand-icon svg { width: 20px; height: 20px; display: block; }
 .brand-name { display: flex; flex-direction: column; line-height: var(--leading-tight); min-width: 0; text-align: left; }
 .brand-name strong { font-family: var(--font-display); font-size: var(--text-md); font-weight: var(--font-weight-bold); }
 .brand-name > span { font-size: var(--text-2xs); opacity: .55; letter-spacing: var(--tracking-wider); text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -323,7 +322,7 @@ a { color: var(--color-primary); }
   display: flex; flex-direction: column; align-items: center; text-align: center;
   padding: var(--spacing-6) var(--spacing-4) var(--spacing-8);
 }
-.hero-logo { width: 100%; max-width: 260px; }
+.hero-logo { width: 100%; max-width: 250px; }
 .hero h1 {
   font-size: var(--text-3xl); margin: var(--spacing-4) 0 var(--spacing-2);
   color: var(--color-text); letter-spacing: var(--tracking-tight); line-height: var(--leading-tight);
@@ -332,7 +331,29 @@ a { color: var(--color-primary); }
   font-size: var(--text-2xs); text-transform: uppercase; letter-spacing: var(--tracking-widest);
   font-weight: var(--font-weight-bold); color: var(--color-primary);
 }
-@media (max-width: 600px) { .hero h1 { font-size: var(--text-2xl); } .hero-logo { max-width: 190px; } }
+@media (max-width: 600px) { .hero h1 { font-size: var(--text-2xl); } .hero-logo { max-width: 185px; } }
+
+/* =============================================================
+   Stats
+   ============================================================= */
+.stat-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: var(--spacing-4); margin: var(--spacing-5) 0;
+}
+.stat {
+  background: var(--color-surface-subtle);
+  border: var(--border-width-hairline) solid var(--color-border-light);
+  border-left: var(--border-width-accent) solid var(--color-accent-strong);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  padding: var(--spacing-4);
+}
+.stat-value {
+  display: block; font-family: var(--font-display); font-size: var(--text-2xl);
+  font-weight: var(--font-weight-bold); color: var(--color-primary);
+  line-height: var(--leading-tight); letter-spacing: var(--tracking-tight);
+}
+.stat-label { display: block; font-size: var(--text-md); color: var(--color-text-secondary); line-height: var(--leading-normal); margin-top: var(--spacing-1); }
+.stat-src { display: block; font-size: var(--text-sm); margin-top: var(--spacing-2); }
 
 /* =============================================================
    OA comparison table
@@ -418,6 +439,7 @@ a { color: var(--color-primary); }
 .sig-name { font-family: var(--font-display); font-weight: var(--font-weight-semibold); font-size: var(--text-lg); color: var(--color-text); line-height: var(--leading-snug); }
 .sig-name.anon { font-style: italic; color: var(--color-text-secondary); }
 .sig-aff { font-size: var(--text-base); color: var(--color-text-muted); }
+.sig-since { font-size: var(--text-sm); color: var(--color-text-faint); }
 
 /* =============================================================
    Form
@@ -436,6 +458,15 @@ a { color: var(--color-primary); }
 .form-control:focus { outline: none; border-color: var(--color-primary); background: var(--color-surface-raised); box-shadow: var(--shadow-focus-primary); }
 .check-row { display: flex; align-items: flex-start; gap: var(--spacing-2-5); margin-top: var(--spacing-4); font-size: var(--text-md); color: var(--color-text-secondary); }
 .check-row input[type="checkbox"] { width: 18px; height: 18px; margin-top: 3px; accent-color: var(--color-primary); flex-shrink: 0; }
+.check-group {
+  margin-top: var(--spacing-5); padding-top: var(--spacing-2);
+  border-top: var(--border-width-hairline) solid var(--color-border-light);
+}
+.check-group > .group-label {
+  font-size: var(--text-xs); font-weight: var(--font-weight-bold);
+  letter-spacing: var(--tracking-wider); text-transform: uppercase;
+  color: var(--color-text-muted); margin-top: var(--spacing-3); display: block;
+}
 .form-status {
   margin-top: var(--spacing-4); padding: var(--spacing-3) var(--spacing-4);
   border-radius: 0 var(--radius-md) var(--radius-md) 0; font-size: var(--text-md);
@@ -468,7 +499,7 @@ a { color: var(--color-primary); }
 .faq-answer li { margin-bottom: var(--spacing-1-5); }
 
 /* =============================================================
-   People
+   People / linked tiles
    ============================================================= */
 .person-tile {
   display: flex; align-items: flex-start; gap: var(--spacing-3);
@@ -486,8 +517,8 @@ a { color: var(--color-primary); }
   color: var(--color-primary); border: var(--border-width-hairline) solid var(--color-primary-border);
   font-family: var(--font-display); font-weight: var(--font-weight-bold); font-size: var(--text-md);
 }
-.person-tile .tool-title { font-family: var(--font-display); font-weight: var(--font-weight-semibold); font-size: var(--text-xl); }
-.person-tile .tool-desc { color: var(--color-text-secondary); font-size: var(--text-md); line-height: var(--leading-normal); }
+.person-tile .tool-title { font-family: var(--font-display); font-weight: var(--font-weight-semibold); font-size: var(--text-xl); display: block; }
+.person-tile .tool-desc { color: var(--color-text-secondary); font-size: var(--text-md); line-height: var(--leading-normal); display: block; }
 </style>
 </head>
 
@@ -498,12 +529,15 @@ a { color: var(--color-primary); }
   <div class="top-bar-inner">
     <button class="brand-mark" data-goto="home" aria-label="Diamond Reviewer Pledge — home">
       <span class="brand-icon">
-        <svg viewBox="0 0 200 200" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="11" stroke-linejoin="round" stroke-linecap="round">
-          <polygon points="100,28 160,80 100,172 40,80"/>
-          <line x1="60" y1="48" x2="140" y2="48"/>
-          <line x1="60" y1="48" x2="40" y2="80"/>
-          <line x1="140" y1="48" x2="160" y2="80"/>
-          <line x1="63" y1="80" x2="137" y2="80"/>
+        <!-- Simplified brilliant-cut mark, matches the hero gem silhouette -->
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <g stroke="#0a1128" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+            <polygon points="44,88 72,55 100,55 100,88" fill="#e0f7fa"/>
+            <polygon points="100,55 128,55 156,88 100,88" fill="#80deea"/>
+            <polygon points="44,88 100,88 100,158" fill="#4dd0e1"/>
+            <polygon points="100,88 156,88 100,158" fill="#00acc1"/>
+            <polygon points="44,88 72,55 128,55 156,88 100,158" fill="none" stroke-width="9"/>
+          </g>
         </svg>
       </span>
       <span class="brand-name">
@@ -537,40 +571,51 @@ a { color: var(--color-primary); }
 
   <div class="hero">
     <div class="hero-logo" id="hero-logo">
-      <!-- ===== Diamond Reviewer logo / badge ===== -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 550" width="100%" height="100%" role="img" aria-label="Diamond Reviewer badge">
-        <style>
-          .badge-text { font-family: 'Montserrat', 'Source Sans 3', 'Segoe UI', Arial, sans-serif; font-weight: 700; font-size: 22px; fill: #80deea; text-anchor: middle; letter-spacing: 4px; }
-        </style>
-        <polygon points="250,20 440,130 440,350 250,460 60,350 60,130" fill="#0a1128" stroke="#80deea" stroke-width="8" stroke-linejoin="round"/>
-        <g fill="none" stroke="#80deea" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
-          <polygon points="250,100 340,180 250,300 160,180"/>
-          <line x1="190" y1="130" x2="310" y2="130"/>
-          <line x1="190" y1="130" x2="160" y2="180"/>
-          <line x1="310" y1="130" x2="340" y2="180"/>
-          <line x1="250" y1="100" x2="215" y2="180"/>
-          <line x1="250" y1="100" x2="285" y2="180"/>
-          <line x1="215" y1="180" x2="250" y2="300"/>
-          <line x1="285" y1="180" x2="250" y2="300"/>
-          <line x1="190" y1="130" x2="215" y2="180"/>
-          <line x1="310" y1="130" x2="285" y2="180"/>
-          <line x1="215" y1="180" x2="285" y2="180"/>
+      <!-- ===== Diamond Reviewer badge — cartoon brilliant-cut gem ===== -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 480" width="100%" height="100%" role="img" aria-label="Diamond Reviewer badge">
+        <!-- hexagon plate -->
+        <polygon points="250,18 442,128 442,352 250,462 58,352 58,128"
+                 fill="#0a1128" stroke="#80deea" stroke-width="8" stroke-linejoin="round"/>
+
+        <!-- sparkles -->
+        <g fill="#e0f7fa">
+          <path d="M128,94 L131.8,106.2 L144,110 L131.8,113.8 L128,126 L124.2,113.8 L112,110 L124.2,106.2 Z"/>
+          <path d="M392,119 L394.6,127.4 L403,130 L394.6,132.6 L392,141 L389.4,132.6 L381,130 L389.4,127.4 Z" opacity=".8"/>
+          <path d="M350,237 L353.1,246.9 L363,250 L353.1,253.1 L350,263 L346.9,253.1 L337,250 L346.9,246.9 Z" opacity=".6"/>
         </g>
-        <line x1="150" y1="330" x2="350" y2="330" stroke="#80deea" stroke-width="4" stroke-linecap="round"/>
-        <text x="250" y="370" class="badge-text">DIAMOND</text>
-        <text x="250" y="400" class="badge-text">REVIEWER</text>
+
+        <!-- gem facets -->
+        <g stroke="#0a1128" stroke-width="4" stroke-linejoin="round">
+          <polygon points="118,172 182,105 182,172" fill="#b2ebf2"/>
+          <polygon points="182,105 250,105 250,172 182,172" fill="#e0f7fa"/>
+          <polygon points="250,105 318,105 318,172 250,172" fill="#80deea"/>
+          <polygon points="318,105 382,172 318,172" fill="#4dd0e1"/>
+          <polygon points="118,172 182,172 250,296" fill="#4dd0e1"/>
+          <polygon points="182,172 250,172 250,296" fill="#80deea"/>
+          <polygon points="250,172 318,172 250,296" fill="#26c6da"/>
+          <polygon points="318,172 382,172 250,296" fill="#0097a7"/>
+          <polygon points="118,172 182,105 318,105 382,172 250,296"
+                   fill="none" stroke="#0a1128" stroke-width="6"/>
+        </g>
+
+        <!-- wordmark -->
+        <line x1="145" y1="320" x2="355" y2="320" stroke="#80deea" stroke-width="4" stroke-linecap="round"/>
+        <text x="250" y="356" fill="#80deea" font-family="'Source Sans 3', 'Segoe UI', Arial, sans-serif"
+              font-size="26" font-weight="700" letter-spacing="5" text-anchor="middle">DIAMOND</text>
+        <text x="250" y="390" fill="#80deea" font-family="'Source Sans 3', 'Segoe UI', Arial, sans-serif"
+              font-size="26" font-weight="700" letter-spacing="5" text-anchor="middle">REVIEWER</text>
       </svg>
     </div>
     <span class="hero-kicker">Diamond Reviewer Pledge</span>
-    <h1>Give your peer review to the journals that give it back</h1>
+    <h1>Give your peer review to the journals that give back</h1>
   </div>
 
   <div class="card">
     <div class="card-body prose">
       <p><strong>Diamond Open Access journals are academic journals that are led by scholars.</strong> They do not charge for
-      publication nor reading and, unlike commercial journals, they are aligned with scholarly interest. We believe that in a
-      world where much work is published and requires peer review, scholars should prioritize reviewing for such journals as
-      opposed to pay-to-publish or pay-to-read journals.</p>
+      publication or reading and, unlike commercial journals, they are aligned with scholarly interest. We believe that in a
+      world where an increasing amount of work is submitted for publication and requires peer review, scholars should
+      prioritize reviewing for such journals as opposed to pay-to-publish or pay-to-read journals.</p>
 
       <p>As signatories of the Diamond Reviewer Pledge, we commit to <strong>reviewing at least one article in the next 12
       months for a diamond open access journal</strong>.</p>
@@ -581,13 +626,53 @@ a { color: var(--color-primary); }
     </div>
   </div>
 
-  <h2 class="section-title">How do I know if a journal is diamond open access?</h2>
+  <!-- ---------------------- WHY ---------------------- -->
+  <h2 class="section-title">Why it matters where you send your reviews</h2>
   <p class="lede">
-    You can look up journals in the <a href="https://ddh.edch.eu/en" target="_blank" rel="noopener">Diamond Discovery Hub</a>,
-    though many new journals have been created and are not listed there yet. Alternatively, check via
-    <a href="https://lukasroeseler.github.io/openjournals/" target="_blank" rel="noopener">Open Journals</a> for the
-    <em>ACCESS</em> variable, or visit the journal’s website.
+    Peer review is unpaid work. Researchers, most of them on public salaries, write the papers, review them and edit the
+    journals. Publishers organise that work and charge for the result.
   </p>
+
+  <!-- TODO(refs): replace "Source" with author + short title once the two arXiv
+       preprints are confirmed. The first ID (2608.16322) looks like a typo —
+       arXiv IDs beginning 2608 would be August 2026. Verify before launch. -->
+  <div class="stat-grid">
+    <div class="stat">
+      <span class="stat-value">&gt; 15 billion USD</span>
+      <span class="stat-label">Estimated global spending on journal publishing between 2019 and 2025.</span>
+      <a class="stat-src" href="https://arxiv.org/pdf/2608.16322" target="_blank" rel="noopener">Source (arXiv) →</a>
+    </div>
+    <div class="stat">
+      <span class="stat-value">&gt; 30 %</span>
+      <span class="stat-label">Operating profit margin at the largest commercial publishers.</span>
+      <a class="stat-src" href="https://arxiv.org/abs/2511.04820" target="_blank" rel="noopener">Source (arXiv) →</a>
+    </div>
+  </div>
+
+  <p class="prose">That money leaves the research system and does not come back. Diamond journals charge no one: your review
+  stays inside the community that produced the work, and the article it improves can be read by anyone, including the people
+  whose taxes paid for it.</p>
+
+  <!-- ---------------------- FINDING A DOA JOURNAL ---------------------- -->
+  <h2 class="section-title">How do I know if a journal is diamond open access?</h2>
+  <p class="lede">Four places to check, in roughly the order we would try them.</p>
+
+  <!-- TODO(resources): decide which further entries from "Where & how to find a
+       DOA journal" (Zenodo) to add here. Candidates discussed: OpenAlex APC
+       filter, Free Journal Network, Redalyc/SciELO, DOAB for books. -->
+  <div class="card">
+    <div class="card-body prose">
+      <ul>
+        <li><a href="https://ddh.edch.eu/en" target="_blank" rel="noopener">Diamond Discovery Hub</a> — a directory of diamond
+        journals. Many newer journals are not listed there yet.</li>
+        <li><a href="https://doaj.org" target="_blank" rel="noopener">DOAJ</a> — filter for journals "without fees", which
+        records that a journal charges no article processing charge.</li>
+        <li><a href="https://lukasroeseler.github.io/openjournals/" target="_blank" rel="noopener">Open Journals</a> — check the
+        <em>PUBLISHING MODEL</em> variable.</li>
+        <li>The journal's own website, usually under "about", "fees" or "author guidelines".</li>
+      </ul>
+    </div>
+  </div>
 
   <div class="table-wrap">
     <table class="oa-table">
@@ -633,8 +718,8 @@ a { color: var(--color-primary); }
     </table>
   </div>
   <p class="note" style="margin-top:var(--spacing-3)">
-    ✔ = yes &nbsp;·&nbsp; ✖ = no &nbsp;·&nbsp; ? = varies by journal. Diamond is the only model in which neither authors nor
-    readers pay, and in which the scholarly community keeps ownership of the venue.
+    ✔ = yes &nbsp;·&nbsp; ✖ = no &nbsp;·&nbsp; ? = varies by journal. In the diamond model neither authors nor readers pay, and
+    the scholarly community owns the publication.
   </p>
 
   <div class="share-row">
@@ -712,15 +797,40 @@ a { color: var(--color-primary); }
           </div>
         </div>
 
-        <label class="check-row" for="f-private">
-          <input type="checkbox" id="f-private" name="private">
-          <span>Keep your name private? Your entry will be listed as <em>[anonymous]</em> with your affiliation only.</span>
-        </label>
+        <div class="check-group">
+          <span class="group-label">What appears publicly</span>
 
-        <label class="check-row" for="f-database">
-          <input type="checkbox" id="f-database" name="database">
-          <span>Enlist me in a future reviewer database for diamond OA journals.</span>
-        </label>
+          <label class="check-row" for="f-private">
+            <input type="checkbox" id="f-private" name="private">
+            <span>Keep my <strong>name</strong> private. My entry will be listed as <em>[anonymous]</em> with my affiliation only.</span>
+          </label>
+
+          <label class="check-row" for="f-show-orcid">
+            <input type="checkbox" id="f-show-orcid" name="show_orcid">
+            <span>Show my <strong>ORCID iD</strong> next to my name in the public list.</span>
+          </label>
+
+          <p class="note" style="margin:var(--spacing-2) 0 0 var(--spacing-7)">
+            Your email address is never published. The date you sign is recorded and shown as a month, e.g. "signed March 2026".
+          </p>
+        </div>
+
+        <div class="check-group">
+          <span class="group-label">Staying in touch</span>
+
+          <!-- FOR DISCUSSION: contact consent as opt-in (below) vs. bundled into
+               the act of signing. Opt-in is the safer reading of GDPR Art. 6(1)(a)
+               and is what PRO and the Preregistration Pledge do. -->
+          <label class="check-row" for="f-contact">
+            <input type="checkbox" id="f-contact" name="contact">
+            <span>You may email me occasionally about the initiative. We expect to send at most a few emails a year.</span>
+          </label>
+
+          <label class="check-row" for="f-database">
+            <input type="checkbox" id="f-database" name="database">
+            <span>Enlist me in a future reviewer database for diamond OA journals.</span>
+          </label>
+        </div>
 
         <div class="btn-row">
           <button class="btn btn-diamond" type="submit">Sign</button>
@@ -728,9 +838,13 @@ a { color: var(--color-primary); }
 
         <div class="form-status" id="form-status" hidden role="status"></div>
 
-        <p class="note" style="margin-top:var(--spacing-4)">
-          Your email address will be used to verify your signature and to email you with updates related to the initiative.
-        </p>
+        <div class="callout" style="margin-top:var(--spacing-5)">
+          <strong>What we do with your data.</strong> We store your name, affiliation, email address, the date you signed and,
+          if you give one, your ORCID iD. The email address is used to confirm that you signed and is never published, sold or
+          shared. Only your name and affiliation appear in the public list, minus whatever you asked us to hide. Every email we
+          send contains a link that deletes your entry.
+          <a href="#faq" data-goto="faq">More detail in the FAQ →</a>
+        </div>
       </form>
     </div>
   </div>
@@ -739,44 +853,47 @@ a { color: var(--color-primary); }
 <!-- ======================== FOR REVIEWERS ======================= -->
 <section class="tab-pane" id="tab-reviewers" role="tabpanel">
   <h2 class="section-title">Guidelines for Reviewers</h2>
-  <p class="lede">Signing takes a minute; the pledge is about what you do with the next review request that lands in your inbox.
-  These guidelines are suggestions, not conditions of signing.</p>
+  <p class="lede">Signing takes a minute. The pledge is about what you do with the next review request in your inbox.
+  These guidelines are suggestions, not requirements for signing.</p>
 
   <div class="card">
     <div class="card-body prose">
       <h3 class="section-title" style="margin-top:0">Before you say yes</h3>
       <ul>
-        <li><strong>Check the journal’s model.</strong> Look it up in the <a href="https://ddh.edch.eu/en" target="_blank" rel="noopener">Diamond Discovery Hub</a>, in <a href="https://lukasroeseler.github.io/openjournals/" target="_blank" rel="noopener">Open Journals</a> (the <em>ACCESS</em> variable), in the <a href="https://doaj.org" target="_blank" rel="noopener">DOAJ</a> (which records “no APC”), or on the journal’s own “about” and “fees” pages.</li>
-        <li><strong>Give diamond requests priority.</strong> Diamond journals are usually run by a handful of volunteers with no editorial office to fall back on; a fast yes is worth much more there than at a journal with a paid managing editor.</li>
-        <li><strong>Budget your reviewing.</strong> Decide how many reviews per year you can do well (a common heuristic: about three reviews per paper you publish), and reserve at least one of those slots for a diamond venue.</li>
+        <li><strong>Check the journal's publishing model.</strong> Look it up in the <a href="https://ddh.edch.eu/en" target="_blank" rel="noopener">Diamond Discovery Hub</a>, in <a href="https://lukasroeseler.github.io/openjournals/" target="_blank" rel="noopener">Open Journals</a> (the <em>PUBLISHING MODEL</em> variable), in the <a href="https://doaj.org" target="_blank" rel="noopener">DOAJ</a> (which records "no APC"), or on the journal's own "about" and "fees" pages.</li>
+        <li><strong>Give diamond requests priority.</strong> Diamond journals are usually run by a handful of volunteers with no editorial office staff to fall back on. A fast yes is worth much more there than at a journal with a paid managing editor.</li>
+        <li><strong>Budget your reviewing.</strong> Decide how many reviews per year you can do well (a common heuristic: about three reviews per paper you publish), and reserve at least one of those slots for a diamond journal.</li>
+        <li><strong>Commit only when you have capacity.</strong> When accepting a peer review request, ensure that you have the capacity to deliver the review in a timely manner.</li>
       </ul>
 
       <h3 class="section-title">Be proactive</h3>
       <ul>
-        <li><strong>Volunteer.</strong> Most diamond journals have a “become a reviewer” form, or you can email the editors with your topics, methods and rough availability. Tick the reviewer-database box when you sign the pledge.</li>
-        <li><strong>Review preprints and community-review submissions.</strong> Peer Community In (PCI), diamond overlay journals and community-run review platforms all count.</li>
-        <li><strong>Suggest yourself as a reviewer</strong> when colleagues submit to diamond journals, and recommend diamond venues when you are asked where to submit.</li>
+        <li><strong>Volunteer.</strong> Most diamond journals have a "become a reviewer" form. If they don't, you can email the editors to express your availability. Tick the reviewer database box when you sign the pledge.</li>
+        <!-- FOR DISCUSSION: kept PCI, dropped the vaguer "overlay journals and
+             community-run review platforms". FAQ entry added to explain PCI. -->
+        <li><strong>Review preprints through Peer Community In.</strong> <a href="https://peercommunityin.org" target="_blank" rel="noopener">PCI</a> organises free public review of preprints, and neither authors nor readers pay. Those reviews count for the pledge.</li>
+        <li><strong>Submit to diamond journals yourself</strong>, and recommend them when colleagues ask you where to submit.</li>
       </ul>
 
       <h3 class="section-title">Review well</h3>
       <ul>
-        <li><strong>Be on time.</strong> Agree only to deadlines you can keep, and tell the editor immediately if you slip. Volunteer-run journals cannot absorb silent delays.</li>
-        <li><strong>Review the work, not the person.</strong> Be specific, civil and constructive; separate “this is wrong” from “this is not what I would have done”.</li>
-        <li><strong>Prioritise rigour over novelty.</strong> Assess the question, design, analysis and the match between claims and evidence. Ask for data, code and materials, and check them where you can.</li>
+        <li><strong>Be on time.</strong> Agree only to deadlines you can keep, and tell the editor immediately if you slip. Volunteer-run journals have more difficulty accommodating silent delays.</li>
+        <li><strong>Review the work, not the author.</strong> Be civil, specific, and constructive. Separate "this is wrong" from "this is not what I would have done". Write the type of review you would like to receive yourself.</li>
+        <li><strong>Prioritise rigour over novelty.</strong> Assess the question, design, analysis, and the match between claims and evidence. Ask for materials, data, code, and check them where you can.</li>
         <li><strong>Say what would convince you.</strong> Actionable requests are worth more than a verdict.</li>
-        <li><strong>Declare conflicts of interest</strong> and use AI tools only within the journal’s policy — never paste an unpublished manuscript into a service that retains it.</li>
+        <li><strong>Declare conflicts of interest</strong> and use AI tools only within the journal's policy — never paste an unpublished manuscript into a service that retains it.</li>
       </ul>
 
-      <h3 class="section-title">Get, and give, credit</h3>
+      <h3 class="section-title">Get and give credit</h3>
       <ul>
-        <li><strong>Consider open review.</strong> Sign your report or allow it to be published with the article if the journal offers it; open reports are citable scholarly output.</li>
-        <li><strong>Record your reviews</strong> in ORCID (journals can deposit review activity via Crossref) and list them on your CV and in evaluations.</li>
-        <li><strong>Make the norm visible.</strong> Add the badge to your website or signature, and mention the pledge when you decline a request from a pay-to-publish or pay-to-read journal — e.g. “I have committed to prioritising peer review for diamond open access journals; I am happy to review for you if the article is openly available without an APC.”</li>
+        <li><strong>Consider open review.</strong> Sign your report or allow it to be published with the article if the journal offers it. Open reports are citable scholarly output. They tend to be more constructive and allow the authors to reach out in case of questions.</li>
+        <li><strong>Record your reviews in ORCID</strong> and list them on your CV and in evaluations. Journals can deposit review activity via Crossref.</li>
+        <li><strong>Make the norm visible.</strong> Add the badge to your website or signature, and mention the pledge when you decline a request from a pay-to-publish or pay-to-read journal — e.g. "I have committed to prioritising peer review for diamond open access journals. I am happy to review for you if the article is openly available without an APC."</li>
       </ul>
 
       <div class="callout">
-        <strong>The pledge is additive, not exclusive.</strong> Nobody is asking you to boycott anything. Reviewing one article
-        a year for a scholar-led journal is a floor, not a ceiling.
+        <strong>The pledge is complementary, not restrictive.</strong> Nobody is asking you to boycott anything. One article a
+        year for a scholar-led journal is the minimum, and you are welcome to do more.
       </div>
     </div>
   </div>
@@ -785,32 +902,33 @@ a { color: var(--color-primary); }
 <!-- ====================== FOR DOA JOURNALS ====================== -->
 <section class="tab-pane" id="tab-journals" role="tabpanel">
   <h2 class="section-title">Guidelines for Members of DOA Journals</h2>
-  <p class="lede">Reviewers can only prioritise you if they can find you, recognise you as diamond, and trust that their time
-  will be used well. Editors, here is how to make that easy.</p>
+  <p class="lede">Reviewers can only prioritise you if they can find you and recognise you as diamond. Editors, here is how to
+  make that easy.</p>
 
   <div class="card">
     <div class="card-body prose">
       <h3 class="section-title" style="margin-top:0">Be findable and legible as diamond</h3>
       <ul>
-        <li><strong>State it on the landing page:</strong> “No article processing charges. No subscription. Authors retain copyright (CC BY).” One sentence, above the fold, not buried in a policies page.</li>
-        <li><strong>Register the facts</strong> in DOAJ, the Diamond Discovery Hub, OpenAlex and your indexing services, and keep the APC field explicitly at zero.</li>
-        <li><strong>Publish your scope, criteria and timelines</strong>, including median times to first decision and to publication.</li>
+        <li><strong>State it on the landing page:</strong> "No article processing charges. No subscription. Authors retain copyright (CC BY)." One sentence, above the fold, not buried in a policies page.</li>
+        <li><strong>Register the facts</strong> in DOAJ, the Diamond Discovery Hub, OpenAlex, and your indexing services, and keep the APC field explicitly at zero.</li>
+        <li><strong>Publish your scope, criteria, and timelines</strong>, including median times to first decision and to publication.</li>
       </ul>
 
       <h3 class="section-title">Recruit reviewers deliberately</h3>
       <ul>
-        <li><strong>Keep a public “review for us” form</strong> with expertise keywords, methods and availability, and actually use the resulting database.</li>
-        <li><strong>Invite pledge signatories</strong> and say so in the invitation: a line such as “We are a diamond open access journal — free to read, free to publish, authors retain copyright” raises acceptance rates.</li>
+        <li><strong>Keep a public "review for us" form</strong> with expertise keywords, methods and availability, and actually use the resulting database.</li>
+        <li><strong>Invite pledge signatories</strong> and say so in the invitation. A line such as "We are a diamond open access journal — free to read, free to publish, authors retain copyright" raises acceptance rates.</li>
         <li><strong>Recruit early-career researchers</strong>, ideally with a co-review or mentored-review scheme that credits both people by name.</li>
+        <li><strong>Link to this pledge</strong> from your reviewer pages, and tell us about your journal so we can point reviewers to you.</li>
       </ul>
 
-      <h3 class="section-title">Respect reviewer time — it is the journal’s only real budget</h3>
+      <h3 class="section-title">Respect reviewer time — it is the journal's only real budget</h3>
       <ul>
-        <li><strong>Desk-screen properly.</strong> Never send out a manuscript that is out of scope, incomplete or unreadable.</li>
-        <li><strong>Ask precise questions.</strong> A short structured form beats “please comment on the manuscript”.</li>
-        <li><strong>Set realistic deadlines</strong> (three to four weeks), send one polite reminder, and never chase a reviewer who has already delivered.</li>
-        <li><strong>Limit rounds.</strong> Editors should adjudicate rather than forward every disagreement back to the reviewers.</li>
-        <li><strong>Close the loop.</strong> Send the decision letter and the other reports to every reviewer. This is the cheapest form of payment there is.</li>
+        <li><strong>Desk-screen properly.</strong> Never send out a manuscript that is out of scope, incomplete, or unreadable.</li>
+        <li><strong>Set realistic deadlines</strong> (three to four weeks) and send polite reminders when reviewers are late.</li>
+        <li><strong>Provide editorial guidance.</strong> Editors should adjudicate rather than forward every disagreement back to the reviewers.</li>
+        <li><strong>Close the loop.</strong> Send the decision letter and the other reports to every reviewer. It costs nothing and provides reviewers with valuable feedback.</li>
+        <li><strong>Adopt transparency policies</strong> (data, code, and materials availability; preregistration where applicable; Registered Reports) so that reviewers can actually evaluate what they are asked to evaluate.</li>
       </ul>
 
       <h3 class="section-title">Credit the work</h3>
@@ -825,8 +943,6 @@ a { color: var(--color-primary); }
         <li><strong>Use community infrastructure</strong> (OJS, Janeway, Episciences, PKP Preservation Network, CLOCKSS) and get DOIs and long-term archiving in place.</li>
         <li><strong>Fund the journal through institutions, libraries, consortia and grants</strong>, not through authors. Publish your funding model.</li>
         <li><strong>Do not flip to APCs.</strong> If costs grow, share them across the community before shifting them onto authors.</li>
-        <li><strong>Adopt transparency policies</strong> (data, code and materials availability; preregistration where applicable; Registered Reports) so that reviewers can actually evaluate what they are asked to evaluate.</li>
-        <li><strong>Link to this pledge</strong> from your reviewer pages, and tell us about your journal so we can point reviewers to you.</li>
       </ul>
     </div>
   </div>
@@ -842,40 +958,38 @@ a { color: var(--color-primary); }
       <div class="faq-item open">
         <button class="faq-question" aria-expanded="true">
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-          Shouldn’t researchers rather review for high-ranking journals regardless of the commercial status?
+          Shouldn't researchers rather review for high-ranking journals regardless of the commercial status?
         </button>
         <div class="faq-answer">
           <p>Peer review is <strong>free labour</strong>. Researchers — largely paid from public money — write the papers, review
-          the papers and edit the journals. The publisher coordinates and typesets, and then charges for the result. Estimates of
-          the global value of unpaid reviewing run to well over a billion US dollars per year, and the large commercial publishers
-          report operating margins in the range of 30–40 %, which is money that leaves the science system permanently.</p>
+          them and edit the journals. The publisher organises and typesets, then charges for the result. Aczel, Szászi and
+          Holcombe <a href="https://doi.org/10.1186/s41073-021-00118-2" target="_blank" rel="noopener">put the 2020 value of
+          reviewers' unpaid time at over one billion US dollars</a> for the US and UK alone.</p>
 
-          <p>That business model also creates a <strong>structural conflict of interest</strong>. Under article processing charges,
-          every additional accepted manuscript is additional revenue, so the commercial incentive points towards volume, not towards
-          strict quality control. Reviewers are the brake in that system, and they are the only unpaid part of it. Asking whether the
-          brake should be donated to the party that profits from wearing it out is a fair question.</p>
+          <p>The business model also creates a <strong>structural conflict of interest</strong>. Under article processing charges,
+          every additional accepted manuscript is additional revenue, so the commercial incentive points towards volume rather
+          than towards strict quality control. Reviewers are the only unpaid part of the quality-control chain, and the party that
+          profits from a fast acceptance is not the party doing the checking.</p>
 
           <p>Meanwhile the people who pay for the research often cannot read it. Much of the literature written by publicly funded
-          researchers, reviewed by publicly funded researchers, sits behind paywalls that neither the general public, nor practitioners,
-          nor colleagues at less wealthy institutions can pass. Where it is open, it is frequently open because someone paid an
-          <strong>exorbitant APC</strong>: commonly USD 2,000–4,000, and up to roughly EUR 9,500 at the most prestigious titles — figures
-          far above plausible per-article production costs and unaffordable for most of the world’s researchers.</p>
+          researchers and reviewed by publicly funded researchers sits behind paywalls that the general public, practitioners and
+          colleagues at less wealthy institutions cannot pass. Where it is open, it is frequently open because someone paid an
+          APC: commonly USD 2,000–4,000, and up to roughly EUR 9,500 at the most prestigious titles. Those figures sit far above
+          plausible per-article production costs and are unaffordable for most of the world's researchers.</p>
 
-          <p>Large publishers have also become <strong>data businesses</strong>. Elsevier’s parent company RELX derives much of its
+          <p>Large publishers have also become <strong>data businesses</strong>. Elsevier's parent company RELX makes much of its
           revenue from analytics and risk products; academic platforms track user behaviour, and researcher and usage data are
-          aggregated into products sold back to universities, funders and, in the case of other RELX units, to third parties including
-          government agencies. See the German Research Foundation’s briefing paper
-          <a href="https://doi.org/10.5281/zenodo.5937995" target="_blank" rel="noopener">“Data Tracking in Research”</a> (DFG, 2021) and
-          the <a href="https://sparcopen.org/our-work/addressing-the-alarming-systems-of-surveillance-built-by-library-vendors/" target="_blank" rel="noopener">SPARC</a>
-          work on vendor surveillance. Every review you donate helps sustain that infrastructure.</p>
+          aggregated into products sold back to universities, funders and, in the case of other RELX units, to third parties
+          including government agencies. See the German Research Foundation's briefing paper
+          <a href="https://doi.org/10.5281/zenodo.5937995" target="_blank" rel="noopener">"Data Tracking in Research"</a> (DFG, 2021)
+          and <a href="https://sparcopen.org/our-work/addressing-the-alarming-systems-of-surveillance-built-by-library-vendors/" target="_blank" rel="noopener">SPARC's</a>
+          work on vendor surveillance.</p>
 
-          <p>Finally, “high-ranking” is not a property of the publisher — it is produced by authors, editors and reviewers, and it can
-          be built elsewhere. Diamond journals such as the <em>Journal of Machine Learning Research</em>, <em>Journal of Statistical
-          Software</em>, <em>Glossa</em>, <em>Discrete Analysis</em>, <em>Peer Community Journal</em> and <em>Meta-Psychology</em>
-          demonstrate that fully free-to-read, free-to-publish, rigorously reviewed and highly cited venues are entirely possible.
-          Where you send your review is where you invest your scarce quality-assurance capacity. The pledge asks for one article per
-          year on the scholar-led side of the ledger — and none of it prevents you from also reviewing for the journals in your field
-          you consider important.</p>
+          <p>Finally, "high-ranking" is not a property of the publisher. It is produced by authors, editors and reviewers, and it
+          can be built elsewhere. The <em>Journal of Machine Learning Research</em>, <em>Journal of Statistical Software</em>,
+          <em>Glossa</em>, <em>Discrete Analysis</em>, the <em>Peer Community Journal</em> and <em>Meta-Psychology</em> are all
+          free to read, free to publish and well cited. The pledge asks for one article per year on the scholar-led side, and it
+          does not stop you reviewing for the journals in your field you consider important.</p>
         </div>
       </div>
 
@@ -886,10 +1000,25 @@ a { color: var(--color-primary); }
         </button>
         <div class="faq-answer">
           <p>A peer-reviewed journal that charges <strong>neither readers nor authors</strong>, is typically owned and run by the
-          scholarly community rather than a commercial publisher, and normally lets authors retain copyright under an open licence.
-          Diamond overlay journals and community peer review platforms such as Peer Community In fall under the same spirit and
-          count for the pledge.</p>
-          <p>Waived or discounted APCs do not make a journal diamond — the model, not the individual exemption, is what matters.</p>
+          scholarly community rather than a commercial publisher, and normally lets authors retain copyright under an open
+          licence.</p>
+          <p>Waived or discounted APCs do not make a journal diamond. The model, not the individual exemption, is what
+          matters.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          What is Peer Community In (PCI), and does reviewing there count?
+        </button>
+        <div class="faq-answer">
+          <p><a href="https://peercommunityin.org" target="_blank" rel="noopener">Peer Community In</a> is a set of
+          discipline-based communities of researchers who publicly review and recommend preprints. Authors pay nothing, readers
+          pay nothing, the reviews are published alongside the preprint, and a recommended preprint can afterwards be submitted
+          to a journal or published in the <em>Peer Community Journal</em>.</p>
+          <p>Yes, reviewing for a PCI community counts for the pledge. It works the same way as reviewing for a diamond journal:
+          your time goes to a venue nobody is charged to use.</p>
         </div>
       </div>
 
@@ -899,9 +1028,9 @@ a { color: var(--color-primary); }
           Do I have to stop reviewing for commercial journals?
         </button>
         <div class="faq-answer">
-          <p>No. The pledge is a floor, not a boycott: at least one review for a diamond journal in the next 12 months. Many
-          signatories will continue to review for society and commercial titles as well. If you do decline elsewhere, saying why is
-          the most useful part of the decision.</p>
+          <p>No. The pledge is a minimum, not a boycott: at least one review for a diamond journal in the next 12 months. Many
+          signatories will continue to review for society and commercial titles as well. If you do decline elsewhere, saying why
+          is the most useful part of the decision.</p>
         </div>
       </div>
 
@@ -911,22 +1040,22 @@ a { color: var(--color-primary); }
           What if no diamond journal invites me within 12 months?
         </button>
         <div class="faq-answer">
-          <p>Then be proactive: volunteer through a journal’s reviewer form, email editors in your area, tick the reviewer-database
-          box when you sign, or review a preprint through a community review platform. The pledge is a good-faith commitment; nobody
-          audits it, and nobody is penalised for a year in which the invitations did not arrive.</p>
+          <p>Then be proactive: volunteer through a journal's reviewer form, email editors in your area, tick the reviewer
+          database box when you sign, or review a preprint through PCI. The pledge is a good-faith commitment. Nobody audits it,
+          and nobody is penalised for a year in which the invitations did not arrive.</p>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-          Isn’t reviewing for small journals bad for my career?
+          Isn't reviewing for small journals bad for my career?
         </button>
         <div class="faq-answer">
           <p>Reviewing is rarely evaluated by venue prestige in the first place — it is counted as service. Diamond journals are
-          often better at crediting it: open, citable reports with DOIs, ORCID deposits and public reviewer lists. And because many
-          of these journals are young, reviewers with substantive expertise are frequently invited onto editorial boards, which is
-          service that <em>does</em> appear in evaluations.</p>
+          often better at crediting it: open, citable reports with DOIs, ORCID deposits and public reviewer lists. And because
+          many of these journals are young, reviewers with substantive expertise are frequently invited onto editorial boards,
+          which is service that <em>does</em> appear in evaluations.</p>
         </div>
       </div>
 
@@ -936,9 +1065,18 @@ a { color: var(--color-primary); }
           How is my data handled?
         </button>
         <div class="faq-answer">
-          <p>We collect your name, affiliation, email and optionally your ORCID iD. The email address is used to verify your
-          signature and to send occasional updates about the initiative; it is never displayed publicly, sold or shared. If you tick
-          “keep your name private”, only your affiliation appears in the public list. You can ask to be removed at any time.</p>
+          <p><strong>What we store.</strong> Your name, affiliation, email address, the date you signed, your privacy
+          preferences and — if you provide one — your ORCID iD.</p>
+          <p><strong>What is public.</strong> Your name and affiliation, the month you signed, and your ORCID iD if you asked for
+          it to be shown. If you tick "keep my name private", your entry reads <em>[anonymous]</em> and shows only your
+          affiliation. Your email address is never published, sold or shared.</p>
+          <p><strong>What we use your email for.</strong> Confirming that you are the person who signed. If you also tick the
+          contact box, occasional updates about the initiative — we expect at most a few per year.</p>
+          <p><strong>Legal basis and your rights.</strong> Consent (Art. 6(1)(a) GDPR), which you can withdraw at any time. Every
+          email we send contains a link that removes your entry and deletes your personal data. You can also write to us to
+          access or correct it.</p>
+          <!-- TODO: insert the contact address and the name of the data controller
+               before launch. -->
         </div>
       </div>
 
@@ -949,7 +1087,8 @@ a { color: var(--color-primary); }
 <!-- ========================== WHO ARE WE ======================== -->
 <section class="tab-pane" id="tab-who" role="tabpanel">
   <h2 class="section-title">Who are we?</h2>
-  <p class="lede">The Diamond Reviewer Pledge is a small, volunteer-run initiative. It costs nothing to sign and nothing to run.</p>
+  <p class="lede">The Diamond Reviewer Pledge is a small, volunteer-run initiative. Our goal is to raise awareness about diamond
+  open access publishing and to support diamond open access journals. It costs nothing to sign and nothing to run.</p>
 
   <a class="person-tile" href="https://lukasroeseler.github.io/home/" target="_blank" rel="noopener">
     <span class="tool-icon">LR</span>
@@ -958,10 +1097,31 @@ a { color: var(--color-primary); }
       <span class="tool-desc">University of Münster</span>
     </span>
   </a>
+  <!-- TODO: add remaining organizers as further .person-tile blocks. -->
 
-  <div class="callout" style="margin-top:var(--spacing-6)">
-    <strong>Want to help?</strong> If you would like to join the team, translate the pledge, or list your diamond journal here,
-    sign the pledge and reply to the confirmation email.
+  <h3 class="section-title">Conflict of interest</h3>
+  <div class="card">
+    <div class="card-body prose">
+      <p>The organizers are editors of <a href="https://replicationresearch.org" target="_blank" rel="noopener">Replication
+      Research</a>, a diamond open access journal. We run the kind of journal this pledge asks you to review for, so we stand to
+      gain from it. We say so here so that you can weigh it.</p>
+    </div>
+  </div>
+
+  <h3 class="section-title">Initiatives we took inspiration from</h3>
+  <div class="card">
+    <div class="card-body prose">
+      <ul>
+        <!-- TODO: replace with the direct link to the Diamond pledge page on
+             Free Our Knowledge / Collective Action in Science. -->
+        <li><a href="https://freeourknowledge.org/" target="_blank" rel="noopener">Collective Action in Science — Diamond</a>,
+        which asks researchers to pledge collectively so that nobody has to move first.</li>
+        <li><a href="https://freeourknowledge.org/2020-12-03-preregistration-pledge/" target="_blank" rel="noopener">The
+        Preregistration Pledge</a>, for the model of a single, checkable commitment with a deadline.</li>
+        <li><a href="https://opennessinitiative.org" target="_blank" rel="noopener">The Peer Reviewers' Openness Initiative
+        (PRO)</a>, for showing that reviewers can change publishing norms from where they already sit.</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -988,10 +1148,11 @@ a { color: var(--color-primary); }
   var FORM_ENDPOINT = "";                                  // TODO: POST endpoint for signatures
   var SHARE_TEXT = "I signed the Diamond Reviewer Pledge: I commit to reviewing at least one article in the next 12 months for a diamond open access journal. Free to read, free to publish, scholar-led. Join us:";
 
-  /* Replace with data pulled from the signature database. */
+  /* Replace with data pulled from the signature database.
+     `since` is an ISO year-month; the renderer prints it as e.g. "signed Feb 2026". */
   var SIGNATORIES = [
-    { name: "Lukas Röseler", affiliation: "University of Münster", anonymous: false },
-    { name: "[anonymous]",   affiliation: "Erasmus University Rotterdam", anonymous: true }
+    { name: "Lukas Röseler", affiliation: "University of Münster", anonymous: false, since: "2026-02" },
+    { name: "",              affiliation: "Erasmus University Rotterdam", anonymous: true, since: "2026-02" }
   ];
 
   var $  = function (s, r) { return (r || document).querySelector(s); };
@@ -1000,8 +1161,8 @@ a { color: var(--color-primary); }
   /* ---------------------------------------------------------------
      Favicon from the inline logo
      --------------------------------------------------------------- */
+  var logoSvg = $("#hero-logo svg");
   try {
-    var logoSvg = $("#hero-logo svg");
     var svgText = new XMLSerializer().serializeToString(logoSvg);
     var url = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svgText);
     $("#favicon").setAttribute("href", url);
@@ -1045,7 +1206,9 @@ a { color: var(--color-primary); }
   }
 
   $$(".nav-link").forEach(function (b) { b.addEventListener("click", function () { activate(b.dataset.tab); }); });
-  $$("[data-goto]").forEach(function (b) { b.addEventListener("click", function () { activate(b.dataset.goto); }); });
+  $$("[data-goto]").forEach(function (b) {
+    b.addEventListener("click", function (e) { e.preventDefault(); activate(b.dataset.goto); });
+  });
   window.addEventListener("hashchange", function () { activate(location.hash.slice(1), false); });
   activate(location.hash.slice(1) || "home", false);
 
@@ -1054,6 +1217,15 @@ a { color: var(--color-primary); }
   /* ---------------------------------------------------------------
      Signatories
      --------------------------------------------------------------- */
+  var MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  function prettyMonth(ym) {
+    if (!ym) return "";
+    var p = String(ym).split("-");
+    var m = parseInt(p[1], 10);
+    if (!p[0] || isNaN(m) || m < 1 || m > 12) return "";
+    return MONTHS[m - 1] + " " + p[0];
+  }
+
   (function renderSignatories() {
     var list = $("#sig-list");
     list.innerHTML = "";
@@ -1062,9 +1234,12 @@ a { color: var(--color-primary); }
       li.className = "sig-item";
       li.innerHTML =
         '<span class="sig-name' + (s.anonymous ? " anon" : "") + '"></span>' +
-        '<span class="sig-aff"></span>';
+        '<span class="sig-aff"></span>' +
+        '<span class="sig-since"></span>';
       $(".sig-name", li).textContent = s.anonymous ? "[anonymous]" : s.name;
       $(".sig-aff", li).textContent  = "from " + s.affiliation;
+      var when = prettyMonth(s.since);
+      if (when) $(".sig-since", li).textContent = "signed " + when;
       list.appendChild(li);
     });
     $("#sig-count").textContent = SIGNATORIES.length.toLocaleString();
@@ -1121,16 +1296,18 @@ a { color: var(--color-primary); }
       affiliation: $("#f-aff").value.trim(),
       email: $("#f-email").value.trim(),
       orcid: $("#f-orcid").value.trim(),
-      private: $("#f-private").checked,
+      hide_name: $("#f-private").checked,
+      show_orcid: $("#f-show-orcid").checked,
+      contact_ok: $("#f-contact").checked,
       reviewer_database: $("#f-database").checked,
-      pledged_at: new Date().toISOString()
+      signed_at: new Date().toISOString()          // date of signing, kept in the sheet
     };
 
     var show = function (msg) { status.hidden = false; status.innerHTML = msg; };
 
     if (!FORM_ENDPOINT) {
       // No backend wired up yet — echo the signature so the flow is testable.
-      show("<strong>Thank you, " + (payload.private ? "signatory" : payload.name.replace(/[<>&]/g, "")) +
+      show("<strong>Thank you, " + (payload.hide_name ? "signatory" : payload.name.replace(/[<>&]/g, "")) +
            "!</strong> The signature database is not connected yet, so nothing has been stored. " +
            "Set <code>FORM_ENDPOINT</code> in the page script to start collecting signatures.");
       console.log("Pledge signature (not submitted):", payload);
@@ -1138,21 +1315,18 @@ a { color: var(--color-primary); }
     }
 
     show("Submitting…");
-    fetch(FORM_ENDPOINT, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    }).then(function (r) {
-      if (!r.ok) throw new Error(r.status);
-      show("<strong>Thank you for signing.</strong> Please check your inbox — we have sent a verification email. " +
-           "Your name will appear in the list of signatories once you confirm.");
-      form.reset();
-    }).catch(function () {
-      status.hidden = false;
-      status.style.background = "var(--color-error-bg)";
-      status.style.borderLeftColor = "var(--color-error)";
-      status.innerHTML = "<strong>Something went wrong.</strong> Please try again later, or email us directly.";
-    });
+    fetch(FORM_ENDPOINT, { method: "POST", body: JSON.stringify(payload) })
+      .then(function (r) {
+        if (!r.ok) throw new Error(r.status);
+        show("<strong>Thank you for signing.</strong> Please check your inbox — we have sent a verification email. " +
+             "Your name will appear in the list of signatories once you confirm.");
+        form.reset();
+      }).catch(function () {
+        status.hidden = false;
+        status.style.background = "var(--color-error-bg)";
+        status.style.borderLeftColor = "var(--color-error)";
+        status.innerHTML = "<strong>Something went wrong.</strong> Please try again later, or email us directly.";
+      });
   });
 })();
 </script>
