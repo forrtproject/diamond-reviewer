@@ -523,6 +523,32 @@ a { color: var(--color-primary); }
 }
 .person-tile .tool-title { font-family: var(--font-display); font-weight: var(--font-weight-semibold); font-size: var(--text-xl); display: block; }
 .person-tile .tool-desc { color: var(--color-text-secondary); font-size: var(--text-md); line-height: var(--leading-normal); display: block; }
+
+/* =============================================================
+   Partner / org logos
+   ============================================================= */
+.logo-row {
+  display: flex; align-items: center; flex-wrap: wrap;
+  gap: var(--spacing-6); margin-top: var(--spacing-4);
+}
+.logo-row a {
+  display: inline-flex; align-items: center;
+  transition: opacity var(--transition-fast);
+}
+.logo-row a:hover { opacity: .75; }
+.logo-row img {
+  height: 56px; width: auto; display: block;
+}
+/* keep logos legible in dark mode if they are dark-on-transparent */
+[data-theme="dark"] .logo-row img { filter: brightness(0) invert(1); }
+
+/* footer logos */
+.footer-logos { display: flex; align-items: center; gap: var(--spacing-3); }
+.footer-logos a { display: inline-flex; align-items: center; }
+.footer-logos img { height: 22px; width: auto; display: block; opacity: .75; transition: opacity var(--transition-fast); }
+.footer-logos a:hover img { opacity: 1; }
+[data-theme="dark"] .footer-logos img { filter: brightness(0) invert(1); }
+   
 </style>
 </head>
 
@@ -767,6 +793,21 @@ a { color: var(--color-primary); }
   <div class="btn-row">
     <button class="btn btn-primary" data-goto="join">Become a Diamond Reviewer</button>
   </div>
+
+   <h3 class="section-title">Our home institutions</h3>
+  <div class="card">
+    <div class="card-body">
+      <div class="logo-row">
+        <a href="https://forrt.org" target="_blank" rel="noopener" aria-label="FORRT">
+          <img src="https://raw.githubusercontent.com/forrtproject/diamond-reviewer/main/assets/forrt.png" alt="FORRT logo">
+        </a>
+        <a href="https://www.uni-muenster.de/MueCOS/en/index.html" target="_blank" rel="noopener" aria-label="Münster Center for Open Science (MüCOS)">
+          <img src="https://raw.githubusercontent.com/forrtproject/diamond-reviewer/main/assets/mücos.png" alt="MüCOS logo">
+        </a>
+      </div>
+    </div>
+  </div>
+   
 </section>
 
 <!-- ============================ JOIN ============================ -->
@@ -1136,10 +1177,20 @@ a { color: var(--color-primary); }
 
 <footer class="footer-bar">
   <span>Diamond Reviewer Pledge — free to read, free to publish, scholar-led.</span>
-  <div>
-    <a href="https://ddh.edch.eu/en" target="_blank" rel="noopener">Diamond Discovery Hub</a>
-    <a href="https://lukasroeseler.github.io/openjournals/" target="_blank" rel="noopener">Open Journals</a>
-    <a href="https://doaj.org" target="_blank" rel="noopener">DOAJ</a>
+  <div style="display:flex; align-items:center; gap:var(--spacing-4); flex-wrap:wrap;">
+    <span class="footer-logos">
+      <a href="https://forrt.org" target="_blank" rel="noopener" aria-label="FORRT">
+        <img src="https://raw.githubusercontent.com/forrtproject/diamond-reviewer/main/assets/forrt.png" alt="FORRT">
+      </a>
+      <a href="https://www.uni-muenster.de/MueCOS/en/index.html" target="_blank" rel="noopener" aria-label="MüCOS">
+        <img src="https://raw.githubusercontent.com/forrtproject/diamond-reviewer/main/assets/mücos.png" alt="MüCOS">
+      </a>
+    </span>
+    <span>
+      <a href="https://ddh.edch.eu/en" target="_blank" rel="noopener">Diamond Discovery Hub</a>
+      <a href="https://lukasroeseler.github.io/openjournals/" target="_blank" rel="noopener">Open Journals</a>
+      <a href="https://doaj.org" target="_blank" rel="noopener">DOAJ</a>
+    </span>
   </div>
 </footer>
 
