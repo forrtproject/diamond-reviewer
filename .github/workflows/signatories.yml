@@ -1,0 +1,26 @@
+name: Snapshot signatories
+on:
+  schedule:
+    - cron: "*/30 * * * *"     # alle 30 min
+  workflow_dispatch:            # manuell auslösbar
+permissions:
+  contents: write
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch list from Apps Script
+        run: |
+          curl -sSfL --retry 3 --retry-delay 5 --max-time 60 \
+               "${{ secrets.DRP_API }}?action=list" -o tmp.json
+          python -c "import json;d=json.load(open('tmp.json'));assert d.get('ok');assert 'signatories' in d"
+          mv tmp.json signatories.json
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add signatories.json
+          git diff --cached --quiet || (git commit -m "chore: update signatories" && git push)
