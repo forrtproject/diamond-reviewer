@@ -1,5 +1,5 @@
 {
- "count": 18,
+ "count": 20,
  "ok": true,
  "signatories": [
   {
@@ -109,7 +109,19 @@
    "name": "Daniel Morillo",
    "orcid": "0000-0003-3021-3878",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Münster",
+   "name": "Jan Ole Hätscher",
+   "orcid": "0009-0009-1410-4023",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "Lancaster University",
+   "name": "Sol Picciotto",
+   "orcid": "0000-0003-4251-0765",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-10T16:16:46.818Z"
+ "updated": "2026-09-10T17:37:15.904Z"
 }
