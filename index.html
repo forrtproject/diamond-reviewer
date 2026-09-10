@@ -443,6 +443,8 @@ a { color: var(--color-primary); }
 .sig-since { font-size: var(--text-sm); color: var(--color-text-faint); }
 .sig-orcid { font-size: var(--text-sm); }
 .sig-empty { grid-column: 1 / -1; }
+.sig-updated { font-size: var(--text-sm); color: var(--color-text-faint); margin: var(--spacing-4) 0 0; }
+.sig-updated[hidden] { display: none; }
 
 /* =============================================================
    Form
@@ -565,7 +567,12 @@ a { color: var(--color-primary); }
 .footer-social-btn:hover { background: rgb(var(--color-white-rgb) / .18); color: var(--color-text-inverse); }
 .footer-social-btn svg { width: 14px; height: 14px; fill: currentColor; }
 .footer-tagline { margin-left: var(--spacing-2); }
-   
+
+/* footer imprint link */
+.footer-imprint {
+  flex-shrink: 0; white-space: nowrap; text-decoration: underline;
+  text-underline-offset: 2px; font-weight: var(--font-weight-semibold);
+}
 </style>
 </head>
 
@@ -807,6 +814,7 @@ a { color: var(--color-primary); }
   </div>
 
   <ul class="sig-list" id="sig-list"><!-- rendered by JS --></ul>
+  <p class="sig-updated" id="sig-updated" hidden></p>
 
   <div class="btn-row">
     <button class="btn btn-primary" data-goto="join">Become a Diamond Reviewer</button>
@@ -1207,6 +1215,7 @@ a { color: var(--color-primary); }
     <a class="footer-social-btn" id="footer-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn" title="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a>
     <a class="footer-social-btn" id="footer-x" href="#" target="_blank" rel="noopener" aria-label="Share on X" title="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
     <span class="footer-tagline">Diamond Reviewer Pledge — free to read, free to publish, scholar-led.</span>
+    <a class="footer-imprint" href="https://forrt.org/imprint/" target="_blank" rel="noopener">Imprint</a>
   </div>
   <span class="footer-logos">
     <a href="https://forrt.org" target="_blank" rel="noopener" aria-label="FORRT">
@@ -1223,16 +1232,18 @@ a { color: var(--color-primary); }
   "use strict";
 
   /* ---------------------------------------------------------------
-     Config — the only two lines you need to edit
+     Config
      --------------------------------------------------------------- */
-  // TODO(api): paste the Apps Script /exec URL here to switch the backend on.
+  // Apps Script /exec URL — used for signing, and as fallback for the list.
   var API      = "https://script.google.com/macros/s/AKfycbxg5NLRV13O8P3k2VYaxJLTwO3FUNpxPG9T7-rB-rBX-QYUOw9hHa61ozLSReMFUXnyvw/exec";
-  // TODO(site): set the live URL (used for share links when opened from file://).
+  // Static snapshot written by the GitHub Action. Primary source for the list.
+  var STATIC_JSON = "signatories.json";
+  // Live URL (used for share links when the page is opened from file://).
   var SITE_URL = "https://forrt.org/diamond-reviewer/";
 
   var SHARE_TEXT = "I signed the Diamond Reviewer Pledge: I commit to reviewing at least one article in the next 12 months for a diamond open access journal. Free to read, free to publish, scholar-led. Join us:";
 
-  /* Shown only while API is empty, so the page works standalone. */
+  /* Shown only while both sources are unavailable, so the page works standalone. */
   var SAMPLE = {
     ok: true, count: 2,
     signatories: [
@@ -1274,33 +1285,12 @@ a { color: var(--color-primary); }
   });
 
   /* ---------------------------------------------------------------
-     Tabs
+     Signatories — static snapshot first, API as fallback,
+     localStorage as stale-while-revalidate cache.
      --------------------------------------------------------------- */
-  var TABS = ["home", "signatories", "join", "reviewers", "journals", "faq", "who"];
+  var LS_KEY   = "drp-sig-v1";
+  var FRESH_MS = 15 * 60 * 1000;   // treat a cached copy younger than this as fresh
 
-  function activate(name, push) {
-    if (TABS.indexOf(name) === -1) name = "home";
-    $$(".nav-link").forEach(function (b) {
-      var on = b.dataset.tab === name;
-      b.classList.toggle("active", on);
-      b.setAttribute("aria-selected", on ? "true" : "false");
-    });
-    $$(".tab-pane").forEach(function (p) { p.classList.toggle("active", p.id === "tab-" + name); });
-    $("#app-main").scrollTop = 0;
-    if (push !== false && location.hash.slice(1) !== name) history.replaceState(null, "", "#" + name);
-    document.title = (name === "home" ? "" : name.charAt(0).toUpperCase() + name.slice(1) + " · ") + "Diamond Reviewer Pledge";
-  }
-
-  $$(".nav-link").forEach(function (b) { b.addEventListener("click", function () { activate(b.dataset.tab); }); });
-  $$("[data-goto]").forEach(function (b) {
-    b.addEventListener("click", function (e) { e.preventDefault(); activate(b.dataset.goto); });
-  });
-  window.addEventListener("hashchange", function () { activate(location.hash.slice(1), false); });
-  activate(location.hash.slice(1) || "home", false);
-
-  /* ---------------------------------------------------------------
-     Signatories
-     --------------------------------------------------------------- */
   var MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
   function prettyMonth(ym) {
     if (!ym) return "";
@@ -1309,18 +1299,49 @@ a { color: var(--color-primary); }
     return MONTHS[m - 1] + " " + p[0];
   }
 
+  function cacheRead() {
+    try {
+      var raw = localStorage.getItem(LS_KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+  }
+  function cacheWrite(d) {
+    try { localStorage.setItem(LS_KEY, JSON.stringify({ t: Date.now(), d: d })); } catch (e) {}
+  }
+  function cacheClear() {
+    try { localStorage.removeItem(LS_KEY); } catch (e) {}
+  }
+
+  function fetchJSON(url, ms) {
+    var ctl = window.AbortController ? new AbortController() : null;
+    var to  = ctl ? setTimeout(function () { ctl.abort(); }, ms || 8000) : null;
+    return fetch(url, ctl ? { signal: ctl.signal } : undefined)
+      .then(function (r) {
+        if (to) { clearTimeout(to); to = null; }
+        if (!r.ok) throw new Error("http " + r.status);
+        return r.json();
+      })
+      .then(function (d) {
+        if (!d || !d.ok || !d.signatories) throw new Error("bad payload");
+        return d;
+      })
+      .catch(function (e) { if (to) clearTimeout(to); throw e; });
+  }
+
   function renderSignatories(data) {
     var list = $("#sig-list");
-    $("#sig-count").textContent = (data.count || 0).toLocaleString();
+    var upd  = $("#sig-updated");
+    $("#sig-count").textContent = (data.count || (data.signatories ? data.signatories.length : 0)).toLocaleString();
     list.innerHTML = "";
 
     if (!data.signatories || !data.signatories.length) {
       list.innerHTML = '<li class="note sig-empty">Be the first to sign.</li>';
+      upd.hidden = true;
       return;
     }
 
     /* newest first: later month up top, and within a month the later entry
-       (the API returns them in the order they signed). */
+       (the source returns them in the order they signed). */
     var items = data.signatories.map(function (s, i) { return { s: s, i: i }; });
     items.sort(function (a, b) {
       var ka = String(a.s.since || ""), kb = String(b.s.since || "");
@@ -1362,19 +1383,86 @@ a { color: var(--color-primary); }
       }
       list.appendChild(li);
     });
+
+    if (data.updated) {
+      var d = new Date(data.updated);
+      if (!isNaN(d.getTime())) {
+        upd.textContent = "List last updated " + d.toLocaleString() +
+                          ". New signatures can take up to an hour to appear here.";
+        upd.hidden = false;
+      } else { upd.hidden = true; }
+    } else {
+      upd.hidden = true;
+    }
   }
 
-  (function loadSignatories() {
-    if (!API) { renderSignatories(SAMPLE); return; }
-    $("#sig-list").innerHTML = '<li class="note sig-empty">Loading signatories…</li>';
-    fetch(API + "?action=list&_=" + Date.now())
-      .then(function (r) { return r.json(); })
-      .then(function (d) { if (!d || !d.ok) throw new Error("bad payload"); renderSignatories(d); })
-      .catch(function () {
-        $("#sig-count").textContent = "—";
-        $("#sig-list").innerHTML = '<li class="note sig-empty">The signatory list could not be loaded right now. Please try again shortly.</li>';
-      });
-  })();
+  var sigLoaded = false;
+  function loadSignatories() {
+    if (sigLoaded) return;
+    sigLoaded = true;
+
+    var cached = cacheRead();
+
+    if (cached && cached.d) {
+      renderSignatories(cached.d);                       // instant paint from cache
+    } else if (!STATIC_JSON && !API) {
+      renderSignatories(SAMPLE);
+      return;
+    } else {
+      $("#sig-list").innerHTML = '<li class="note sig-empty">Loading signatories…</li>';
+    }
+
+    if (cached && (Date.now() - cached.t) < FRESH_MS) return;   // fresh enough, no request
+
+    var p;
+    if (STATIC_JSON) {
+      p = fetchJSON(STATIC_JSON, 5000);
+      if (API) {
+        p = p.catch(function () { return fetchJSON(API + "?action=list", 12000); });
+      }
+    } else {
+      p = fetchJSON(API + "?action=list", 12000);
+    }
+
+    p.then(function (d) { cacheWrite(d); renderSignatories(d); })
+     .catch(function () {
+       sigLoaded = false;                                 // retry on the next tab visit
+       if (cached && cached.d) return;                    // keep showing the stale list
+       $("#sig-count").textContent = "—";
+       $("#sig-updated").hidden = true;
+       $("#sig-list").innerHTML =
+         '<li class="note sig-empty">The signatory list could not be loaded right now. Please try again shortly.</li>';
+     });
+  }
+
+  /* ---------------------------------------------------------------
+     Tabs
+     --------------------------------------------------------------- */
+  var TABS = ["home", "signatories", "join", "reviewers", "journals", "faq", "who"];
+
+  function activate(name, push) {
+    if (TABS.indexOf(name) === -1) name = "home";
+    $$(".nav-link").forEach(function (b) {
+      var on = b.dataset.tab === name;
+      b.classList.toggle("active", on);
+      b.setAttribute("aria-selected", on ? "true" : "false");
+    });
+    $$(".tab-pane").forEach(function (p) { p.classList.toggle("active", p.id === "tab-" + name); });
+    $("#app-main").scrollTop = 0;
+    if (push !== false && location.hash.slice(1) !== name) history.replaceState(null, "", "#" + name);
+    document.title = (name === "home" ? "" : name.charAt(0).toUpperCase() + name.slice(1) + " · ") + "Diamond Reviewer Pledge";
+    if (name === "signatories") loadSignatories();
+  }
+
+  $$(".nav-link").forEach(function (b) { b.addEventListener("click", function () { activate(b.dataset.tab); }); });
+  $$("[data-goto]").forEach(function (b) {
+    b.addEventListener("click", function (e) { e.preventDefault(); activate(b.dataset.goto); });
+  });
+  window.addEventListener("hashchange", function () { activate(location.hash.slice(1), false); });
+  activate(location.hash.slice(1) || "home", false);
+
+  /* Warm the list shortly after load so the tab is already populated. */
+  setTimeout(loadSignatories, 1500);
 
   /* ---------------------------------------------------------------
      Sharing
@@ -1475,6 +1563,8 @@ a { color: var(--color-primary); }
           return;
         }
         if (d.ok) {
+          cacheClear();          // so the list refreshes once the snapshot catches up
+          sigLoaded = false;
           show("<strong>Almost there.</strong> We have emailed you a confirmation link. Your name appears on the list " +
                "once you click it. If it does not arrive within a few minutes, check your spam folder.");
           form.reset();
