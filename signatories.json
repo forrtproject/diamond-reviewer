@@ -1,5 +1,5 @@
 {
- "count": 20,
+ "count": 21,
  "ok": true,
  "signatories": [
   {
@@ -121,7 +121,13 @@
    "name": "Sol Picciotto",
    "orcid": "0000-0003-4251-0765",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "School of Psychology, Massey University",
+   "name": "Matt N. Williams",
+   "orcid": "0000-0002-0571-215X",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-10T17:37:15.904Z"
+ "updated": "2026-09-10T20:36:58.776Z"
 }
