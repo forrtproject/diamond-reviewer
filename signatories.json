@@ -1,5 +1,5 @@
 {
- "count": 21,
+ "count": 22,
  "ok": true,
  "signatories": [
   {
@@ -127,7 +127,13 @@
    "name": "Matt N. Williams",
    "orcid": "0000-0002-0571-215X",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Independent Researcher",
+   "name": "Daniel Dunleavy",
+   "orcid": "0000-0002-3597-7714",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-10T20:36:58.776Z"
+ "updated": "2026-09-10T21:12:59.424Z"
 }
