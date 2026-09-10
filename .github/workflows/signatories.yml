@@ -1,10 +1,21 @@
 name: Snapshot signatories
+
 on:
   schedule:
-    - cron: "*/30 * * * *"     # alle 30 min
-  workflow_dispatch:            # manuell auslösbar
+    - cron: "*/30 * * * *"   # alle 30 Minuten
+  workflow_dispatch:          # Button "Run workflow" im Actions-Tab
+
 permissions:
   contents: write
+
+concurrency:                  # verhindert überlappende Läufe
+  group: signatories-snapshot
+  cancel-in-progress: false
+
+env:
+  API: "https://script.google.com/macros/s/AKfycbxg5NLRV13O8P3k2VYaxJLTwO3FUNpxPG9T7-rB-rBX-QYUOw9hHa61ozLSReMFUXnyvw/exec"
+  OUT: "signatories.json"     # ggf. auf "docs/signatories.json" ändern
+
 jobs:
   snapshot:
     runs-on: ubuntu-latest
@@ -13,14 +24,50 @@ jobs:
 
       - name: Fetch list from Apps Script
         run: |
-          curl -sSfL --retry 3 --retry-delay 5 --max-time 60 \
-               "${{ secrets.DRP_API }}?action=list" -o tmp.json
-          python -c "import json;d=json.load(open('tmp.json'));assert d.get('ok');assert 'signatories' in d"
-          mv tmp.json signatories.json
+          set -euo pipefail
+
+          if ! curl -sSfL --retry 3 --retry-delay 5 --retry-all-errors \
+                    --max-time 60 "${API}?action=list" -o tmp.json; then
+            echo "::error::Abruf fehlgeschlagen. Antwort der URL:"
+            curl -sL --max-time 30 "${API}?action=list" | head -c 800 || true
+            exit 1
+          fi
+
+          echo "Empfangen: $(wc -c < tmp.json) Bytes"
+
+          if head -c 1 tmp.json | grep -q '<'; then
+            echo "::error::HTML statt JSON erhalten - Web-App vermutlich nicht auf 'Anyone' freigegeben."
+            head -c 800 tmp.json
+            exit 1
+          fi
+
+          python3 - <<'PY'
+          import json, sys
+          d = json.load(open("tmp.json"))
+          assert d.get("ok") is True, d
+          assert isinstance(d.get("signatories"), list), d
+          print("OK:", len(d["signatories"]), "Eintraege")
+          PY
+
+          mkdir -p "$(dirname "$OUT")"
+          mv tmp.json "$OUT"
 
       - name: Commit if changed
         run: |
+          set -euo pipefail
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add signatories.json
-          git diff --cached --quiet || (git commit -m "chore: update signatories" && git push)
+          git add "$OUT"
+
+          if git diff --cached --quiet; then
+            echo "Keine Änderung - nichts zu committen."
+            exit 0
+          fi
+
+          git commit -m "chore: update signatories"
+          for i in 1 2 3; do
+            git push && exit 0
+            echo "Push fehlgeschlagen, rebase und erneut versuchen ($i/3)"
+            git pull --rebase --autostash
+          done
+          exit 1
