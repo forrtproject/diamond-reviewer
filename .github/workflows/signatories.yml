@@ -2,19 +2,19 @@ name: Snapshot signatories
 
 on:
   schedule:
-    - cron: "*/30 * * * *"   # alle 30 Minuten
+    - cron: "*/30 * * * *"   # alle 30 Minuten (verspätet sich unter Last)
   workflow_dispatch:          # Button "Run workflow" im Actions-Tab
 
 permissions:
   contents: write
 
-concurrency:                  # verhindert überlappende Läufe
+concurrency:
   group: signatories-snapshot
   cancel-in-progress: false
 
 env:
   API: "https://script.google.com/macros/s/AKfycbxg5NLRV13O8P3k2VYaxJLTwO3FUNpxPG9T7-rB-rBX-QYUOw9hHa61ozLSReMFUXnyvw/exec"
-  OUT: "signatories.json"     # ggf. auf "docs/signatories.json" ändern
+  OUT: "signatories.json"     # ggf. "docs/signatories.json"
 
 jobs:
   snapshot:
@@ -41,16 +41,53 @@ jobs:
             exit 1
           fi
 
+      - name: Validate and write snapshot
+        run: |
+          set -euo pipefail
+          mkdir -p "$(dirname "$OUT")"
+
           python3 - <<'PY'
-          import json, sys
-          d = json.load(open("tmp.json"))
-          assert d.get("ok") is True, d
-          assert isinstance(d.get("signatories"), list), d
-          print("OK:", len(d["signatories"]), "Eintraege")
+          import json, os, sys
+
+          new = json.load(open("tmp.json", encoding="utf-8"))
+          assert new.get("ok") is True, new
+          sigs = new.get("signatories")
+          assert isinstance(sigs, list), new
+
+          # Plausibilitaet: count muss zur Liste passen
+          if new.get("count") is not None and new["count"] != len(sigs):
+              print(f"::warning::count={new['count']} != {len(sigs)} Eintraege")
+
+          # Keine E-Mail-Adressen o.ae. im oeffentlichen Snapshot
+          allowed = {"name", "affiliation", "orcid", "since"}
+          leaked = set()
+          for s in sigs:
+              leaked |= set(s) - allowed
+          if leaked:
+              print(f"::error::Unerwartete Felder im Payload: {sorted(leaked)}")
+              sys.exit(1)
+
+          out = os.environ["OUT"]
+          old = {}
+          if os.path.exists(out):
+              try:
+                  old = json.load(open(out, encoding="utf-8"))
+              except Exception:
+                  pass
+
+          # Zeitstempel nur bewegen, wenn sich die Liste wirklich geaendert hat,
+          # sonst gaebe es 48 leere Commits pro Tag.
+          if old.get("signatories") == sigs and "updated" in old:
+              new["updated"] = old["updated"]
+
+          with open(out, "w", encoding="utf-8") as f:
+              json.dump(new, f, ensure_ascii=False, indent=1, sort_keys=True)
+              f.write("\n")
+
+          print(f"OK: {len(sigs)} Eintraege -> {out}")
           PY
 
-          mkdir -p "$(dirname "$OUT")"
-          mv tmp.json "$OUT"
+          rm -f tmp.json
 
       - name: Commit if changed
         run: |
