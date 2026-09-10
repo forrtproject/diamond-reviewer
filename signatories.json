@@ -1,1 +1,55 @@
-{"ok":true,"count":6,"updated":"2026-09-10T12:51:35.181Z","signatories":[{"name":"Lukas Röseler","affiliation":"University of Münster","orcid":"0000-0002-6446-1901","since":"2026-08"},{"name":"Steven Verheyen","affiliation":"Erasmus University Rotterdam","orcid":"0000-0002-6778-6744","since":"2026-08"},{"name":"Priya Silverstein","affiliation":"University of Coimbra","orcid":"0000-0003-0095-339X","since":"2026-09"},{"name":"David Vaidis","affiliation":"Université de Toulouse, CNRS","orcid":"0000-0002-1954-2219","since":"2026-09"},{"name":"Sarah Dellmann","affiliation":"Technische Informationsbibliothek","orcid":"0000-0002-0310-5831","since":"2026-09"},{"name":"Patrizio Tressoldi","affiliation":"University of Padova","orcid":"0000-0002-6404-0058","since":"2026-09"}]}
+{
+ "count": 8,
+ "ok": true,
+ "signatories": [
+  {
+   "affiliation": "University of Münster",
+   "name": "Lukas Röseler",
+   "orcid": "0000-0002-6446-1901",
+   "since": "2026-08"
+  },
+  {
+   "affiliation": "Erasmus University Rotterdam",
+   "name": "Steven Verheyen",
+   "orcid": "0000-0002-6778-6744",
+   "since": "2026-08"
+  },
+  {
+   "affiliation": "University of Coimbra",
+   "name": "Priya Silverstein",
+   "orcid": "0000-0003-0095-339X",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "Université de Toulouse, CNRS",
+   "name": "David Vaidis",
+   "orcid": "0000-0002-1954-2219",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "Technische Informationsbibliothek",
+   "name": "Sarah Dellmann",
+   "orcid": "0000-0002-0310-5831",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Padova",
+   "name": "Patrizio Tressoldi",
+   "orcid": "0000-0002-6404-0058",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Western Ontario",
+   "name": "Adira Daniel",
+   "orcid": "0009-0004-6830-2141",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Groningen",
+   "name": "Sarahanne Field",
+   "orcid": "0000-0001-7874-1261",
+   "since": "2026-09"
+  }
+ ],
+ "updated": "2026-09-10T13:03:55.156Z"
+}
