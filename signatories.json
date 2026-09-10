@@ -1,5 +1,5 @@
 {
- "count": 14,
+ "count": 16,
  "ok": true,
  "signatories": [
   {
@@ -85,7 +85,19 @@
    "name": "Dimitri Hefter",
    "orcid": "0000-0003-2861-7865",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "CEFE, CNRS, Montpellier, France",
+   "name": "Barbara Class",
+   "orcid": "0000-0002-2361-9821",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Muenster",
+   "name": "Shaheed Azaad",
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-10T15:16:23.199Z"
+ "updated": "2026-09-10T15:38:16.172Z"
 }
