@@ -1,5 +1,5 @@
 {
- "count": 8,
+ "count": 12,
  "ok": true,
  "signatories": [
   {
@@ -49,7 +49,31 @@
    "name": "Sarahanne Field",
    "orcid": "0000-0001-7874-1261",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "1) OPERAS AISBL 2) University of West Attica",
+   "name": "Fotis Mystakopoulos",
+   "orcid": "0000-0002-9354-3754",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "City University of Science & Information Technology",
+   "name": null,
+   "orcid": null,
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "Radboud University",
+   "name": "Djoerd Hiemstra",
+   "orcid": "0000-0003-4967-2900",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Münster",
+   "name": "Mitja Back",
+   "orcid": "0000-0003-2186-1558",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-10T13:03:55.156Z"
+ "updated": "2026-09-10T14:39:07.709Z"
 }
