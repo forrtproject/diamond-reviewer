@@ -1,5 +1,5 @@
 {
- "count": 32,
+ "count": 33,
  "ok": true,
  "signatories": [
   {
@@ -193,7 +193,13 @@
    "name": "Julian Scharbert",
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Aruba",
+   "name": "Eric Mijts",
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-11T09:39:27.533Z"
+ "updated": "2026-09-11T11:36:50.328Z"
 }
