@@ -1,5 +1,5 @@
 {
- "count": 31,
+ "count": 32,
  "ok": true,
  "signatories": [
   {
@@ -187,7 +187,13 @@
    "name": "Maria Paula Paragis",
    "orcid": "0000-0002-6909-4311",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Münster",
+   "name": "Julian Scharbert",
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-11T08:22:43.950Z"
+ "updated": "2026-09-11T09:18:12.544Z"
 }
