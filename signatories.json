@@ -1,5 +1,5 @@
 {
- "count": 22,
+ "count": 23,
  "ok": true,
  "signatories": [
   {
@@ -133,7 +133,13 @@
    "name": "Daniel Dunleavy",
    "orcid": "0000-0002-3597-7714",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Aruba",
+   "name": "Esther Plomp",
+   "orcid": "0000-0003-3625-1357",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-10T21:12:59.424Z"
+ "updated": "2026-09-11T01:24:28.702Z"
 }
