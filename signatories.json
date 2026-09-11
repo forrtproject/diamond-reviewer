@@ -1,5 +1,5 @@
 {
- "count": 24,
+ "count": 26,
  "ok": true,
  "signatories": [
   {
@@ -145,7 +145,19 @@
    "name": "Christoph Schil",
    "orcid": "0000-0002-6668-5773",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Florida State University",
+   "name": "Phil Hiver",
+   "orcid": null,
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "Ronin Institute for Independent Scholarship 2.0",
+   "name": "Jennifer M. Miller",
+   "orcid": "0000-0001-5459-6733",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-11T01:46:28.915Z"
+ "updated": "2026-09-11T04:19:54.704Z"
 }
