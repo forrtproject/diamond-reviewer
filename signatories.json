@@ -1,5 +1,5 @@
 {
- "count": 27,
+ "count": 28,
  "ok": true,
  "signatories": [
   {
@@ -163,7 +163,13 @@
    "name": "Abigail E. Licata",
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "INRAE",
+   "name": "THOMAS GUILLEMAUD",
+   "orcid": "0000-0003-0451-1644",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-11T06:51:17.801Z"
+ "updated": "2026-09-11T07:18:38.294Z"
 }
