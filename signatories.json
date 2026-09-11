@@ -1,5 +1,5 @@
 {
- "count": 40,
+ "count": 41,
  "ok": true,
  "signatories": [
   {
@@ -241,7 +241,13 @@
    "name": "Moritz Reis",
    "orcid": "0000-0002-1547-8109",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Paris 1 Panthéon-Sorbonne",
+   "name": "Nehemie Strupler",
+   "orcid": "0000-0002-2898-6217",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-11T20:16:07.325Z"
+ "updated": "2026-09-11T20:37:27.298Z"
 }
