@@ -1,5 +1,5 @@
 {
- "count": 26,
+ "count": 27,
  "ok": true,
  "signatories": [
   {
@@ -157,7 +157,13 @@
    "name": "Jennifer M. Miller",
    "orcid": "0000-0001-5459-6733",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Geneva",
+   "name": "Abigail E. Licata",
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-11T04:19:54.704Z"
+ "updated": "2026-09-11T06:51:17.801Z"
 }
