@@ -1,5 +1,5 @@
 {
- "count": 33,
+ "count": 35,
  "ok": true,
  "signatories": [
   {
@@ -199,7 +199,19 @@
    "name": "Eric Mijts",
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Federation of American Scientists",
+   "name": "Christopher S Marcum",
+   "orcid": "0000-0002-0899-6143",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Rhode Island",
+   "name": "M. Shane Tutwiler",
+   "orcid": "0000-0002-6135-0579",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-11T11:36:50.328Z"
+ "updated": "2026-09-11T12:46:08.581Z"
 }
