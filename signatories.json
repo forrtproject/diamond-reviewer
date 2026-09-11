@@ -1,5 +1,5 @@
 {
- "count": 39,
+ "count": 40,
  "ok": true,
  "signatories": [
   {
@@ -235,7 +235,13 @@
    "name": "Pablo Ezequiel Flores Kanter",
    "orcid": "0000-0002-6712-779X",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Würzburg",
+   "name": "Moritz Reis",
+   "orcid": "0000-0002-1547-8109",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-11T14:39:14.016Z"
+ "updated": "2026-09-11T20:16:07.325Z"
 }
