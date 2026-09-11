@@ -1,5 +1,5 @@
 {
- "count": 36,
+ "count": 39,
  "ok": true,
  "signatories": [
   {
@@ -217,7 +217,25 @@
    "name": null,
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Maastricht University",
+   "name": "Egon Willighagen",
+   "orcid": "0000-0001-7542-0286",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "Universitäts- und Landesbibliothek Darmstadt",
+   "name": "Jagusch Gerald",
+   "orcid": "0000-0001-9964-1112",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "Universidad Siglo 21",
+   "name": "Pablo Ezequiel Flores Kanter",
+   "orcid": "0000-0002-6712-779X",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-11T13:16:07.268Z"
+ "updated": "2026-09-11T14:39:14.016Z"
 }
