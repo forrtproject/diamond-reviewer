@@ -1,5 +1,5 @@
 {
- "count": 28,
+ "count": 31,
  "ok": true,
  "signatories": [
   {
@@ -169,7 +169,25 @@
    "name": "THOMAS GUILLEMAUD",
    "orcid": "0000-0003-0451-1644",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Leibniz University Hannover",
+   "name": "Nicola Mößner",
+   "orcid": null,
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "Maastricht University",
+   "name": null,
+   "orcid": null,
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "Pompeu Fabra University",
+   "name": "Maria Paula Paragis",
+   "orcid": "0000-0002-6909-4311",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-11T07:18:38.294Z"
+ "updated": "2026-09-11T08:22:43.950Z"
 }
