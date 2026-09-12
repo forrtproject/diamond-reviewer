@@ -1,5 +1,5 @@
 {
- "count": 42,
+ "count": 41,
  "ok": true,
  "signatories": [
   {
@@ -247,13 +247,7 @@
    "name": "Nehemie Strupler",
    "orcid": "0000-0002-2898-6217",
    "since": "2026-09"
-  },
-  {
-   "affiliation": "City University of New York",
-   "name": "Rachel L. Thompson",
-   "orcid": "0000-0002-3042-7887",
-   "since": "2026-09"
   }
  ],
- "updated": "2026-09-12T03:18:49.802Z"
+ "updated": "2026-09-12T03:40:47.299Z"
 }
