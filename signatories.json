@@ -1,5 +1,5 @@
 {
- "count": 43,
+ "count": 45,
  "ok": true,
  "signatories": [
   {
@@ -259,7 +259,19 @@
    "name": null,
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Sydney",
+   "name": "Tom Hardwicke",
+   "orcid": "0000-0001-9485-4952",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Sydney",
+   "name": "Alex Holcombe",
+   "orcid": "0000-0003-2869-0085",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-12T18:37:50.009Z"
+ "updated": "2026-09-12T21:14:20.156Z"
 }
