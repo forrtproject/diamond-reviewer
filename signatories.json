@@ -1,5 +1,5 @@
 {
- "count": 42,
+ "count": 43,
  "ok": true,
  "signatories": [
   {
@@ -253,7 +253,13 @@
    "name": "Guillaume Gaullier",
    "orcid": "0000-0003-3405-6021",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Sciber Foundation",
+   "name": null,
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-12T07:36:30.835Z"
+ "updated": "2026-09-12T18:37:50.009Z"
 }
