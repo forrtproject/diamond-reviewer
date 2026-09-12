@@ -1,5 +1,5 @@
 {
- "count": 46,
+ "count": 47,
  "ok": true,
  "signatories": [
   {
@@ -277,7 +277,13 @@
    "name": "Diego Lozano Soldevilla",
    "orcid": "0000-0003-1794-8204",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Stanford University",
+   "name": "Robert D Hawkins",
+   "orcid": "0000-0001-9089-8544",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-12T22:18:45.718Z"
+ "updated": "2026-09-12T23:36:41.139Z"
 }
