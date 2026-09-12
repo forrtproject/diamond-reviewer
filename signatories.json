@@ -1,5 +1,5 @@
 {
- "count": 45,
+ "count": 46,
  "ok": true,
  "signatories": [
   {
@@ -271,7 +271,13 @@
    "name": "Alex Holcombe",
    "orcid": "0000-0003-2869-0085",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Universitat Internacional de Catalunya",
+   "name": "Diego Lozano Soldevilla",
+   "orcid": "0000-0003-1794-8204",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-12T21:14:20.156Z"
+ "updated": "2026-09-12T22:18:45.718Z"
 }
