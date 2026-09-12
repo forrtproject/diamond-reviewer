@@ -1,5 +1,5 @@
 {
- "count": 41,
+ "count": 42,
  "ok": true,
  "signatories": [
   {
@@ -247,7 +247,13 @@
    "name": "Nehemie Strupler",
    "orcid": "0000-0002-2898-6217",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Uppsala University",
+   "name": "Guillaume Gaullier",
+   "orcid": "0000-0003-3405-6021",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-12T03:40:47.299Z"
+ "updated": "2026-09-12T07:36:30.835Z"
 }
