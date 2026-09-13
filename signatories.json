@@ -1,5 +1,5 @@
 {
- "count": 51,
+ "count": 52,
  "ok": true,
  "signatories": [
   {
@@ -307,7 +307,13 @@
    "name": null,
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "KU Leuven",
+   "name": null,
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-13T06:30:17.679Z"
+ "updated": "2026-09-13T07:37:45.844Z"
 }
