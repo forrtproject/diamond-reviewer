@@ -1,5 +1,5 @@
 {
- "count": 47,
+ "count": 48,
  "ok": true,
  "signatories": [
   {
@@ -283,7 +283,13 @@
    "name": "Robert D Hawkins",
    "orcid": "0000-0001-9089-8544",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Auckland & Keio University",
+   "name": "Patrick Savage",
+   "orcid": "0000-0001-6996-7496",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-12T23:36:41.139Z"
+ "updated": "2026-09-13T01:30:01.890Z"
 }
