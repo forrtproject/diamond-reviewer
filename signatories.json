@@ -1,5 +1,5 @@
 {
- "count": 50,
+ "count": 51,
  "ok": true,
  "signatories": [
   {
@@ -301,7 +301,13 @@
    "name": "Joseph Crawford",
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of the Philippines Visayas",
+   "name": null,
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-13T05:15:35.505Z"
+ "updated": "2026-09-13T06:30:17.679Z"
 }
