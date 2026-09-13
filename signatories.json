@@ -1,5 +1,5 @@
 {
- "count": 48,
+ "count": 49,
  "ok": true,
  "signatories": [
   {
@@ -289,7 +289,13 @@
    "name": "Patrick Savage",
    "orcid": "0000-0001-6996-7496",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of the Philippines Visayas",
+   "name": "Johnrev Guilaran",
+   "orcid": "0000-0001-6607-8001",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-13T01:30:01.890Z"
+ "updated": "2026-09-13T02:43:25.168Z"
 }
