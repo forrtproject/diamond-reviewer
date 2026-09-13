@@ -1,5 +1,5 @@
 {
- "count": 52,
+ "count": 53,
  "ok": true,
  "signatories": [
   {
@@ -313,7 +313,13 @@
    "name": null,
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "VU Amsterdam",
+   "name": "Rene Bekkers",
+   "orcid": "0000-0002-4403-7222",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-13T07:37:45.844Z"
+ "updated": "2026-09-13T08:20:49.046Z"
 }
