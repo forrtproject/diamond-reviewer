@@ -1,5 +1,5 @@
 {
- "count": 53,
+ "count": 54,
  "ok": true,
  "signatories": [
   {
@@ -319,7 +319,13 @@
    "name": "Rene Bekkers",
    "orcid": "0000-0002-4403-7222",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "German Aerospace Center | University of Lübeck",
+   "name": "Katharina Utesch",
+   "orcid": "0000-0002-7424-306X",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-13T08:20:49.046Z"
+ "updated": "2026-09-13T18:39:07.275Z"
 }
