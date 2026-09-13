@@ -1,5 +1,5 @@
 {
- "count": 54,
+ "count": 55,
  "ok": true,
  "signatories": [
   {
@@ -325,7 +325,13 @@
    "name": "Katharina Utesch",
    "orcid": "0000-0002-7424-306X",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Brown University",
+   "name": null,
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-13T18:39:07.275Z"
+ "updated": "2026-09-13T21:13:30.185Z"
 }
