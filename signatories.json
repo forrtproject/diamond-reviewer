@@ -1,5 +1,5 @@
 {
- "count": 49,
+ "count": 50,
  "ok": true,
  "signatories": [
   {
@@ -295,7 +295,13 @@
    "name": "Johnrev Guilaran",
    "orcid": "0000-0001-6607-8001",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Tasmania",
+   "name": "Joseph Crawford",
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-13T02:43:25.168Z"
+ "updated": "2026-09-13T05:15:35.505Z"
 }
