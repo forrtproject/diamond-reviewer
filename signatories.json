@@ -1,5 +1,5 @@
 {
- "count": 74,
+ "count": 75,
  "ok": true,
  "signatories": [
   {
@@ -445,7 +445,13 @@
    "name": "Ljiljana Lazarevic",
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Mazumdar Shaw Medical Foundation (MSMF)",
+   "name": "DR. DEBPRASAD DUTTA",
+   "orcid": "0000-0001-5698-3067",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-14T18:19:24.491Z"
+ "updated": "2026-09-14T19:36:41.745Z"
 }
