@@ -1,5 +1,5 @@
 {
- "count": 59,
+ "count": 61,
  "ok": true,
  "signatories": [
   {
@@ -355,7 +355,19 @@
    "name": "Marco Tullney",
    "orcid": "0000-0002-5111-2788",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "City University of Science & Information Technology",
+   "name": "Yaqub, Muhammad",
+   "orcid": "0009-0005-1923-782X",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "Paderborn University",
+   "name": "Ingrid Scharlau",
+   "orcid": "0000-0003-2364-9489",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-14T07:47:58.402Z"
+ "updated": "2026-09-14T10:17:10.777Z"
 }
