@@ -1,5 +1,5 @@
 {
- "count": 75,
+ "count": 76,
  "ok": true,
  "signatories": [
   {
@@ -451,7 +451,13 @@
    "name": "DR. DEBPRASAD DUTTA",
    "orcid": "0000-0001-5698-3067",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Macedonian Academy of Sciences and Arts",
+   "name": "Biljana Gjoneska",
+   "orcid": "0000-0003-1200-6672",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-14T19:36:41.745Z"
+ "updated": "2026-09-14T20:16:05.048Z"
 }
