@@ -1,5 +1,5 @@
 {
- "count": 61,
+ "count": 63,
  "ok": true,
  "signatories": [
   {
@@ -367,7 +367,19 @@
    "name": "Ingrid Scharlau",
    "orcid": "0000-0003-2364-9489",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Colorado Anschutz Medical Campus",
+   "name": "Daniel S Goldberg",
+   "orcid": "0000-0003-1843-7422",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Tehran",
+   "name": "yasaman asaadi",
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-14T10:17:10.777Z"
+ "updated": "2026-09-14T10:39:10.234Z"
 }
