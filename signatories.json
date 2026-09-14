@@ -1,5 +1,5 @@
 {
- "count": 66,
+ "count": 67,
  "ok": true,
  "signatories": [
   {
@@ -397,7 +397,13 @@
    "name": "Eftychia Koukouraki",
    "orcid": "0000-0003-0928-1139",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Historisches Seminar, Universität Münster",
+   "name": "Wolfram Drews",
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-14T12:26:21.173Z"
+ "updated": "2026-09-14T13:17:57.087Z"
 }
