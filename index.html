@@ -159,10 +159,10 @@ body {
 }
 .app-main {
   flex: 1; overflow-y: auto; min-height: 0;
-  padding-top: var(--spacing-8); padding-bottom: var(--spacing-10);
+  padding-top: var(--spacing-8);
   scroll-behavior: smooth;
 }
-.container { width: 100%; max-width: 1060px; margin: 0 auto; padding: 0 var(--spacing-5); }
+.container { width: 100%; max-width: 1060px; margin: 0 auto; padding: 0 var(--spacing-5) var(--spacing-10); }
 
 h1, h2, h3, .serif, .card-header { font-family: var(--font-display); font-weight: var(--font-weight-semibold); letter-spacing: var(--tracking-tight); }
 a { color: var(--color-primary); }
@@ -242,13 +242,13 @@ a { color: var(--color-primary); }
 
 .footer-bar {
   background: var(--color-neutral); color: rgb(var(--color-white-rgb) / .45);
-  padding: var(--spacing-2) var(--spacing-5); font-size: var(--text-xs);
-  display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-4); flex-shrink: 0;
+  padding: var(--spacing-5) var(--spacing-6); font-size: var(--text-sm);
+  display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-5); flex-wrap: wrap;
 }
 .footer-bar > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .footer-bar a { color: rgb(var(--color-white-rgb) / .42); text-decoration: none; margin-left: var(--spacing-4); transition: color var(--transition-fast); }
 .footer-bar a:hover { color: rgb(var(--color-white-rgb) / .8); }
-@media (max-width: 600px) { .footer-tagline { display: none; } .footer-bar { justify-content: center; gap: var(--spacing-3); } }
+@media (max-width: 600px) { .footer-tagline { display: none; } .footer-bar { justify-content: center; gap: var(--spacing-4); } }
 
 /* =============================================================
    Cards, sections, buttons
@@ -548,27 +548,27 @@ a { color: var(--color-primary); }
 
 /* footer logos — dark PNGs, so they sit on their own white plate */
 .footer-logos {
-  display: flex; align-items: center; gap: var(--spacing-4);
-  background: rgb(var(--color-white-rgb)); border-radius: var(--radius-md);
-  padding: var(--spacing-2) var(--spacing-3);
+  display: flex; align-items: center; gap: var(--spacing-5);
+  background: rgb(var(--color-white-rgb)); border-radius: var(--radius-lg);
+  padding: var(--spacing-3) var(--spacing-4);
   box-shadow: 0 1px 3px rgb(0 0 0 / .25);
 }
 .footer-logos a { display: inline-flex; align-items: center; margin-left: 0; }
-.footer-logos img { height: 22px; width: auto; display: block; opacity: .9; transition: opacity var(--transition-fast); }
+.footer-logos img { height: 40px; width: auto; display: block; opacity: .9; transition: opacity var(--transition-fast); }
 .footer-logos a:hover img { opacity: 1; }
-.footer-logos .footer-logo-divider { width: 1px; height: 18px; background: rgb(0 0 0 / .15); flex-shrink: 0; margin: 0 var(--spacing-1); }
+.footer-logos .footer-logo-divider { width: 1px; height: 32px; background: rgb(0 0 0 / .15); flex-shrink: 0; margin: 0 var(--spacing-1); }
 
 /* footer social icons */
-.footer-social { display: flex; align-items: center; gap: var(--spacing-2); min-width: 0; }
+.footer-social { display: flex; align-items: center; gap: var(--spacing-3); min-width: 0; }
 .footer-social-btn {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 26px; height: 26px; padding: 0; margin-left: 0; flex-shrink: 0;
+  width: 36px; height: 36px; padding: 0; margin-left: 0; flex-shrink: 0;
   border: 0; border-radius: var(--radius-pill); background: rgb(var(--color-white-rgb) / .08);
   color: rgb(var(--color-white-rgb) / .55); cursor: pointer;
   transition: background var(--transition-fast), color var(--transition-fast);
 }
 .footer-social-btn:hover { background: rgb(var(--color-white-rgb) / .18); color: var(--color-text-inverse); }
-.footer-social-btn svg { width: 14px; height: 14px; fill: currentColor; }
+.footer-social-btn svg { width: 17px; height: 17px; fill: currentColor; }
 .footer-tagline { margin-left: var(--spacing-2); }
 
 /* footer imprint link */
@@ -1217,7 +1217,6 @@ a { color: var(--color-primary); }
 </section>
 
 </div>
-</main>
 
 <footer class="footer-bar">
   <div class="footer-social">
@@ -1241,6 +1240,7 @@ a { color: var(--color-primary); }
     </a>
   </span>
 </footer>
+</main>
 
 <script>
 (function () {
