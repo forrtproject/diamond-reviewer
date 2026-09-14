@@ -1,5 +1,5 @@
 {
- "count": 73,
+ "count": 74,
  "ok": true,
  "signatories": [
   {
@@ -439,7 +439,13 @@
    "name": null,
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Institute of Psychology, Faculty of Philosophy, University of Belgrade",
+   "name": "Ljiljana Lazarevic",
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-14T17:13:51.187Z"
+ "updated": "2026-09-14T18:19:24.491Z"
 }
