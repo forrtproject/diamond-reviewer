@@ -1,5 +1,5 @@
 {
- "count": 72,
+ "count": 73,
  "ok": true,
  "signatories": [
   {
@@ -433,7 +433,13 @@
    "name": "Jay Patel",
    "orcid": "0000-0003-1040-3607",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Muenster",
+   "name": null,
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-14T16:39:31.973Z"
+ "updated": "2026-09-14T17:13:51.187Z"
 }
