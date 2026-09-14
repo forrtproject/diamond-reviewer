@@ -522,7 +522,9 @@ a { color: var(--color-primary); }
   border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center;
   color: var(--color-primary); border: var(--border-width-hairline) solid var(--color-primary-border);
   font-family: var(--font-display); font-weight: var(--font-weight-bold); font-size: var(--text-md);
+  overflow: hidden;
 }
+.person-tile .tool-icon img { width: 100%; height: 100%; object-fit: contain; }
 .person-tile .tool-title { font-family: var(--font-display); font-weight: var(--font-weight-semibold); font-size: var(--text-xl); display: block; }
 .person-tile .tool-desc { color: var(--color-text-secondary); font-size: var(--text-md); line-height: var(--leading-normal); display: block; }
 
@@ -554,6 +556,7 @@ a { color: var(--color-primary); }
 .footer-logos a { display: inline-flex; align-items: center; margin-left: 0; }
 .footer-logos img { height: 22px; width: auto; display: block; opacity: .9; transition: opacity var(--transition-fast); }
 .footer-logos a:hover img { opacity: 1; }
+.footer-logos .footer-logo-divider { width: 1px; height: 18px; background: rgb(0 0 0 / .15); flex-shrink: 0; margin: 0 var(--spacing-1); }
 
 /* footer social icons */
 .footer-social { display: flex; align-items: center; gap: var(--spacing-2); min-width: 0; }
@@ -1201,6 +1204,16 @@ a { color: var(--color-primary); }
       </ul>
     </div>
   </div>
+
+  <h3 class="section-title">Supporters</h3>
+  <a class="person-tile" href="https://www.openaccess.nl/nl/expertisecentrum-diamond-open-access" target="_blank" rel="noopener">
+    <span class="tool-icon">
+      <img src="https://raw.githubusercontent.com/forrtproject/diamond-reviewer/main/assets/DIAMON-1.PNG" alt="">
+    </span>
+    <span class="tool-body">
+      <span class="tool-title">Expertise Centre Diamond Open Access</span>
+    </span>
+  </a>
 </section>
 
 </div>
@@ -1221,6 +1234,10 @@ a { color: var(--color-primary); }
     </a>
     <a href="https://www.uni-muenster.de/MueCOS/en/index.html" target="_blank" rel="noopener" aria-label="MüCOS">
       <img src="https://raw.githubusercontent.com/forrtproject/diamond-reviewer/main/assets/mücos.png" alt="MüCOS">
+    </a>
+    <span class="footer-logo-divider" aria-hidden="true"></span>
+    <a href="https://www.openaccess.nl/nl/expertisecentrum-diamond-open-access" target="_blank" rel="noopener" aria-label="Expertise Centre Diamond Open Access">
+      <img src="https://raw.githubusercontent.com/forrtproject/diamond-reviewer/main/assets/DIAMON-1.PNG" alt="Expertise Centre Diamond Open Access">
     </a>
   </span>
 </footer>
