@@ -1,5 +1,5 @@
 {
- "count": 69,
+ "count": 70,
  "ok": true,
  "signatories": [
   {
@@ -415,7 +415,13 @@
    "name": "Jos C M Baeten",
    "orcid": "0000-0003-0287-0555",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "KU Leuven",
+   "name": "Nicolas Ruytenbeek",
+   "orcid": "0000-0002-1651-9777",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-14T14:18:58.914Z"
+ "updated": "2026-09-14T14:41:06.313Z"
 }
