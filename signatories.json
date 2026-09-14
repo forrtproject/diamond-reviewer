@@ -1,5 +1,5 @@
 {
- "count": 64,
+ "count": 66,
  "ok": true,
  "signatories": [
   {
@@ -385,7 +385,19 @@
    "name": null,
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Le Mans Université (France)",
+   "name": "Erwan David",
+   "orcid": "0000-0002-5307-1705",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Münster",
+   "name": "Eftychia Koukouraki",
+   "orcid": "0000-0003-0928-1139",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-14T11:37:54.185Z"
+ "updated": "2026-09-14T12:26:21.173Z"
 }
