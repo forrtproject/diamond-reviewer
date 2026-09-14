@@ -1,5 +1,5 @@
 {
- "count": 70,
+ "count": 71,
  "ok": true,
  "signatories": [
   {
@@ -421,7 +421,13 @@
    "name": "Nicolas Ruytenbeek",
    "orcid": "0000-0002-1651-9777",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Manchester, UK",
+   "name": "Katherine Twomey",
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-14T14:41:06.313Z"
+ "updated": "2026-09-14T15:17:41.971Z"
 }
