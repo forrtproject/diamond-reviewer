@@ -1,5 +1,5 @@
 {
- "count": 76,
+ "count": 77,
  "ok": true,
  "signatories": [
   {
@@ -457,7 +457,13 @@
    "name": "Biljana Gjoneska",
    "orcid": "0000-0003-1200-6672",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "California Baptist University",
+   "name": null,
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-14T20:16:05.048Z"
+ "updated": "2026-09-15T00:46:25.309Z"
 }
