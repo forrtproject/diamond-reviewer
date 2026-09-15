@@ -1,5 +1,5 @@
 {
- "count": 77,
+ "count": 78,
  "ok": true,
  "signatories": [
   {
@@ -463,7 +463,13 @@
    "name": null,
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Max Planck Institut for Human Cognitive and Brain Sciences",
+   "name": null,
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-15T00:46:25.309Z"
+ "updated": "2026-09-15T06:29:50.118Z"
 }
