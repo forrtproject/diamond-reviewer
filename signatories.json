@@ -1,5 +1,5 @@
 {
- "count": 79,
+ "count": 81,
  "ok": true,
  "signatories": [
   {
@@ -475,7 +475,19 @@
    "name": null,
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Universidad Autónoma de Madrid",
+   "name": "Francisco Garre-Frutos",
+   "orcid": "0000-0001-9810-186X",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Birmingham",
+   "name": "Anne Saulin",
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-15T07:41:48.216Z"
+ "updated": "2026-09-15T08:23:29.622Z"
 }
