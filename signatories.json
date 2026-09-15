@@ -1,5 +1,5 @@
 {
- "count": 85,
+ "count": 86,
  "ok": true,
  "signatories": [
   {
@@ -511,7 +511,13 @@
    "name": null,
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of South Alabama",
+   "name": null,
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-15T18:18:43.475Z"
+ "updated": "2026-09-15T21:36:42.154Z"
 }
