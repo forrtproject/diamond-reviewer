@@ -1,5 +1,5 @@
 {
- "count": 82,
+ "count": 83,
  "ok": true,
  "signatories": [
   {
@@ -493,7 +493,13 @@
    "name": "Nick Ballou",
    "orcid": "0000-0003-4126-0696",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "ZBW - Leibniz Information Centre for Economics",
+   "name": null,
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-15T10:40:00.009Z"
+ "updated": "2026-09-15T13:17:31.764Z"
 }
