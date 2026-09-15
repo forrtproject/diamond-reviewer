@@ -1,5 +1,5 @@
 {
- "count": 78,
+ "count": 79,
  "ok": true,
  "signatories": [
   {
@@ -469,7 +469,13 @@
    "name": null,
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Bern University of Applied Sciences",
+   "name": null,
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-15T06:29:50.118Z"
+ "updated": "2026-09-15T07:41:48.216Z"
 }
