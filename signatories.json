@@ -1,5 +1,5 @@
 {
- "count": 84,
+ "count": 85,
  "ok": true,
  "signatories": [
   {
@@ -505,7 +505,13 @@
    "name": "Sebastiaan Bol",
    "orcid": "0000-0002-3843-6657",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Biology Centre CAS",
+   "name": null,
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-15T14:39:50.277Z"
+ "updated": "2026-09-15T18:18:43.475Z"
 }
