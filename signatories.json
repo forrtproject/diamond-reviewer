@@ -1,5 +1,5 @@
 {
- "count": 89,
+ "count": 90,
  "ok": true,
  "signatories": [
   {
@@ -535,7 +535,13 @@
    "name": "Erica Celine Yu",
    "orcid": "0000-0001-6008-8356",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University Hospital Essen",
+   "name": "Belkis Ezgi Arikan",
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-16T15:38:20.696Z"
+ "updated": "2026-09-16T21:15:29.013Z"
 }
