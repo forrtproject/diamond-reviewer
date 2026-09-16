@@ -1,5 +1,5 @@
 {
- "count": 88,
+ "count": 89,
  "ok": true,
  "signatories": [
   {
@@ -529,7 +529,13 @@
    "name": "Jeroen Sondervan",
    "orcid": "0000-0002-9866-0239",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Tilburg University",
+   "name": "Erica Celine Yu",
+   "orcid": "0000-0001-6008-8356",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-16T12:48:44.323Z"
+ "updated": "2026-09-16T15:38:20.696Z"
 }
