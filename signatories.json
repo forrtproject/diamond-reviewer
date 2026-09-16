@@ -1,5 +1,5 @@
 {
- "count": 86,
+ "count": 88,
  "ok": true,
  "signatories": [
   {
@@ -517,7 +517,19 @@
    "name": null,
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Mannheim",
+   "name": "Pernelle Lorette",
+   "orcid": "0000-0001-6695-5254",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "Open Science NL",
+   "name": "Jeroen Sondervan",
+   "orcid": "0000-0002-9866-0239",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-15T21:36:42.154Z"
+ "updated": "2026-09-16T12:48:44.323Z"
 }
