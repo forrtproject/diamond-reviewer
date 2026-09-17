@@ -1,5 +1,5 @@
 {
- "count": 93,
+ "count": 94,
  "ok": true,
  "signatories": [
   {
@@ -559,7 +559,13 @@
    "name": "Daniel Leising",
    "orcid": "0000-0001-8503-5840",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Zurich",
+   "name": "Peter Degen",
+   "orcid": "0009-0004-0706-9200",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-17T10:40:06.522Z"
+ "updated": "2026-09-17T11:15:32.177Z"
 }
