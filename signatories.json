@@ -1,5 +1,5 @@
 {
- "count": 94,
+ "count": 95,
  "ok": true,
  "signatories": [
   {
@@ -565,7 +565,13 @@
    "name": "Peter Degen",
    "orcid": "0009-0004-0706-9200",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "CNRS, Mines Paris - PSL",
+   "name": "Vladislav A. Yastrebov",
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-17T11:15:32.177Z"
+ "updated": "2026-09-17T21:36:10.920Z"
 }
