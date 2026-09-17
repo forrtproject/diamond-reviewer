@@ -1,5 +1,5 @@
 {
- "count": 90,
+ "count": 92,
  "ok": true,
  "signatories": [
   {
@@ -541,7 +541,19 @@
    "name": "Belkis Ezgi Arikan",
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Tübingen",
+   "name": "Maristella Lunardon",
+   "orcid": null,
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "RWTH Aachen University",
+   "name": "Tanja C Roembke",
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-16T21:15:29.013Z"
+ "updated": "2026-09-17T10:17:26.314Z"
 }
