@@ -1,5 +1,5 @@
 {
- "count": 92,
+ "count": 93,
  "ok": true,
  "signatories": [
   {
@@ -553,7 +553,13 @@
    "name": "Tanja C Roembke",
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Technische Universität Dresden",
+   "name": "Daniel Leising",
+   "orcid": "0000-0001-8503-5840",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-17T10:17:26.314Z"
+ "updated": "2026-09-17T10:40:06.522Z"
 }
