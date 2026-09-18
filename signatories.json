@@ -1,5 +1,5 @@
 {
- "count": 101,
+ "count": 102,
  "ok": true,
  "signatories": [
   {
@@ -607,7 +607,13 @@
    "name": "Serhii Nazarovets",
    "orcid": "0000-0002-5067-4498",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Leibniz University Hannover",
+   "name": "Til Gärtner",
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-18T13:15:10.416Z"
+ "updated": "2026-09-18T14:16:36.884Z"
 }
