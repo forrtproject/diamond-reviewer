@@ -1,5 +1,5 @@
 {
- "count": 97,
+ "count": 98,
  "ok": true,
  "signatories": [
   {
@@ -583,7 +583,13 @@
    "name": "Joe Alexandersen",
    "orcid": "0000-0001-7872-6272",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of York",
+   "name": "Zlatomira G. Ilchovska",
+   "orcid": "0000-0001-6682-9952",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-18T07:40:47.643Z"
+ "updated": "2026-09-18T09:17:54.510Z"
 }
