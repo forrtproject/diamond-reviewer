@@ -1,5 +1,5 @@
 {
- "count": 99,
+ "count": 100,
  "ok": true,
  "signatories": [
   {
@@ -595,7 +595,13 @@
    "name": "Marc Bletry",
    "orcid": "0000-0003-2509-9847",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Zurich",
+   "name": "Rachel HEyard",
+   "orcid": "0000-0002-7531-4333",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-18T11:15:19.062Z"
+ "updated": "2026-09-18T12:24:04.842Z"
 }
