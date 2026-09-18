@@ -1,5 +1,5 @@
 {
- "count": 96,
+ "count": 97,
  "ok": true,
  "signatories": [
   {
@@ -577,7 +577,13 @@
    "name": null,
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Southern Denmark",
+   "name": "Joe Alexandersen",
+   "orcid": "0000-0001-7872-6272",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-18T05:16:21.718Z"
+ "updated": "2026-09-18T06:28:25.058Z"
 }
