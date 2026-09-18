@@ -1,5 +1,5 @@
 {
- "count": 100,
+ "count": 101,
  "ok": true,
  "signatories": [
   {
@@ -601,7 +601,13 @@
    "name": "Rachel HEyard",
    "orcid": "0000-0002-7531-4333",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Borys Grinchenko Kyiv Metropolitan University",
+   "name": "Serhii Nazarovets",
+   "orcid": "0000-0002-5067-4498",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-18T12:24:04.842Z"
+ "updated": "2026-09-18T13:15:10.416Z"
 }
