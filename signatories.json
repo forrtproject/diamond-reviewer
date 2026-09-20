@@ -1,5 +1,5 @@
 {
- "count": 104,
+ "count": 105,
  "ok": true,
  "signatories": [
   {
@@ -625,7 +625,13 @@
    "name": "Manuel Ninaus",
    "orcid": "0000-0002-4664-8430",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Université Bourgogne Europr",
+   "name": "Benedicte Coste",
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-20T18:18:27.037Z"
+ "updated": "2026-09-20T21:13:40.609Z"
 }
