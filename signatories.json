@@ -1,5 +1,5 @@
 {
- "count": 103,
+ "count": 104,
  "ok": true,
  "signatories": [
   {
@@ -619,7 +619,13 @@
    "name": null,
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Graz",
+   "name": "Manuel Ninaus",
+   "orcid": "0000-0002-4664-8430",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-20T08:20:49.010Z"
+ "updated": "2026-09-20T18:18:27.037Z"
 }
