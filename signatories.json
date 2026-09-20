@@ -1,5 +1,5 @@
 {
- "count": 102,
+ "count": 103,
  "ok": true,
  "signatories": [
   {
@@ -613,7 +613,13 @@
    "name": "Til Gärtner",
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Unemployed",
+   "name": null,
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-18T14:16:36.884Z"
+ "updated": "2026-09-20T08:20:49.010Z"
 }
