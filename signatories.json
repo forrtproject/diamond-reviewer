@@ -1,5 +1,5 @@
 {
- "count": 107,
+ "count": 108,
  "ok": true,
  "signatories": [
   {
@@ -643,7 +643,13 @@
    "name": null,
    "orcid": "0000-0002-7761-871X",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Michelin",
+   "name": "Wiyao EDJEOU",
+   "orcid": "0000-0001-5037-835X",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-21T07:49:20.861Z"
+ "updated": "2026-09-21T08:48:01.617Z"
 }
