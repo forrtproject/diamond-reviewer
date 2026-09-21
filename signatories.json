@@ -1,5 +1,5 @@
 {
- "count": 111,
+ "count": 112,
  "ok": true,
  "signatories": [
   {
@@ -667,7 +667,13 @@
    "name": "Roberto Guerra",
    "orcid": "0000-0002-1278-8021",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Milan",
+   "name": "Chiara Meluzzi",
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-21T12:24:29.534Z"
+ "updated": "2026-09-21T16:40:50.194Z"
 }
