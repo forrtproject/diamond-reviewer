@@ -1,5 +1,5 @@
 {
- "count": 114,
+ "count": 115,
  "ok": true,
  "signatories": [
   {
@@ -685,7 +685,13 @@
    "name": "Astrid S. de Wijn",
    "orcid": "0000-0003-4664-6811",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Canterbury",
+   "name": "Bob Reed",
+   "orcid": "0000-0002-6459-8174",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-21T21:14:36.623Z"
+ "updated": "2026-09-21T23:37:29.091Z"
 }
