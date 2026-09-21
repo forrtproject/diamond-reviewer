@@ -1,5 +1,5 @@
 {
- "count": 105,
+ "count": 106,
  "ok": true,
  "signatories": [
   {
@@ -631,7 +631,13 @@
    "name": "Benedicte Coste",
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Tübingen",
+   "name": "Philipp Alexander Schroeder",
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-20T21:13:40.609Z"
+ "updated": "2026-09-21T05:41:14.142Z"
 }
