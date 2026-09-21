@@ -1,5 +1,5 @@
 {
- "count": 109,
+ "count": 111,
  "ok": true,
  "signatories": [
   {
@@ -655,7 +655,19 @@
    "name": "Alexandra Petrak",
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Università degli Studi di Milano",
+   "name": "Mirko Marino",
+   "orcid": "0000-0001-9913-4380",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Milan",
+   "name": "Roberto Guerra",
+   "orcid": "0000-0002-1278-8021",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-21T10:18:13.879Z"
+ "updated": "2026-09-21T12:24:29.534Z"
 }
