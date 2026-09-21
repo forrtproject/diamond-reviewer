@@ -1,5 +1,5 @@
 {
- "count": 108,
+ "count": 109,
  "ok": true,
  "signatories": [
   {
@@ -649,7 +649,13 @@
    "name": "Wiyao EDJEOU",
    "orcid": "0000-0001-5037-835X",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Muenster",
+   "name": "Alexandra Petrak",
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-21T08:48:01.617Z"
+ "updated": "2026-09-21T10:18:13.879Z"
 }
