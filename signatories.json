@@ -1,5 +1,5 @@
 {
- "count": 106,
+ "count": 107,
  "ok": true,
  "signatories": [
   {
@@ -637,7 +637,13 @@
    "name": "Philipp Alexander Schroeder",
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "onera",
+   "name": null,
+   "orcid": "0000-0002-7761-871X",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-21T05:41:14.142Z"
+ "updated": "2026-09-21T07:49:20.861Z"
 }
