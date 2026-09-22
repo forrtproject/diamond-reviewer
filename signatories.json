@@ -1,5 +1,5 @@
 {
- "count": 115,
+ "count": 116,
  "ok": true,
  "signatories": [
   {
@@ -691,7 +691,13 @@
    "name": "Bob Reed",
    "orcid": "0000-0002-6459-8174",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of São Paulo",
+   "name": "Lorena G Barberia",
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-21T23:37:29.091Z"
+ "updated": "2026-09-22T03:43:22.609Z"
 }
