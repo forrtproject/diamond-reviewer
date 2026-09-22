@@ -1,5 +1,5 @@
 {
- "count": 119,
+ "count": 120,
  "ok": true,
  "signatories": [
   {
@@ -715,7 +715,13 @@
    "name": "John Culbert",
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Fernuniversität in Hagen",
+   "name": "Christian Blötner",
+   "orcid": "0000-0001-7415-4756",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-22T10:17:55.896Z"
+ "updated": "2026-09-22T11:38:14.882Z"
 }
