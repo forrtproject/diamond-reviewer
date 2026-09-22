@@ -1,5 +1,5 @@
 {
- "count": 116,
+ "count": 118,
  "ok": true,
  "signatories": [
   {
@@ -697,7 +697,19 @@
    "name": "Lorena G Barberia",
    "orcid": null,
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Ravensburg-Weingarten University of Applied Science",
+   "name": "Claudia Sassenrath",
+   "orcid": null,
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "FU Berlin",
+   "name": "Gabriel Ziegler",
+   "orcid": "0000-0002-3169-9630",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-22T03:43:22.609Z"
+ "updated": "2026-09-22T08:23:19.469Z"
 }
