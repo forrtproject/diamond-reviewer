@@ -1,5 +1,5 @@
 {
- "count": 118,
+ "count": 119,
  "ok": true,
  "signatories": [
   {
@@ -709,7 +709,13 @@
    "name": "Gabriel Ziegler",
    "orcid": "0000-0002-3169-9630",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "HHU",
+   "name": "John Culbert",
+   "orcid": null,
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-22T08:23:19.469Z"
+ "updated": "2026-09-22T10:17:55.896Z"
 }
