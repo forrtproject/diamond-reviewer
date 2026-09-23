@@ -1,5 +1,5 @@
 {
- "count": 120,
+ "count": 121,
  "ok": true,
  "signatories": [
   {
@@ -721,7 +721,13 @@
    "name": "Christian Blötner",
    "orcid": "0000-0001-7415-4756",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "NTNU (Norway)",
+   "name": "Nuria Espallargas",
+   "orcid": "0000-0001-7139-106X",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-22T11:38:14.882Z"
+ "updated": "2026-09-23T06:55:09.250Z"
 }
