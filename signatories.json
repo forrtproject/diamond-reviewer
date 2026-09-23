@@ -1,5 +1,5 @@
 {
- "count": 128,
+ "count": 129,
  "ok": true,
  "signatories": [
   {
@@ -769,7 +769,13 @@
    "name": "Davide Sangalli",
    "orcid": "0000-0002-4268-9454",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "Barasat Government College",
+   "name": "Diptarup Mallick",
+   "orcid": "0009-0006-6065-9650",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-23T12:48:22.047Z"
+ "updated": "2026-09-23T21:15:20.835Z"
 }
