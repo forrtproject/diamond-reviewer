@@ -1,5 +1,5 @@
 {
- "count": 121,
+ "count": 123,
  "ok": true,
  "signatories": [
   {
@@ -723,11 +723,23 @@
    "since": "2026-09"
   },
   {
+   "affiliation": "University of Trieste",
+   "name": "Gianluca Levi",
+   "orcid": null,
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Milan",
+   "name": "Giovanni Onida",
+   "orcid": "0000-0001-9532-5083",
+   "since": "2026-09"
+  },
+  {
    "affiliation": "NTNU (Norway)",
    "name": "Nuria Espallargas",
    "orcid": "0000-0001-7139-106X",
    "since": "2026-09"
   }
  ],
- "updated": "2026-09-23T06:55:09.250Z"
+ "updated": "2026-09-23T07:42:37.979Z"
 }
