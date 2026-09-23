@@ -1,5 +1,5 @@
 {
- "count": 126,
+ "count": 128,
  "ok": true,
  "signatories": [
   {
@@ -757,7 +757,19 @@
    "name": "Nuria Espallargas",
    "orcid": "0000-0001-7139-106X",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Milan",
+   "name": null,
+   "orcid": null,
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "Istituto di Struttura della Materia - CNR, Milano (Italy)",
+   "name": "Davide Sangalli",
+   "orcid": "0000-0002-4268-9454",
+   "since": "2026-09"
   }
  ],
- "updated": "2026-09-23T08:23:21.283Z"
+ "updated": "2026-09-23T12:48:22.047Z"
 }
