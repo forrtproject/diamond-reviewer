@@ -1,7 +1,13 @@
 {
- "count": 130,
+ "count": 131,
  "ok": true,
  "signatories": [
+  {
+   "affiliation": "Justus-Liebig-University Giessen",
+   "name": "Elmar Schlueter",
+   "orcid": "0000-0003-3880-4111",
+   "since": "2026-09"
+  },
   {
    "affiliation": "University of Münster",
    "name": "Lukas Röseler",
@@ -783,5 +789,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-09-24T06:29:36.710Z"
+ "updated": "2026-09-24T08:45:41.965Z"
 }
