@@ -1,5 +1,5 @@
 {
- "count": 132,
+ "count": 133,
  "ok": true,
  "signatories": [
   {
@@ -12,6 +12,12 @@
    "affiliation": "Instituto de Investigaciones Biológicas Clemente Estable",
    "name": null,
    "orcid": "0000-0001-8669-4805",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Münster",
+   "name": "Mareike Ehlert",
+   "orcid": "0000-0002-8772-8058",
    "since": "2026-09"
   },
   {
@@ -795,5 +801,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-09-27T17:13:49.357Z"
+ "updated": "2026-09-28T08:31:07.854Z"
 }
