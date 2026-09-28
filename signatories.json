@@ -1,5 +1,5 @@
 {
- "count": 133,
+ "count": 134,
  "ok": true,
  "signatories": [
   {
@@ -18,6 +18,12 @@
    "affiliation": "University of Münster",
    "name": "Mareike Ehlert",
    "orcid": "0000-0002-8772-8058",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Milan",
+   "name": "Giovanni Ruscica",
+   "orcid": null,
    "since": "2026-09"
   },
   {
@@ -801,5 +807,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-09-28T08:31:07.854Z"
+ "updated": "2026-09-28T14:44:59.983Z"
 }
