@@ -1,5 +1,5 @@
 {
- "count": 134,
+ "count": 135,
  "ok": true,
  "signatories": [
   {
@@ -24,6 +24,12 @@
    "affiliation": "University of Milan",
    "name": "Giovanni Ruscica",
    "orcid": null,
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "Department of Child and Adolescent Psychiatry, Psychosomatics, and Psychotherapy, University Hospital, Ludwig-Maximilians-University of Munich",
+   "name": "Anna Yi Leung",
+   "orcid": "0000-0003-0720-5036",
    "since": "2026-09"
   },
   {
@@ -807,5 +813,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-09-28T14:44:59.983Z"
+ "updated": "2026-09-29T07:46:29.420Z"
 }
