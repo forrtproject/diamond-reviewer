@@ -1,5 +1,5 @@
 {
- "count": 135,
+ "count": 136,
  "ok": true,
  "signatories": [
   {
@@ -30,6 +30,12 @@
    "affiliation": "Department of Child and Adolescent Psychiatry, Psychosomatics, and Psychotherapy, University Hospital, Ludwig-Maximilians-University of Munich",
    "name": "Anna Yi Leung",
    "orcid": "0000-0003-0720-5036",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "Utrecht University",
+   "name": "Flavio Azevedo",
+   "orcid": null,
    "since": "2026-09"
   },
   {
@@ -813,5 +819,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-09-29T07:46:29.420Z"
+ "updated": "2026-09-29T23:15:40.394Z"
 }
