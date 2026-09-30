@@ -1,5 +1,5 @@
 {
- "count": 136,
+ "count": 137,
  "ok": true,
  "signatories": [
   {
@@ -36,6 +36,12 @@
    "affiliation": "Utrecht University",
    "name": "Flavio Azevedo",
    "orcid": null,
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "University of Amsterdam",
+   "name": "Jean-Sébastien Caux",
+   "orcid": "0000-0001-9322-5011",
    "since": "2026-09"
   },
   {
@@ -819,5 +825,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-09-29T23:15:40.394Z"
+ "updated": "2026-09-30T06:30:46.586Z"
 }
