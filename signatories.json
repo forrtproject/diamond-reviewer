@@ -1,5 +1,5 @@
 {
- "count": 137,
+ "count": 138,
  "ok": true,
  "signatories": [
   {
@@ -42,6 +42,12 @@
    "affiliation": "University of Amsterdam",
    "name": "Jean-Sébastien Caux",
    "orcid": "0000-0001-9322-5011",
+   "since": "2026-09"
+  },
+  {
+   "affiliation": "CODECHECK",
+   "name": "Daniel Nüst",
+   "orcid": "0000-0002-0024-5046",
    "since": "2026-09"
   },
   {
@@ -825,5 +831,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-09-30T06:30:46.586Z"
+ "updated": "2026-09-30T23:39:02.988Z"
 }
