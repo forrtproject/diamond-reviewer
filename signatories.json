@@ -1,5 +1,5 @@
 {
- "count": 143,
+ "count": 144,
  "ok": true,
  "signatories": [
   {
@@ -71,6 +71,12 @@
   {
    "affiliation": "Stockholm University",
    "name": null,
+   "orcid": null,
+   "since": "2026-10"
+  },
+  {
+   "affiliation": "Democritus University of Thrace",
+   "name": "Vaitsa Giannouli",
    "orcid": null,
    "since": "2026-10"
   },
@@ -861,5 +867,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-10-01T14:44:02.237Z"
+ "updated": "2026-10-01T16:41:30.480Z"
 }
