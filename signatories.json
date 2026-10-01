@@ -1,5 +1,5 @@
 {
- "count": 138,
+ "count": 141,
  "ok": true,
  "signatories": [
   {
@@ -49,6 +49,24 @@
    "name": "Daniel Nüst",
    "orcid": "0000-0002-0024-5046",
    "since": "2026-09"
+  },
+  {
+   "affiliation": "National and Kapodistrian University of Athens & Biomedical Research Foundation",
+   "name": "Marietta Papadatou-Pastou",
+   "orcid": "0000-0002-2834-4003",
+   "since": "2026-10"
+  },
+  {
+   "affiliation": "Philipps-Universität Marburg",
+   "name": "Björn S. Siepe",
+   "orcid": null,
+   "since": "2026-10"
+  },
+  {
+   "affiliation": "Witten/Herdecke University",
+   "name": "Jan Philipp Röer",
+   "orcid": "0000-0001-7774-3433",
+   "since": "2026-10"
   },
   {
    "affiliation": "University of Münster",
@@ -831,5 +849,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-09-30T23:39:02.988Z"
+ "updated": "2026-10-01T08:26:02.818Z"
 }
