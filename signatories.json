@@ -1,5 +1,5 @@
 {
- "count": 142,
+ "count": 143,
  "ok": true,
  "signatories": [
   {
@@ -66,6 +66,12 @@
    "affiliation": "Witten/Herdecke University",
    "name": "Jan Philipp Röer",
    "orcid": "0000-0001-7774-3433",
+   "since": "2026-10"
+  },
+  {
+   "affiliation": "Stockholm University",
+   "name": null,
+   "orcid": null,
    "since": "2026-10"
   },
   {
@@ -855,5 +861,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-10-01T09:44:45.869Z"
+ "updated": "2026-10-01T14:44:02.237Z"
 }
