@@ -1,5 +1,5 @@
 {
- "count": 141,
+ "count": 142,
  "ok": true,
  "signatories": [
   {
@@ -67,6 +67,12 @@
    "name": "Jan Philipp Röer",
    "orcid": "0000-0001-7774-3433",
    "since": "2026-10"
+  },
+  {
+   "affiliation": "University of Amsterdam",
+   "name": "Ingmar Visser",
+   "orcid": "0000-0003-3855-2778",
+   "since": "11:40"
   },
   {
    "affiliation": "University of Münster",
@@ -849,5 +855,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-10-01T08:26:02.818Z"
+ "updated": "2026-10-01T09:44:45.869Z"
 }
