@@ -1,5 +1,5 @@
 {
- "count": 144,
+ "count": 145,
  "ok": true,
  "signatories": [
   {
@@ -78,6 +78,12 @@
    "affiliation": "Democritus University of Thrace",
    "name": "Vaitsa Giannouli",
    "orcid": null,
+   "since": "2026-10"
+  },
+  {
+   "affiliation": "University of Melbourne",
+   "name": "Emma Sullivan",
+   "orcid": "0000-0002-7303-8734",
    "since": "2026-10"
   },
   {
@@ -867,5 +873,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-10-01T16:41:30.480Z"
+ "updated": "2026-10-02T00:48:09.490Z"
 }
