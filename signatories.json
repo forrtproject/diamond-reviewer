@@ -1,5 +1,5 @@
 {
- "count": 148,
+ "count": 149,
  "ok": true,
  "signatories": [
   {
@@ -96,6 +96,12 @@
    "affiliation": "University of Belgrade",
    "name": "Danka Purić",
    "orcid": "0000-0001-5126-3781",
+   "since": "2026-10"
+  },
+  {
+   "affiliation": "Birkbeck, University of London",
+   "name": "Josefina Weinerova",
+   "orcid": "0000-0001-9911-526X",
    "since": "2026-10"
   },
   {
@@ -891,5 +897,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-10-02T09:43:04.243Z"
+ "updated": "2026-10-02T12:27:01.794Z"
 }
