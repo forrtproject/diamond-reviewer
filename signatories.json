@@ -1,5 +1,5 @@
 {
- "count": 149,
+ "count": 150,
  "ok": true,
  "signatories": [
   {
@@ -102,6 +102,12 @@
    "affiliation": "Birkbeck, University of London",
    "name": "Josefina Weinerova",
    "orcid": "0000-0001-9911-526X",
+   "since": "2026-10"
+  },
+  {
+   "affiliation": "University of Glasgow",
+   "name": "James Bartlett",
+   "orcid": "0000-0002-4191-5245",
    "since": "2026-10"
   },
   {
@@ -897,5 +903,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-10-02T12:27:01.794Z"
+ "updated": "2026-10-02T13:42:45.256Z"
 }
