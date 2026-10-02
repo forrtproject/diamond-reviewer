@@ -1,5 +1,5 @@
 {
- "count": 147,
+ "count": 148,
  "ok": true,
  "signatories": [
   {
@@ -90,6 +90,12 @@
    "affiliation": "Linnaeus University",
    "name": "Ran Friedman",
    "orcid": null,
+   "since": "2026-10"
+  },
+  {
+   "affiliation": "University of Belgrade",
+   "name": "Danka Purić",
+   "orcid": "0000-0001-5126-3781",
    "since": "2026-10"
   },
   {
@@ -885,5 +891,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-10-02T08:24:11.326Z"
+ "updated": "2026-10-02T09:43:04.243Z"
 }
