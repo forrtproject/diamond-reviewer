@@ -1,5 +1,5 @@
 {
- "count": 146,
+ "count": 147,
  "ok": true,
  "signatories": [
   {
@@ -84,6 +84,12 @@
    "affiliation": "University of Melbourne",
    "name": "Emma Sullivan",
    "orcid": "0000-0002-7303-8734",
+   "since": "2026-10"
+  },
+  {
+   "affiliation": "Linnaeus University",
+   "name": "Ran Friedman",
+   "orcid": null,
    "since": "2026-10"
   },
   {
@@ -879,5 +885,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-10-02T06:29:54.681Z"
+ "updated": "2026-10-02T08:24:11.326Z"
 }
