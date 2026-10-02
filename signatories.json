@@ -1,5 +1,5 @@
 {
- "count": 145,
+ "count": 146,
  "ok": true,
  "signatories": [
   {
@@ -85,6 +85,12 @@
    "name": "Emma Sullivan",
    "orcid": "0000-0002-7303-8734",
    "since": "2026-10"
+  },
+  {
+   "affiliation": "University Library, CSU Long Beach",
+   "name": "Gabriel J. Gardner",
+   "orcid": "0000-0002-9996-5587",
+   "since": "1.10.26"
   },
   {
    "affiliation": "University of Amsterdam",
@@ -873,5 +879,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-10-02T00:48:09.490Z"
+ "updated": "2026-10-02T06:29:54.681Z"
 }
