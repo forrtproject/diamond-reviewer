@@ -1,5 +1,5 @@
 {
- "count": 150,
+ "count": 151,
  "ok": true,
  "signatories": [
   {
@@ -108,6 +108,12 @@
    "affiliation": "University of Glasgow",
    "name": "James Bartlett",
    "orcid": "0000-0002-4191-5245",
+   "since": "2026-10"
+  },
+  {
+   "affiliation": "Heidelberg University",
+   "name": "Gaspar Jekely",
+   "orcid": null,
    "since": "2026-10"
   },
   {
@@ -903,5 +909,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-10-02T13:42:45.256Z"
+ "updated": "2026-10-02T21:15:42.960Z"
 }
