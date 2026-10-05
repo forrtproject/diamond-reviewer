@@ -1,5 +1,5 @@
 {
- "count": 151,
+ "count": 152,
  "ok": true,
  "signatories": [
   {
@@ -113,6 +113,12 @@
   {
    "affiliation": "Heidelberg University",
    "name": "Gaspar Jekely",
+   "orcid": null,
+   "since": "2026-10"
+  },
+  {
+   "affiliation": "Radboud University Nijmegen",
+   "name": null,
    "orcid": null,
    "since": "2026-10"
   },
@@ -909,5 +915,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-10-02T21:15:42.960Z"
+ "updated": "2026-10-05T08:33:25.564Z"
 }
