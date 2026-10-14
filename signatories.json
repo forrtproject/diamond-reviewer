@@ -1,5 +1,5 @@
 {
- "count": 154,
+ "count": 155,
  "ok": true,
  "signatories": [
   {
@@ -132,6 +132,12 @@
    "affiliation": "Eras",
    "name": "Steven W. Mes",
    "orcid": "0009-0007-5970-2903",
+   "since": "2026-10"
+  },
+  {
+   "affiliation": "IT University of Copenhagen",
+   "name": "Michael Szell",
+   "orcid": "0000-0003-3022-2483",
    "since": "2026-10"
   },
   {
@@ -927,5 +933,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-10-08T06:32:10.740Z"
+ "updated": "2026-10-14T11:40:30.536Z"
 }
