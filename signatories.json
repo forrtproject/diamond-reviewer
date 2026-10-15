@@ -1,5 +1,5 @@
 {
- "count": 155,
+ "count": 156,
  "ok": true,
  "signatories": [
   {
@@ -138,6 +138,12 @@
    "affiliation": "IT University of Copenhagen",
    "name": "Michael Szell",
    "orcid": "0000-0003-3022-2483",
+   "since": "2026-10"
+  },
+  {
+   "affiliation": "ErasmusMC",
+   "name": "Anton Rink",
+   "orcid": "0009-0002-5573-6640",
    "since": "2026-10"
   },
   {
@@ -933,5 +939,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-10-14T11:40:30.536Z"
+ "updated": "2026-10-15T10:16:44.090Z"
 }
