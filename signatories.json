@@ -1,5 +1,5 @@
 {
- "count": 156,
+ "count": 157,
  "ok": true,
  "signatories": [
   {
@@ -144,6 +144,12 @@
    "affiliation": "ErasmusMC",
    "name": "Anton Rink",
    "orcid": "0009-0002-5573-6640",
+   "since": "2026-10"
+  },
+  {
+   "affiliation": "Erasmus MC",
+   "name": "Marco P.A.W. Claasen",
+   "orcid": "0000-0001-8218-3119",
    "since": "2026-10"
   },
   {
@@ -939,5 +945,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-10-15T10:16:44.090Z"
+ "updated": "2026-10-18T23:36:36.127Z"
 }
