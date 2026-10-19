@@ -1,5 +1,5 @@
 {
- "count": 158,
+ "count": 159,
  "ok": true,
  "signatories": [
   {
@@ -156,6 +156,12 @@
    "affiliation": "Laboratoire Charles Coulomb",
    "name": null,
    "orcid": null,
+   "since": "2026-10"
+  },
+  {
+   "affiliation": "University of Chemistry and Technology Prague",
+   "name": "Joyce Boitumelo Matsoso",
+   "orcid": "0000-0003-1017-0073",
    "since": "2026-10"
   },
   {
@@ -951,5 +957,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-10-19T08:51:54.159Z"
+ "updated": "2026-10-19T09:25:07.488Z"
 }
