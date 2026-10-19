@@ -1,5 +1,5 @@
 {
- "count": 157,
+ "count": 158,
  "ok": true,
  "signatories": [
   {
@@ -150,6 +150,12 @@
    "affiliation": "Erasmus MC",
    "name": "Marco P.A.W. Claasen",
    "orcid": "0000-0001-8218-3119",
+   "since": "2026-10"
+  },
+  {
+   "affiliation": "Laboratoire Charles Coulomb",
+   "name": null,
+   "orcid": null,
    "since": "2026-10"
   },
   {
@@ -945,5 +951,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-10-18T23:36:36.127Z"
+ "updated": "2026-10-19T08:51:54.159Z"
 }
