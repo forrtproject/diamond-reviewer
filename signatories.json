@@ -1,5 +1,5 @@
 {
- "count": 159,
+ "count": 160,
  "ok": true,
  "signatories": [
   {
@@ -132,6 +132,12 @@
    "affiliation": "Eras",
    "name": "Steven W. Mes",
    "orcid": "0009-0007-5970-2903",
+   "since": "2026-10"
+  },
+  {
+   "affiliation": "University of Milano",
+   "name": null,
+   "orcid": null,
    "since": "2026-10"
   },
   {
@@ -957,5 +963,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-10-19T09:25:07.488Z"
+ "updated": "2026-10-21T11:41:35.466Z"
 }
