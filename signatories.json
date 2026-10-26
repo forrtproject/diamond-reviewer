@@ -1,5 +1,5 @@
 {
- "count": 160,
+ "count": 161,
  "ok": true,
  "signatories": [
   {
@@ -168,6 +168,12 @@
    "affiliation": "University of Chemistry and Technology Prague",
    "name": "Joyce Boitumelo Matsoso",
    "orcid": "0000-0003-1017-0073",
+   "since": "2026-10"
+  },
+  {
+   "affiliation": "PHELIQS CEA",
+   "name": "florie mesple",
+   "orcid": "0009-0007-0239-1534",
    "since": "2026-10"
   },
   {
@@ -963,5 +969,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-10-21T11:41:35.466Z"
+ "updated": "2026-10-26T09:26:53.485Z"
 }
