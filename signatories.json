@@ -1,5 +1,5 @@
 {
- "count": 162,
+ "count": 163,
  "ok": true,
  "signatories": [
   {
@@ -181,6 +181,12 @@
    "name": null,
    "orcid": "0000-0003-1123-3056",
    "since": "2026-10"
+  },
+  {
+   "affiliation": "University of Oxford",
+   "name": "Tara Ghafari",
+   "orcid": null,
+   "since": "2026-11"
   },
   {
    "affiliation": "University Library, CSU Long Beach",
@@ -975,5 +981,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-10-26T13:49:18.619Z"
+ "updated": "2026-11-02T18:13:24.116Z"
 }
