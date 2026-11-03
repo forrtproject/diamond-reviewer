@@ -1,5 +1,5 @@
 {
- "count": 163,
+ "count": 164,
  "ok": true,
  "signatories": [
   {
@@ -186,6 +186,12 @@
    "affiliation": "University of Oxford",
    "name": "Tara Ghafari",
    "orcid": null,
+   "since": "2026-11"
+  },
+  {
+   "affiliation": "University of Twente",
+   "name": "Raul Zurita-Milla",
+   "orcid": "0000-0002-1769-6310",
    "since": "2026-11"
   },
   {
@@ -981,5 +987,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-11-02T18:13:24.116Z"
+ "updated": "2026-11-03T14:10:54.784Z"
 }
