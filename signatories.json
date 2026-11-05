@@ -1,5 +1,5 @@
 {
- "count": 164,
+ "count": 165,
  "ok": true,
  "signatories": [
   {
@@ -192,6 +192,12 @@
    "affiliation": "University of Twente",
    "name": "Raul Zurita-Milla",
    "orcid": "0000-0002-1769-6310",
+   "since": "2026-11"
+  },
+  {
+   "affiliation": "Bielefeld University",
+   "name": "Axel Mayer",
+   "orcid": null,
    "since": "2026-11"
   },
   {
@@ -987,5 +993,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-11-03T14:10:54.784Z"
+ "updated": "2026-11-05T13:36:23.615Z"
 }
