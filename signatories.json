@@ -1,5 +1,5 @@
 {
- "count": 165,
+ "count": 166,
  "ok": true,
  "signatories": [
   {
@@ -198,6 +198,12 @@
    "affiliation": "Bielefeld University",
    "name": "Axel Mayer",
    "orcid": null,
+   "since": "2026-11"
+  },
+  {
+   "affiliation": "Universidad Pontificia Comillas",
+   "name": "Pablo Nájera",
+   "orcid": "0000-0001-7435-2744",
    "since": "2026-11"
   },
   {
@@ -993,5 +999,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-11-05T13:36:23.615Z"
+ "updated": "2026-11-06T12:15:22.531Z"
 }
