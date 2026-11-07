@@ -1,5 +1,5 @@
 {
- "count": 166,
+ "count": 167,
  "ok": true,
  "signatories": [
   {
@@ -204,6 +204,12 @@
    "affiliation": "Universidad Pontificia Comillas",
    "name": "Pablo Nájera",
    "orcid": "0000-0001-7435-2744",
+   "since": "2026-11"
+  },
+  {
+   "affiliation": "Universidad Técnica de Machala",
+   "name": null,
+   "orcid": "0009-0004-4828-8055",
    "since": "2026-11"
   },
   {
@@ -999,5 +1005,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-11-06T12:15:22.531Z"
+ "updated": "2026-11-07T13:09:09.985Z"
 }
