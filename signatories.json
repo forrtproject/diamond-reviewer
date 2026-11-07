@@ -1,5 +1,5 @@
 {
- "count": 167,
+ "count": 168,
  "ok": true,
  "signatories": [
   {
@@ -210,6 +210,12 @@
    "affiliation": "Universidad Técnica de Machala",
    "name": null,
    "orcid": "0009-0004-4828-8055",
+   "since": "2026-11"
+  },
+  {
+   "affiliation": "University of Jaén",
+   "name": "Iván Ramírez Sánchez",
+   "orcid": "0000-0001-5846-6514",
    "since": "2026-11"
   },
   {
@@ -1005,5 +1011,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-11-07T13:09:09.985Z"
+ "updated": "2026-11-07T17:08:10.380Z"
 }
