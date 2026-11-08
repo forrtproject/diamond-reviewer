@@ -1,5 +1,5 @@
 {
- "count": 170,
+ "count": 171,
  "ok": true,
  "signatories": [
   {
@@ -228,6 +228,12 @@
    "affiliation": "University of Barcelona",
    "name": null,
    "orcid": "0009-0004-0561-5503",
+   "since": "2026-11"
+  },
+  {
+   "affiliation": "Ministerio Público Fiscal",
+   "name": null,
+   "orcid": "0000-0002-8073-5108",
    "since": "2026-11"
   },
   {
@@ -1023,5 +1029,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-11-08T09:10:26.686Z"
+ "updated": "2026-11-08T15:08:49.597Z"
 }
