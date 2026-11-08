@@ -1,5 +1,5 @@
 {
- "count": 173,
+ "count": 174,
  "ok": true,
  "signatories": [
   {
@@ -246,6 +246,12 @@
    "affiliation": "Evidence Based Opthalmology Unit, Scientia Clinical and Epidemiological Research Institute, Lima, Peru",
    "name": "Jose Galvez-Olortegui",
    "orcid": "0000-0003-1818-9801",
+   "since": "2026-11"
+  },
+  {
+   "affiliation": "Universidad Francisco de Vitoria",
+   "name": "Germán Díaz Ureña",
+   "orcid": "0000-0002-3848-0471",
    "since": "2026-11"
   },
   {
@@ -1041,5 +1047,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-11-08T19:07:54.240Z"
+ "updated": "2026-11-08T21:35:02.128Z"
 }
