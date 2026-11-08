@@ -1,5 +1,5 @@
 {
- "count": 171,
+ "count": 172,
  "ok": true,
  "signatories": [
   {
@@ -234,6 +234,12 @@
    "affiliation": "Ministerio Público Fiscal",
    "name": null,
    "orcid": "0000-0002-8073-5108",
+   "since": "2026-11"
+  },
+  {
+   "affiliation": "Complutense University of Madrid",
+   "name": "Oscar Lecuona",
+   "orcid": "0000-0003-0080-1062",
    "since": "2026-11"
   },
   {
@@ -1029,5 +1035,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-11-08T15:08:49.597Z"
+ "updated": "2026-11-08T17:07:52.677Z"
 }
