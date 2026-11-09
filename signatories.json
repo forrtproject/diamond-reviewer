@@ -1,5 +1,5 @@
 {
- "count": 174,
+ "count": 175,
  "ok": true,
  "signatories": [
   {
@@ -252,6 +252,12 @@
    "affiliation": "Universidad Francisco de Vitoria",
    "name": "Germán Díaz Ureña",
    "orcid": "0000-0002-3848-0471",
+   "since": "2026-11"
+  },
+  {
+   "affiliation": "University of São Paulo",
+   "name": "Isis Trajano",
+   "orcid": "0000-0001-9001-4323",
    "since": "2026-11"
   },
   {
@@ -1047,5 +1053,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-11-08T21:35:02.128Z"
+ "updated": "2026-11-09T12:16:42.867Z"
 }
