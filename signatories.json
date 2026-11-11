@@ -1,5 +1,5 @@
 {
- "count": 177,
+ "count": 178,
  "ok": true,
  "signatories": [
   {
@@ -270,6 +270,12 @@
    "affiliation": "Ministry of Health of the Valencian Government, Spain",
    "name": "Alonso Sánchez Santamaría",
    "orcid": "0009-0001-0866-9038",
+   "since": "2026-11"
+  },
+  {
+   "affiliation": "Universidad de Islas balearea",
+   "name": "Paula Rodríguez Rivera",
+   "orcid": "0000-0002-0415-4125",
    "since": "2026-11"
   },
   {
@@ -1065,5 +1071,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-11-11T07:12:08.625Z"
+ "updated": "2026-11-11T18:35:49.994Z"
 }
