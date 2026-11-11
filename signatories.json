@@ -1,5 +1,5 @@
 {
- "count": 176,
+ "count": 177,
  "ok": true,
  "signatories": [
   {
@@ -264,6 +264,12 @@
    "affiliation": "University of Zaragoza",
    "name": "Victor Hugo Pérez Gallo",
    "orcid": "0000-0003-1452-2531",
+   "since": "2026-11"
+  },
+  {
+   "affiliation": "Ministry of Health of the Valencian Government, Spain",
+   "name": "Alonso Sánchez Santamaría",
+   "orcid": "0009-0001-0866-9038",
    "since": "2026-11"
   },
   {
@@ -1059,5 +1065,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-11-09T15:10:53.569Z"
+ "updated": "2026-11-11T07:12:08.625Z"
 }
