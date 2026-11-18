@@ -1,5 +1,5 @@
 {
- "count": 179,
+ "count": 180,
  "ok": true,
  "signatories": [
   {
@@ -282,6 +282,12 @@
    "affiliation": "IntegraMédica S.A, parte de BUPA",
    "name": "Rodrigo Ojeda-Salamanca",
    "orcid": "0000-0002-4368-724X",
+   "since": "2026-11"
+  },
+  {
+   "affiliation": "University of Valencia",
+   "name": "Ana María Hernández Baeza",
+   "orcid": "0000-0002-5237-0535",
    "since": "2026-11"
   },
   {
@@ -1077,5 +1083,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-11-12T18:35:30.043Z"
+ "updated": "2026-11-18T21:09:55.576Z"
 }
