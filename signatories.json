@@ -1,5 +1,5 @@
 {
- "count": 180,
+ "count": 181,
  "ok": true,
  "signatories": [
   {
@@ -288,6 +288,12 @@
    "affiliation": "University of Valencia",
    "name": "Ana María Hernández Baeza",
    "orcid": "0000-0002-5237-0535",
+   "since": "2026-11"
+  },
+  {
+   "affiliation": "CNRS",
+   "name": null,
+   "orcid": null,
    "since": "2026-11"
   },
   {
@@ -1083,5 +1089,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-11-18T21:09:55.576Z"
+ "updated": "2026-11-25T11:10:06.111Z"
 }
