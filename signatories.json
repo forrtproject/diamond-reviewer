@@ -1,5 +1,5 @@
 {
- "count": 181,
+ "count": 182,
  "ok": true,
  "signatories": [
   {
@@ -294,6 +294,12 @@
    "affiliation": "CNRS",
    "name": null,
    "orcid": null,
+   "since": "2026-11"
+  },
+  {
+   "affiliation": "Radboudumc",
+   "name": "Max Cenci",
+   "orcid": "0000-0002-2543-6201",
    "since": "2026-11"
   },
   {
@@ -1089,5 +1095,5 @@
    "since": "2026-09"
   }
  ],
- "updated": "2026-11-25T11:10:06.111Z"
+ "updated": "2026-11-27T08:14:34.496Z"
 }
